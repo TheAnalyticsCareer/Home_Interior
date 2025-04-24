@@ -1,0 +1,343 @@
+/* General Styles */
+.upvc-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .highlight {
+    color: #fa853d; /* Orange color */
+  }
+  
+  /* Hero Banner Section */
+  .upvc-hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  
+  .upvc-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .upvc-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .inner-upvc-overlay {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .upvc-content {
+    color: white;
+    max-width: 600px;
+  }
+  
+  .upvc-content h3 {
+    font-size: 25px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .upvc-content p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  /* Product Navigation Section */
+
+.product-hero-footer {
+  background: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #eaeaea;
+  margin-bottom: 30px;
+}
+
+.product-footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  
+ 
+}
+
+.product-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  position: absolute;
+  top: -70px;
+  left: 300px;
+ 
+}
+
+.product-footer-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  color: #333;
+  transition: all 0.3s ease;
+  padding: 15px 0;
+  border: 1px solid #000000;
+  height: 100px;
+  width: 250px;
+ 
+
+}
+
+.product-footer-item:hover {
+ 
+  background-color: #fa853d;
+  transition: 0.5s;
+
+}
+
+.product-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.product-icon-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+
+
+.product-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-footer-label {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-footer-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 20px;
+  }
+  
+  .product-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+  
+  .product-icon-container {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-footer-label {
+    font-size: 14px;
+  }
+}
+  
+  /* Why uPVC Section */
+  .upvc-window-section {
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  .upvc-window-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .upvc-window-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+  
+  .upvc-window-text h4 {
+    font-size: 22px;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .upvc-window-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .upvc-window-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .upvc-window-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Benefits Section */
+  .upvc-benefits-section {
+    padding: 40px 20px 60px;
+    background: #f8f8f8;
+  }
+  
+  .benefits-header {
+    width: max-content;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  .benefits-header h1 {
+    font-size: 25px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .benefit-item {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .benefit-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .benefit-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px 40px;
+  }
+  
+  .benefit-text h3 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .benefit-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .benefit-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .benefit-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .upvc-hero-section {
+      height: 50vh;
+    }
+    
+    .upvc-content h3 {
+      font-size: 20px;
+    }
+    
+    .upvc-content p {
+      font-size: 16px;
+    }
+    
+    .product-footer-item {
+      padding: 15px;
+      width: 33.33%;
+    }
+    
+    .product-icon-container {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .product-footer-text {
+      font-size: 14px;
+    }
+    
+    .upvc-window-text, 
+    .upvc-window-image,
+    .benefit-text,
+    .benefit-image {
+      flex: 100%;
+      padding: 10px;
+    }
+    
+    .benefit-item.reverse {
+      flex-direction: column;
+    }
+    
+    .benefits-header h1 {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-footer-item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .upvc-hero-section {
+      height: 40vh;
+    }
+  }
