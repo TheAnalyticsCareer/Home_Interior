@@ -7,10 +7,10 @@ const AboutUs = () => {
   return (
     <div className="about-us-page">
       {/* Top Section */}
-      <section className="hero-section">
-        <div className="hero-container">
+      <section className="about-hero-section">
+        <div className="about-hero-container">
           {/* Left Content */}
-          <div className="hero-content">
+          <div className="about-hero-content">
             <h1>
               <span className="highlight">Experts in making quality uPVC</span> to your exact standards.
             </h1>
@@ -25,7 +25,7 @@ const AboutUs = () => {
             </p>
           </div>
           {/* Right Image */}
-          <div className="hero-image">
+          <div className="about-hero-image">
             <img
               src={heroImg} 
               alt="uPVC Technician at Work"

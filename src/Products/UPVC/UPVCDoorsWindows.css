@@ -1,343 +1,378 @@
 /* General Styles */
-.upvc-page {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .highlight {
-    color: #fa853d; /* Orange color */
-  }
-  
-  /* Hero Banner Section */
-  .upvc-hero-section {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-  }
-  
-  .upvc-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .upvc-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .inner-upvc-overlay {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .upvc-content {
-    color: white;
-    max-width: 600px;
-  }
-  
-  .upvc-content h3 {
-    font-size: 25px;
-    color: #000;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-  
-  .upvc-content p {
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 0;
-  }
-  
-  /* Product Navigation Section */
-
-.product-hero-footer {
-  background: #fff;
-  padding: 20px 0;
-  border-top: 1px solid #eaeaea;
-  margin-bottom: 30px;
+.interior-design-page {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.8;
+  overflow-x: hidden;
 }
 
-.product-footer-container {
+.highlight {
+  color: #c8a97e; /* Elegant taupe color */
+}
+
+.container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
-  position: relative;
-  
- 
+  padding: 0 20px;
 }
 
-.product-footer-grid {
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #c8a97e;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #c8a97e;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  background: #b5986e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
+}
+
+/* Hero Section */
+.interior-hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.interior-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.interior-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.inner-hero-overlay {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.interior-hero-content {
+  color: white;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Services Showcase */
+.services-showcase {
+  padding: 100px 0;
+  background: #f9f9f9;
+}
+
+.services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+.service-card {
+  position: relative;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.05);
+}
+
+.service-overlay {
   position: absolute;
-  top: -70px;
-  left: 300px;
- 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 40px 30px;
+  color: white;
 }
 
-.product-footer-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background-color: #ffffff;
-  border-radius: 10px;
-  color: #333;
-  transition: all 0.3s ease;
-  padding: 15px 0;
-  border: 1px solid #000000;
-  height: 100px;
-  width: 250px;
- 
-
-}
-
-.product-footer-item:hover {
- 
-  background-color: #fa853d;
-  transition: 0.5s;
-
-}
-
-.product-icon-wrapper {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.product-icon-container {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-
-
-.product-icon {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.product-footer-label {
-  font-size: 16px;
+.service-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  text-align: center;
-  color: #333;
 }
 
-/* Responsive adjustments */
+.service-overlay p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Expertise Section */
+.expertise-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.expertise-item {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.expertise-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.expertise-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 50px;
+}
+
+.expertise-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.expertise-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.benefits-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #c8a97e;
+  font-weight: bold;
+}
+
+.expertise-image {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.expertise-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    height: 70vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .expertise-text {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .product-footer-grid {
+  .hero-section {
+    height: 60vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .services-grid {
     grid-template-columns: 1fr;
   }
   
-  .product-footer-item {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 10px 20px;
+  .service-card {
+    height: 350px;
   }
   
-  .product-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0;
-    margin-right: 15px;
+  .service-card:last-child {
+    grid-column: span 1;
+    max-width: 100%;
   }
   
-  .product-icon-container {
-    width: 50px;
-    height: 50px;
+  .expertise-item {
+    flex-direction: column;
+  }
+  
+  .expertise-item.reverse {
+    flex-direction: column;
+  }
+  
+  .expertise-text {
+    padding: 20px;
+    order: 2;
+  }
+  
+  .expertise-image {
+    order: 1;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 480px) {
-  .product-footer-label {
-    font-size: 14px;
+@media (max-width: 576px) {
+  .hero-section {
+    height: 50vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .service-card {
+    height: 300px;
+  }
+  
+  .service-overlay h3 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem;
   }
 }
-  
-  /* Why uPVC Section */
-  .upvc-window-section {
-    padding: 60px 20px;
-    background: #fff;
-  }
-  
-  .upvc-window-container {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .upvc-window-text {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-  }
-  
-  .upvc-window-text h4 {
-    font-size: 22px;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-  }
-  
-  .upvc-window-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-  }
-  
-  .upvc-window-image {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .upvc-window-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  /* Benefits Section */
-  .upvc-benefits-section {
-    padding: 40px 20px 60px;
-    background: #f8f8f8;
-  }
-  
-  .benefits-header {
-    width: max-content;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-  
-  .benefits-header h1 {
-    font-size: 25px;
-    color: #000;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  
-  .benefit-item {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .benefit-item.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .benefit-text {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px 40px;
-  }
-  
-  .benefit-text h3 {
-    font-size: 20px;
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
-  
-  .benefit-text p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-  }
-  
-  .benefit-image {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .benefit-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .upvc-hero-section {
-      height: 50vh;
-    }
-    
-    .upvc-content h3 {
-      font-size: 20px;
-    }
-    
-    .upvc-content p {
-      font-size: 16px;
-    }
-    
-    .product-footer-item {
-      padding: 15px;
-      width: 33.33%;
-    }
-    
-    .product-icon-container {
-      width: 40px;
-      height: 40px;
-    }
-    
-    .product-footer-text {
-      font-size: 14px;
-    }
-    
-    .upvc-window-text, 
-    .upvc-window-image,
-    .benefit-text,
-    .benefit-image {
-      flex: 100%;
-      padding: 10px;
-    }
-    
-    .benefit-item.reverse {
-      flex-direction: column;
-    }
-    
-    .benefits-header h1 {
-      font-size: 22px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .product-footer-item {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    
-    .upvc-hero-section {
-      height: 40vh;
-    }
-  }

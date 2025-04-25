@@ -33,7 +33,7 @@ const Header = () => {
             </div>
             <div className="header_container_2">
               <div className="header_button_container">
-                <a href="/become-a-dealer/" style={{ textDecoration: 'none' }}>
+                <a href="/dealer" style={{ textDecoration: 'none' }}>
                   <button className="header_button1">
                     <img
                       src="https://www.aluempire.com/assets/images/become-a-dealerIcon.png"
@@ -188,7 +188,7 @@ const Header = () => {
                   onMouseEnter={() => toggleDropdown('product')}
                   onMouseLeave={() => toggleDropdown(null)}
                 >
-                  <a className="" href="#products">
+                  <a className="" href="/productPage">
                     <div style={{
                       height: '100%',
                       display: 'flex',
@@ -197,7 +197,7 @@ const Header = () => {
                       fontWeight: '600'
                     }}>
                       Product
-                      <svg
+                      {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="1em"
                         height="1em"
@@ -208,10 +208,10 @@ const Header = () => {
                           fillRule="nonzero"
                           d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
                         ></path>
-                      </svg>
+                      </svg> */}
                     </div>
                   </a>
-                  <div className={`product_dropdown ${activeDropdown === 'product' ? 'show' : ''}`}>
+                  {/* <div className={`product_dropdown ${activeDropdown === 'product' ? 'show' : ''}`}>
                     <div className="innerproduct_dropdown">
                       <ul>
                         <a
@@ -288,13 +288,13 @@ const Header = () => {
                         </a>
                       </ul>
                     </div>
-                  </div>
+                  </div> */}
                 </li>
                 <li>
                   <a className="" href="/blogs/">Blogs</a>
                 </li>
                 <li>
-                  <a className="" href="/locate-us/">Locate Us</a>
+                  <a className="" href="/locateUs">Locate Us</a>
                 </li>
                 <li style={{ position: 'relative' }}>
                   <div className="outer_search_container">

@@ -10,7 +10,7 @@
   }
   
   /* Hero Section */
-  .hero-section {
+  .about-hero-section {
     background-color: #f8f8f8;
     padding: 60px 0;
     min-height: 80vh;
@@ -18,7 +18,7 @@
     align-items: center;
   }
   
-  .hero-container {
+  .about-hero-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -28,7 +28,7 @@
     overflow: hidden;
   }
   
-  .hero-content {
+  .about-hero-content {
     flex: 1;
     min-width: 300px;
     padding: 40px;
@@ -60,7 +60,7 @@
     max-width: 500px;
   }
   
-  .hero-image {
+  .about-hero-image {
     flex: 1;
     min-width: 300px;
   }
