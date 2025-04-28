@@ -9,6 +9,8 @@ import UPVCDoorsWindows from './Products/UPVC/UPVCDoorsWindows';
 import Skirting from './Products/UPVC/Skirting';
 import LocateUs from './LocateUs/LocateUs';
 import Dealer from './Dealer/Dealer';
+import Carpet from './Products/UPVC/Carpet';
+import Flooring from './Products/UPVC/Flooring';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +25,10 @@ root.render(
           <Route path="skirting" element={<Skirting />} />
           <Route path='locateUs' element={<LocateUs />} />
           <Route path='dealer' element={<Dealer />} />
+          <Route path='carpet' element={<Carpet />} />
+          <Route path='flooring' element={<Flooring />} />
+          
+
         </Route>
       </Routes>
     </Router>
