@@ -11,6 +11,8 @@ import LocateUs from './LocateUs/LocateUs';
 import Dealer from './Dealer/Dealer';
 import Carpet from './Products/UPVC/Carpet';
 import Flooring from './Products/UPVC/Flooring';
+import Blogs from './Blog/Blogs';
+import BlogDetail from './Blog/BlogDetail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,7 +29,8 @@ root.render(
           <Route path='dealer' element={<Dealer />} />
           <Route path='carpet' element={<Carpet />} />
           <Route path='flooring' element={<Flooring />} />
-          
+          <Route path='blogs' element={<Blogs />} />
+          <Route path="blogDetails/:blogId" element={<BlogDetail />} />
 
         </Route>
       </Routes>
