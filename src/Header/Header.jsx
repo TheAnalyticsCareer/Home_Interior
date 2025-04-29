@@ -3,7 +3,8 @@ import "./header.css";
 import { Dialog, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import brochure from "./img/brochure.pdf"
-import logo from "./img/companyLogo.png"
+import logo from "./img/companyLogo.jpg"
+import aidfLogo from "./img/aidf_logo.png"
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -149,13 +150,23 @@ const Header = () => {
             {/* Logo Container */}
             <div className="header_container_1">
               <div className="header_logo_container">
-                <div style={{ backgroundColor: 'black', marginTop: '30px' }}>
+                <div >
                   {/* Main Logo - Links to home page */}
                   <a href="/">
                     <img
                       src={logo}
                       alt="Advant"
                       className='company_logo'
+                    />
+                   
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                  <img
+                      src={aidfLogo}
+                      alt="AIDF"
+                      className='aidf_logo'
                     />
                   </a>
                 </div>
@@ -492,8 +503,8 @@ const Header = () => {
             <div style={{ backgroundColor: 'black', marginTop: '30px' }}>
               <a href="/">
                 <img
-                  src="https://www.aluempire.com/wp-content/uploads/2022/06/ALU-EMPIRE-LOGO-WHITE.png"
-                  alt="ALU Empire company logo for mobile"
+                  src={logo}
+                  alt="Advant"
                 />
               </a>
             </div>

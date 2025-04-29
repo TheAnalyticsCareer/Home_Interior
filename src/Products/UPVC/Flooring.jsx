@@ -325,7 +325,7 @@ const Flooring = () => {
         <div className="hero-overlay">
           <div className="hero-content">
             {/* Animated hero title */}
-            <h1 data-aos="fade-up">Premium Carpet Profiles</h1>
+            <h1 data-aos="fade-up">Premium Flooring</h1>
           </div>
         </div>
       </section>

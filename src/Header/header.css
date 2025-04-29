@@ -58,18 +58,33 @@
     position: relative;
     width: 20%;
     z-index: 200;
+    top: 22px;
+    
   }
+
+ 
   
   .header_logo_container {
     height: 100px;
     padding: 0.2rem;
     width: 175px;
+    display: flex !important;
   }
   
 .company_logo{
-  width:100%   ;
+  width:150px;
+  position: relative;
+  top: -37px;
+ 
 
 }
+
+.aidf_logo{
+  width: 150px;
+  position: relative;
+  top: 6px;
+}
+
   
   a {
     color: inherit;
