@@ -3,7 +3,7 @@ import "./header.css";
 import { Dialog, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import brochure from "./img/brochure.pdf"
-
+import logo from "./img/companyLogo.png"
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -153,8 +153,9 @@ const Header = () => {
                   {/* Main Logo - Links to home page */}
                   <a href="/">
                     <img
-                      src="https://www.aluempire.com/wp-content/uploads/2022/06/ALU-EMPIRE-LOGO-WHITE.png"
-                      alt="ALU Empire company logo"
+                      src={logo}
+                      alt="Advant"
+                      className='company_logo'
                     />
                   </a>
                 </div>
