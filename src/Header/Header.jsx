@@ -1,24 +1,144 @@
 import React, { useState } from 'react';
-import "./header.css"
+import "./header.css";
+import { Dialog, DialogContent, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import brochure from "./img/brochure.pdf"
 
 const Header = () => {
-  // State for managing dropdown menus in desktop view
   const [activeDropdown, setActiveDropdown] = useState(null);
-  // State for managing mobile menu visibility
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    service: 'uPVC',
+    email: ''
+  });
 
-  // Toggle dropdown menus in both desktop and mobile views
   const toggleDropdown = (menu) => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
-  // Toggle mobile menu visibility
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setContactFormOpen(false);
+  };
   return (
     <>
+
+
+      {/* Contact Form Popup */}
+      <Dialog 
+        open={contactFormOpen} 
+        onClose={() => setContactFormOpen(false)}
+        maxWidth="sm"
+        fullWidth
+        className="contact-form-dialog"
+        BackdropProps={{
+          style: {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backdropFilter: 'blur(4px)'
+          }
+        }}
+      >
+        <DialogContent className="contact-form-content">
+          <IconButton 
+            aria-label="close" 
+            onClick={() => setContactFormOpen(false)}
+            className="close-button"
+          >
+            <CloseIcon />
+          </IconButton>
+
+          <div className="contact-form-container">
+            <h2 className="form-title">Get in Touch</h2>
+            <p className="form-subtitle">We'll get back to you shortly</p>
+
+            <form onSubmit={handleFormSubmit} className="contact-form">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  maxLength="35"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  maxLength="13"
+                  value={formData.phone}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="service">I'm looking for</label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleFormChange}
+                  required
+                >
+                  <option value="uPVC">uPVC</option>
+                  <option value="ALU Home Interior">ALU Home Interior</option>
+                  <option value="Commercial partition system">Commercial partition system</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email ID</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  maxLength="70"
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  required
+                />
+              </div>
+
+              <button type="submit" className="submit-button">
+                Submit
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15">
+                  <path fill="none" stroke="currentColor" d="m13.5 7.5l-4-4m4 4l-4 4m4-4H1"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+
+
       {/* 
         Desktop Header Section 
         This section is visible on larger screens and hidden on mobile
@@ -58,7 +178,7 @@ const Header = () => {
 
                 {/* Brochure Download Button */}
                 <a
-                  href="/assets/images/Brochure_alu_empire.pdf"
+                  href={brochure}
                   download=""
                   style={{ textDecoration: 'none' }}
                 >
@@ -72,7 +192,7 @@ const Header = () => {
                 </a>
 
                 {/* Enquiry Button */}
-                <button className="header_button1">
+                <button className="header_button1" onClick={() => setContactFormOpen(true)}>
                   <img
                     src="https://www.aluempire.com/assets/images/Home/icons/enqury_icon.png"
                     alt="Make an enquiry icon"
@@ -104,8 +224,10 @@ const Header = () => {
                   className="product_menu" 
                   onMouseEnter={() => toggleDropdown('about')}
                   onMouseLeave={() => toggleDropdown(null)}
+                 
+                  style={{cursor:'pointer'}}
                 >
-                  <a>
+                  <a  href="/about-us">
                     <div style={{
                       height: '100%',
                       display: 'flex',
@@ -130,8 +252,8 @@ const Header = () => {
                     </div>
                   </a>
                   {/* About Us Dropdown Content */}
-                  <div className={`product_dropdown ${activeDropdown === 'about' ? 'show' : ''}`}>
-                    <div className="innerproduct_dropdown">
+                  <div  className={`product_dropdown ${activeDropdown === 'about' ? 'show' : ''}`}  >
+                    <div className="innerproduct_dropdown" >
                       <ul style={{ width: '100%' }}>
                         <a
                           href="/about-us/#chairman-section"
@@ -225,8 +347,100 @@ const Header = () => {
                       fontWeight: '600'
                     }}>
                       Product
+
+                       {/* Dropdown indicator icon */}
+                       <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill="currentColor"
+                          fillRule="nonzero"
+                          d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
+                        ></path>
+                        </svg>
                     </div>
                   </a>
+                  <div  className={`product_dropdown ${activeDropdown === 'product' ? 'show' : ''}`}  >
+                    <div className="innerproduct_dropdown" >
+                      <ul style={{ width: '100%' }}>
+                        <a
+                          href="/skirting"
+                          style={{
+                            width: '100%',
+                            padding: '0px',
+                            textTransform: 'capitalize'
+                          }}
+                        >
+                          <li style={{ height: '100%', textTransform: 'capitalize' }}>
+                            Skirting & profile
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="1em"
+                              height="1em"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill="currentColor"
+                                fillRule="nonzero"
+                                d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
+                              ></path>
+                            </svg>
+                          </li>
+                        </a>
+                        <a
+                          href="/carpet"
+                          style={{
+                            width: '100%',
+                            padding: '0px',
+                            textTransform: 'capitalize'
+                          }}
+                        >
+                          <li style={{ height: '100%', textTransform: 'capitalize' }}>
+                            Carpets
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="1em"
+                              height="1em"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill="currentColor"
+                                fillRule="nonzero"
+                                d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
+                              ></path>
+                            </svg>
+                          </li>
+                        </a>
+                        <a
+                          href="/flooring"
+                          style={{
+                            width: '100%',
+                            padding: '0px',
+                            textTransform: 'capitalize'
+                          }}
+                        >
+                          <li style={{ height: '100%', textTransform: 'capitalize' }}>
+                           Flooring
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="1em"
+                              height="1em"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill="currentColor"
+                                fillRule="nonzero"
+                                d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
+                              ></path>
+                            </svg>
+                          </li>
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
 
                 {/* Blogs Link */}
@@ -432,7 +646,7 @@ const Header = () => {
                   <span>Brochure</span>
                 </button>
               </a>
-              <button className="header_button1">
+              <button className="header_button1" onClick={() => setContactFormOpen(true)}>
                 <img
                   src="https://www.aluempire.com/assets/images/Home/icons/enqury_icon.png"
                   alt="Make an enquiry icon for mobile"

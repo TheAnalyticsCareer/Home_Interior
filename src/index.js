@@ -13,6 +13,7 @@ import Carpet from './Products/UPVC/Carpet';
 import Flooring from './Products/UPVC/Flooring';
 import Blogs from './Blog/Blogs';
 import BlogDetail from './Blog/BlogDetail';
+import ContactFormPopup from './POPUP/ContactFormPopup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,6 +32,7 @@ root.render(
           <Route path='flooring' element={<Flooring />} />
           <Route path='blogs' element={<Blogs />} />
           <Route path="blogDetails/:blogId" element={<BlogDetail />} />
+         <Route path='contact' element={<ContactFormPopup />} />
 
         </Route>
       </Routes>

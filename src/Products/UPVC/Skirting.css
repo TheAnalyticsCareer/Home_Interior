@@ -406,6 +406,180 @@
   .jk-banner-right:hover .view-all-text svg {
     transform: translateX(5px);
   }
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* Quote Modal Styles */
+.quote-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.quote-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+ 
+  /* padding: 10px; */
+}
+
+.close-modal:hover {
+  color: #f50000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-info {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.modal-product-image {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.modal-price {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.modal-price span {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.modal-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-specs li {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.modal-specs li span {
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.contact-message {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #e2e2e2 !important;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+
+.submit-btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e05d00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-info {
+    flex-direction: column;
+  }
+  
+  .modal-product-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
   
   /* Responsive Adjustments */
   @media (max-width: 1200px) {

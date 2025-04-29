@@ -1,9 +1,10 @@
+
 // import React, { useEffect } from 'react';
 // import './Carpet.css';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
-// // Import images
+// // ====== Import images ======
 // import heroImage from "./img/skirting/heroImg2.jpg";
 // import Carpet50mm from "./img/carpet/app1-500x500.webp";
 // import Carpet75mm from "./img/carpet/luxury-carpets-500x500.webp";
@@ -18,7 +19,7 @@
 // import product8 from "./img/carpet/tigerwood-engineered-flooring-250x250.webp";
 // import viewAllImage from "./img/carpet/plain-nylon-carpet-250x250.webp";
 
-// // ========== Constants for Category List ==========
+// // ====== Constants for Category List ======
 // const categories = [
 //   { title: "Wall to Wall carpet", img: Carpet50mm, link: "/skirting-50mm" },
 //   { title: "Wall To Wall Floor Carpets", img: Carpet75mm, link: "/skirting-75mm" },
@@ -26,7 +27,7 @@
 //   { title: "Hand Tuffted Carpet", img: Carpet100mm, link: "/hand-tuffted-carpet" },
 // ];
 
-// // ========== Constants for Products ==========
+// // ====== Constants for Main Products ======
 // const mainProducts = [
 //   {
 //     img: product1,
@@ -48,6 +49,7 @@
 //   },
 // ];
 
+// // ====== Constants for Other Products ======
 // const otherProducts = [
 //   {
 //     img: product3,
@@ -124,13 +126,15 @@
 // ];
 
 // const Carpet = () => {
+//   // ====== Initialize AOS Animation Library on Component Mount ======
 //   useEffect(() => {
 //     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 //   }, []);
 
 //   return (
 //     <div className="carpet-page">
-//       {/* Hero Section */}
+      
+//       {/* ====== Hero Section ====== */}
 //       <section className="hero-section">
 //         <img src={heroImage} alt="Premium Carpet Solutions" className="hero-image" />
 //         <div className="hero-overlay">
@@ -140,12 +144,18 @@
 //         </div>
 //       </section>
 
-//       {/* Categories */}
+//       {/* ====== Category Section ====== */}
 //       <section className="category-section">
 //         <div className="container">
 //           <div className="category-grid">
 //             {categories.map((item, index) => (
-//               <a key={index} href={item.link} className="category-item" data-aos="fade-up" data-aos-delay={index * 100}>
+//               <a
+//                 key={index}
+//                 href={item.link}
+//                 className="category-item"
+//                 data-aos="fade-up"
+//                 data-aos-delay={index * 100}
+//               >
 //                 <div className="category-image-wrapper">
 //                   <img src={item.img} alt={item.title} className="category-image" />
 //                 </div>
@@ -158,11 +168,12 @@
 //         </div>
 //       </section>
 
-//       {/* Products */}
+//       {/* ====== Product Showcase Section ====== */}
 //       <section className="product-showcase-section">
 //         <div className="container">
 //           <div className="ps-section__carousel">
-//             {/* Main Products */}
+            
+//             {/* ====== Main Products Row ====== */}
 //             <div className="row" data-aos="fade-up">
 //               <div className="col-md-9">
 //                 <div className="row">
@@ -182,6 +193,7 @@
 //                               <li><span>Finish:</span> {product.finish}</li>
 //                             </ul>
 //                           </div>
+//                           {/* Get Quote Button */}
 //                           <button className="ps-btn ps-btn--warning get-q-btn">Get Quote</button>
 //                         </div>
 //                       </div>
@@ -190,7 +202,7 @@
 //                 </div>
 //               </div>
 
-//               {/* View All */}
+//               {/* ====== View All Button Section ====== */}
 //               <div className="col-md-3">
 //                 <div className="jk-banner-right">
 //                   <a href="/all-products" className="view-all-link">
@@ -208,7 +220,7 @@
 //               </div>
 //             </div>
 
-//             {/* Other Products */}
+//             {/* ====== Other Products Row ====== */}
 //             <div className="row home_boxes" data-aos="fade-up" data-aos-delay="100">
 //               {otherProducts.map((product, idx) => (
 //                 <div key={idx} className="col-md-3">
@@ -226,6 +238,7 @@
 //                           <li><span>Finish:</span> {product.finish}</li>
 //                         </ul>
 //                       </div>
+//                       {/* Get Quote Button */}
 //                       <button className="ps-btn ps-btn--warning get-q-btn">Get Quote</button>
 //                     </div>
 //                   </div>
@@ -236,6 +249,7 @@
 //           </div>
 //         </div>
 //       </section>
+
 //     </div>
 //   );
 // };
@@ -254,10 +268,7 @@
 
 
 
-
-
-
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Carpet.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -288,6 +299,7 @@ const categories = [
 // ====== Constants for Main Products ======
 const mainProducts = [
   {
+    id: 'mp1',
     img: product1,
     title: "Carpets For Media Room",
     link: "/classic-white-skirting",
@@ -297,6 +309,7 @@ const mainProducts = [
     finish: "Glossy",
   },
   {
+    id: 'mp2',
     img: product2,
     title: "Wall To Wall Floor Carpets",
     link: "/wooden-oak-skirting",
@@ -310,6 +323,7 @@ const mainProducts = [
 // ====== Constants for Other Products ======
 const otherProducts = [
   {
+    id: 'op1',
     img: product3,
     title: "Cut Pile Carpet",
     link: "/modern-grey-skirting",
@@ -319,6 +333,7 @@ const otherProducts = [
     finish: "Matte",
   },
   {
+    id: 'op2',
     img: product4,
     title: "Stone Nylon Matte Carpet Tiles",
     link: "/aluminum-skirting",
@@ -328,6 +343,7 @@ const otherProducts = [
     finish: "Brushed",
   },
   {
+    id: 'op3',
     img: product5,
     title: "Raven Matte Nylon Carpet Tiles",
     link: "/flexible-pvc-skirting",
@@ -337,6 +353,7 @@ const otherProducts = [
     finish: "Glossy",
   },
   {
+    id: 'op4',
     img: product6,
     title: "Exotic Wood Flooring",
     link: "/heritage-skirting",
@@ -346,6 +363,7 @@ const otherProducts = [
     finish: "Polished",
   },
   {
+    id: 'op5',
     img: product7,
     title: "Polished Nylon Carpet Tiles",
     link: "/minimalist-skirting",
@@ -355,6 +373,7 @@ const otherProducts = [
     finish: "Matte",
   },
   {
+    id: 'op6',
     img: product8,
     title: "Floor Profiles",
     link: "/contemporary-skirting",
@@ -364,6 +383,7 @@ const otherProducts = [
     finish: "Satin",
   },
   {
+    id: 'op7',
     img: product1,
     title: "Polished Engineered Flooring",
     link: "/classic-white-skirting",
@@ -373,6 +393,7 @@ const otherProducts = [
     finish: "Glossy",
   },
   {
+    id: 'op8',
     img: product2,
     title: "Carpet Roll Foam",
     link: "/wooden-oak-skirting",
@@ -384,10 +405,39 @@ const otherProducts = [
 ];
 
 const Carpet = () => {
+  // ====== State for Modal Management ======
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentProduct, setCurrentProduct] = useState(null);
+  const [phoneNumber, setPhoneNumber] = useState('');
+
   // ====== Initialize AOS Animation Library on Component Mount ======
   useEffect(() => {
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
   }, []);
+
+  // ====== Modal Control Functions ======
+  const openModal = (productId) => {
+    // Find product in either mainProducts or otherProducts
+    const product = [...mainProducts, ...otherProducts].find(p => p.id === productId);
+    setCurrentProduct(product);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setPhoneNumber('');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Quote request for:', currentProduct.title, 'Phone:', phoneNumber);
+    // Close modal after submission
+    closeModal();
+    // You might want to show a success message here
+  };
 
   return (
     <div className="carpet-page">
@@ -452,7 +502,12 @@ const Carpet = () => {
                             </ul>
                           </div>
                           {/* Get Quote Button */}
-                          <button className="ps-btn ps-btn--warning get-q-btn">Get Quote</button>
+                          <button 
+                            className="ps-btn ps-btn--warning get-q-btn"
+                            onClick={() => openModal(product.id)}
+                          >
+                            Get Quote
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -497,17 +552,80 @@ const Carpet = () => {
                         </ul>
                       </div>
                       {/* Get Quote Button */}
-                      <button className="ps-btn ps-btn--warning get-q-btn">Get Quote</button>
+                      <button 
+                        className="ps-btn ps-btn--warning get-q-btn"
+                        onClick={() => openModal(product.id)}
+                      >
+                        Get Quote
+                      </button>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </section>
 
+      {/* ====== Quote Modal ====== */}
+      {isModalOpen && currentProduct && (
+        <div className="quote-modal-overlay">
+          <div className="quote-modal" data-aos="zoom-in">
+            {/* Close Button */}
+            <button className="close-modal" onClick={closeModal}>
+              <span className="material-symbols-outlined">close</span>
+            </button>
+
+            {/* Modal Content */}
+            <div className="modal-content">
+              {/* Product Information */}
+              <div className="product-info">
+                <img
+                  src={currentProduct.img}
+                  alt={currentProduct.title}
+                  className="modal-product-image"
+                />
+                <div className="product-details">
+                  <h3>{currentProduct.title}</h3>
+                  <div className="modal-price">
+                    {currentProduct.price}
+                    <span>/sq ft</span>
+                  </div>
+                  <ul className="modal-specs">
+                    <li><span>Height:</span> {currentProduct.height}</li>
+                    <li><span>Material:</span> {currentProduct.material}</li>
+                    <li><span>Finish:</span> {currentProduct.finish}</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="contact-form">
+                <p className="contact-message">
+                  We'll contact you shortly with the quote details
+                </p>
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      placeholder="Enter your phone number"
+                      required
+                      className="form-input"
+                    />
+                  </div>
+                  <button type="submit" className="submit-btn">
+                    Submit Request
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
