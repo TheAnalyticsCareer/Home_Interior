@@ -48,8 +48,13 @@
   margin-right: auto;
 }
 
+
+#hero-cta-btn{
+   background: #E90000 !important;
+}
+
 .cta-button {
-  background: #E90000;
+  background: #E90000 !important;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -63,7 +68,7 @@
 }
 
 .cta-button:hover {
-  background: #f06161;
+  background: #f06161 !important;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
 }

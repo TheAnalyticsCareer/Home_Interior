@@ -49,7 +49,7 @@ const UPVCDoorsWindows = () => {
                 Elegant, functional, and tailored to your unique taste.
               </p>
               {/* Call-to-action button */}
-              <button className="cta-button">Explore Our Collections</button>
+              <button className="cta-button" id='hero-cta-btn'>Explore Our Collections</button>
             </div>
           </div>
         </div>

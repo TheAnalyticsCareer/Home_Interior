@@ -259,7 +259,7 @@ textarea.form-input {
 }
 
 .submit-btn {
-  background: #61CE70;
+  background: #E90000 !important;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -276,7 +276,7 @@ textarea.form-input {
 }
 
 .submit-btn:hover {
-  background: #4fb85e;
+  background: #f67e7e;
   transform: translateY(-2px);
 }
 
