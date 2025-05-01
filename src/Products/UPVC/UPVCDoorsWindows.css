@@ -49,7 +49,7 @@
 }
 
 .cta-button {
-  background: #c8a97e;
+  background: #E90000;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -63,7 +63,7 @@
 }
 
 .cta-button:hover {
-  background: #b5986e;
+  background: #f06161;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
 }

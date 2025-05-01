@@ -1,124 +1,300 @@
 
+// import React from 'react';
+// import './Footer.css';
+// import linkedIn from "./HomeImg/linkedin.png";
+// import facebook from "./HomeImg/facebook.png";
+// import whatsapp from "./HomeImg/whatsapp.png";
+// import instagram from "./HomeImg/insta.png";
+// import logo from "./HomeImg/aidf_logo.png"
+
+// const Footer = () => {
+//   return (
+//     <footer className="footer-container">
+//       {/* Main container for the entire footer */}
+//       <div className="footer-content">
+        
+//         {/* Top section of the footer - contains logo and social media links */}
+//         <div className="footer-top">
+          
+//           {/* Logo link to homepage */}
+//           <a href="/" className="footer-logo-link">
+//             <div className="footer-logo">
+//               {/* Company Logo Image */}
+//               <img src={logo} alt="Aidf" />
+//             </div>
+//             <h4></h4>
+//             <div className="footer-tagline">
+//               <span> We Provide Best quality,</span><br />
+//               <span> Complete Flooring Solutions</span>
+//             </div>
+//           </a>
+         
+        
+
+//           {/* Social Media Section */}
+//           <div className="social-media-container">
+//             <h5>Connect With Us</h5>
+//             <div className="social-icons">
+//               {/* LinkedIn Social Media Icon Link */}
+//               <a href="https://www.linkedin.com/company/alu-empire/" target="_blank" rel="noopener noreferrer">
+//                 <div className="social-icon">
+//                   <img src={linkedIn} alt="LinkedIn" />
+//                 </div>
+//               </a>
+
+//               {/* Facebook Social Media Icon Link */}
+//               <a href="/" target="_blank" rel="noopener noreferrer">
+//                 <div className="social-icon">
+//                   <img src={facebook} alt="Facebook" />
+//                 </div>
+//               </a>
+
+//               {/* WhatsApp Social Media Icon Link */}
+//               <a href="https://wa.me/919002690068" target="_blank" rel="noopener noreferrer">
+//                 <div className="social-icon">
+//                   <img src={whatsapp} alt="WhatsApp" />
+//                 </div>
+//               </a>
+
+//               {/* Instagram Social Media Icon Link */}
+//               <a href="https://www.instagram.com/aidfgroup/" target="_blank" rel="noopener noreferrer">
+//                 <div className="social-icon">
+//                   <img src={instagram} alt="Instagram" />
+//                 </div>
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Footer Navigation Links Section */}
+//         <div className="footer-nav">
+          
+//           {/* Column 1 - Links to discover pages */}
+//           <div className="footer-column">
+//             <h6 className="footer-heading">Discover AIDF GROUP</h6>
+//             <ul>
+//               <li><a href="/">Home</a></li>
+//               <li><a href="/about-us/">About Us</a></li>
+//               <li><a href="/blogs/">Blog</a></li>
+//             </ul>
+//           </div>
+
+//           {/* Column 2 - Links to Alu Home Interior products */}
+//           <div className="footer-column">
+//             <h6 className="footer-heading"> AIDF GROUP Home Interior</h6>
+//             <ul>
+//               <li><a href="/alu-home-interior/doors-and-window">Door & Window</a></li>
+//               <li><a href="/alu-home-interior/railingsystem">Stair Railing</a></li>
+//               <li><a href="/alu-home-interior/shower-cubical">Shower Cubical</a></li>
+//               <li><a href="/alu-home-interior/sky-light">Sky Light</a></li>
+//               <li><a href="/alu-home-interior/Slim-Sliding-Doors">Slim Sliding Door</a></li>
+//             </ul>
+//           </div>
+
+//           {/* Column 3 - Links to uPVC Window & Door products */}
+//           <div className="footer-column">
+//             <h6 className="footer-heading">uPVC Window & Door</h6>
+//             <ul>
+//               <li><a href="/upvc-door-and-window/window">Window</a></li>
+//               <li><a href="/upvc-door-and-window/door">Door</a></li>
+//               <li><a href="/accessories/window-door-and-accessories">Accessories</a></li>
+//             </ul>
+//           </div>
+
+//           {/* Column 4 - Links to Commercial Partition System */}
+//           <div className="footer-column">
+//             <h6 className="footer-heading">Commercial Partition System</h6>
+//             <ul>
+//               <li><a href="/commercial-partition-system/glass-partition">Glass Partition</a></li>
+//               <li><a href="/accessories/profile-and-accessories">Profile & Accessories</a></li>
+//             </ul>
+//           </div>
+
+//           {/* Column 5 - Support related links */}
+//           <div className="footer-column">
+//             <h6 className="footer-heading">Support</h6>
+//             <ul>
+//               <li><a href="/terms-&-Condition/">Terms & Condition</a></li>
+//               <li><a href="/privacy-policy/">Privacy Policy</a></li>
+//               <li><a href="/locate-us/">Locate Us</a></li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         {/* Bottom section of the footer - Copyright */}
+//         <div className="footer-bottom">
+//           <p>© 2023 AIDF GROUP | Powered By Sanekt</p>
+//         </div>
+
+//       </div>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
+
+
+
+
+
+
+
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Footer.css';
 import linkedIn from "./HomeImg/linkedin.png";
 import facebook from "./HomeImg/facebook.png";
 import whatsapp from "./HomeImg/whatsapp.png";
 import instagram from "./HomeImg/insta.png";
-import logo from "./HomeImg/aidf_logo.png"
+import logo from "./HomeImg/aidf_logo.png";
 
 const Footer = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+    }
+  };
+
+  const socialLinks = [
+    { icon: linkedIn, url: "https://www.linkedin.com/company/alu-empire/", alt: "LinkedIn" },
+    { icon: facebook, url: "/", alt: "Facebook" },
+    { icon: whatsapp, url: "https://wa.me/919002690068", alt: "WhatsApp" },
+    { icon: instagram, url: "https://www.instagram.com/aidfgroup/", alt: "Instagram" }
+  ];
+
+  const footerColumns = [
+    {
+      title: "Discover AIDF GROUP",
+      links: [
+        { text: "Home", url: "/" },
+        { text: "About Us", url: "/about-us/" },
+        { text: "Blog", url: "/blogs/" }
+      ]
+    },
+    {
+      title: "AIDF GROUP Home Interior",
+      links: [
+        { text: "Door & Window", url: "/alu-home-interior/doors-and-window" },
+        { text: "Stair Railing", url: "/alu-home-interior/railingsystem" },
+        { text: "Shower Cubical", url: "/alu-home-interior/shower-cubical" },
+        { text: "Sky Light", url: "/alu-home-interior/sky-light" },
+        { text: "Slim Sliding Door", url: "/alu-home-interior/Slim-Sliding-Doors" }
+      ]
+    },
+    {
+      title: "uPVC Window & Door",
+      links: [
+        { text: "Window", url: "/upvc-door-and-window/window" },
+        { text: "Door", url: "/upvc-door-and-window/door" },
+        { text: "Accessories", url: "/accessories/window-door-and-accessories" }
+      ]
+    },
+    {
+      title: "Commercial Partition System",
+      links: [
+        { text: "Glass Partition", url: "/commercial-partition-system/glass-partition" },
+        { text: "Profile & Accessories", url: "/accessories/profile-and-accessories" }
+      ]
+    },
+    {
+      title: "Support",
+      links: [
+        { text: "Terms & Condition", url: "/terms-&-Condition/" },
+        { text: "Privacy Policy", url: "/privacy-policy/" },
+        { text: "Locate Us", url: "/locate-us/" }
+      ]
+    }
+  ];
+
   return (
     <footer className="footer-container">
-      {/* Main container for the entire footer */}
       <div className="footer-content">
-        
-        {/* Top section of the footer - contains logo and social media links */}
-        <div className="footer-top">
-          
-          {/* Logo link to homepage */}
-          <a href="/" className="footer-logo-link">
-            <div className="footer-logo">
-              {/* Company Logo Image */}
-              <img src={logo} alt="Aidf" />
-            </div>
-          </a>
+        {/* Top Section */}
+        <motion.div 
+          className="footer-top"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+        >
+          {/* Logo and Tagline */}
+          <motion.div className="footer-brand" variants={fadeIn}>
+            <a href="/" className="footer-logo-link">
+              <img src={logo} alt="AIDF Group Logo" className="footer-logo" />
+              <div className="footer-tagline">
+                <p>We Provide Best Quality,</p>
+                <p>Complete Flooring Solutions</p>
+              </div>
+            </a>
+          </motion.div>
 
-          {/* Social Media Section */}
-          <div className="social-media-container">
-            <h5>Connect With Us</h5>
+          {/* Social Media */}
+          <motion.div className="social-media-container" variants={fadeIn}>
+            <h5 className="social-title">Connect With Us</h5>
             <div className="social-icons">
-              {/* LinkedIn Social Media Icon Link */}
-              <a href="https://www.linkedin.com/company/alu-empire/" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon">
-                  <img src={linkedIn} alt="LinkedIn" />
-                </div>
-              </a>
-
-              {/* Facebook Social Media Icon Link */}
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon">
-                  <img src={facebook} alt="Facebook" />
-                </div>
-              </a>
-
-              {/* WhatsApp Social Media Icon Link */}
-              <a href="https://wa.me/919002690068" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon">
-                  <img src={whatsapp} alt="WhatsApp" />
-                </div>
-              </a>
-
-              {/* Instagram Social Media Icon Link */}
-              <a href="https://www.instagram.com/aluempire" target="_blank" rel="noopener noreferrer">
-                <div className="social-icon">
-                  <img src={instagram} alt="Instagram" />
-                </div>
-              </a>
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <div className="social-icon">
+                    <img src={social.icon} alt={social.alt} />
+                  </div>
+                </motion.a>
+              ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Footer Navigation Links Section */}
-        <div className="footer-nav">
-          
-          {/* Column 1 - Links to discover pages */}
-          <div className="footer-column">
-            <h6 className="footer-heading">Discover Alu Empire</h6>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about-us/">About Us</a></li>
-              <li><a href="/blogs/">Blog</a></li>
-            </ul>
-          </div>
+        {/* Navigation Links */}
+        <motion.div 
+          className="footer-nav"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+        >
+          {footerColumns.map((column, index) => (
+            <motion.div className="footer-column" key={index} variants={fadeIn}>
+              <h6 className="footer-heading">{column.title}</h6>
+              <ul>
+                {column.links.map((link, linkIndex) => (
+                  <motion.li 
+                    key={linkIndex}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <a href={link.url}>{link.text}</a>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </motion.div>
 
-          {/* Column 2 - Links to Alu Home Interior products */}
-          <div className="footer-column">
-            <h6 className="footer-heading">Alu Home Interior</h6>
-            <ul>
-              <li><a href="/alu-home-interior/doors-and-window">Door & Window</a></li>
-              <li><a href="/alu-home-interior/railingsystem">Stair Railing</a></li>
-              <li><a href="/alu-home-interior/shower-cubical">Shower Cubical</a></li>
-              <li><a href="/alu-home-interior/sky-light">Sky Light</a></li>
-              <li><a href="/alu-home-interior/Slim-Sliding-Doors">Slim Sliding Door</a></li>
-            </ul>
-          </div>
-
-          {/* Column 3 - Links to uPVC Window & Door products */}
-          <div className="footer-column">
-            <h6 className="footer-heading">uPVC Window & Door</h6>
-            <ul>
-              <li><a href="/upvc-door-and-window/window">Window</a></li>
-              <li><a href="/upvc-door-and-window/door">Door</a></li>
-              <li><a href="/accessories/window-door-and-accessories">Accessories</a></li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Links to Commercial Partition System */}
-          <div className="footer-column">
-            <h6 className="footer-heading">Commercial Partition System</h6>
-            <ul>
-              <li><a href="/commercial-partition-system/glass-partition">Glass Partition</a></li>
-              <li><a href="/accessories/profile-and-accessories">Profile & Accessories</a></li>
-            </ul>
-          </div>
-
-          {/* Column 5 - Support related links */}
-          <div className="footer-column">
-            <h6 className="footer-heading">Support</h6>
-            <ul>
-              <li><a href="/terms-&-Condition/">Terms & Condition</a></li>
-              <li><a href="/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="/locate-us/">Locate Us</a></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom section of the footer - Copyright */}
-        <div className="footer-bottom">
-          <p>© 2024 Alu Empire. All Rights Reserved.</p>
-        </div>
-
+        {/* Bottom Section */}
+        <motion.div 
+          className="footer-bottom"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <p>© {new Date().getFullYear()} AIDF GROUP | Powered By Sanekt</p>
+        </motion.div>
       </div>
     </footer>
   );
