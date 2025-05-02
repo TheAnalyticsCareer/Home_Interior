@@ -134,6 +134,8 @@ import "./HeroSection.css";
 import card1 from "./HomeImg/stick-on-skirting.jpg";
 import card2 from "./HomeImg/carpet.jpg";
 import card3 from "./HomeImg/flooring.jpg";
+import years from "./HomeImg/15+excellence.jpeg";
+
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -203,8 +205,10 @@ const HeroSection = () => {
       <div
         className="slideshow-container"
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseLeave={() => setIsHovered(true)}
       >
+     
+    
         {/* Slides */}
         <div
           className="slides-wrapper"
@@ -228,6 +232,8 @@ const HeroSection = () => {
           ))}
         </div>
 
+        <img src={years} alt="" />
+        
         {/* Navigation Arrows */}
         <button
           className="nav-arrow prev-arrow"
@@ -238,7 +244,10 @@ const HeroSection = () => {
           }}
         >
           &#10094;
+          <div  style={{marginLeft:'95rem'}}  > <img style={{ marginRight:'30px' ,height:'180px'}}
+        src={years} alt="" /></div>
         </button>
+        
         <button
           className="nav-arrow next-arrow"
           onClick={goToNext}
@@ -246,10 +255,13 @@ const HeroSection = () => {
           style={{
             transition: "opacity 0.2s ease", // Smooth arrow appearance
           }}
+          
         >
+       
           &#10095;
         </button>
       </div>
+      
 
       {/* Product Cards - Redesigned */}
       <div className="product-cards-container">

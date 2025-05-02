@@ -1,6 +1,6 @@
 /* Main Section Styles */
 .testimonial-section {
-  padding: 80px 0;
+  padding: 0px 0;
   background-color: #fafafa;
   position: relative;
 }
@@ -27,7 +27,7 @@
 
 .testimonial-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 18px;
 }
 
 .testimonial-header h2 {
@@ -60,7 +60,7 @@
 
 
 .testimonial-swiper {
-  padding: 20px 0 60px;
+  padding: 0px 0 40px;
   overflow: hidden;
 }
 

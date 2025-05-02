@@ -162,7 +162,7 @@ const HomeServices = () => {
             style={{ color: '#0F2A1D' }}
             variants={itemVariants}
           >
-            Professional Window And Door Useful Services
+             PROFESSIONAL FLOORING SOLUTIONS FOR HOMES & OFFICES
           </motion.h3>
         </motion.div>
 

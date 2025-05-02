@@ -241,6 +241,7 @@ import './AboutUs.css';
 import heroImg from "./img/heroImg.png";
 import visionImg from "./img/vision.jpg";
 import missionImg from "./img/mission.jpg";
+import chairmanIcon from "./img/chairman-icon.png"
 
 const AboutUs = () => {
   // Animation controls for all sections
@@ -423,9 +424,10 @@ const AboutUs = () => {
             whileHover={{ y: -5 }}
           >
             <div className="leader-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M15.5 12a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1.444-6.5a6.001 6.001 0 00-9.888 0H2.751a.75.75 0 100 1.5h4.305a6.001 6.001 0 009.888 0h4.305a.75.75 0 100-1.5h-4.305z" />
-              </svg>
+              </svg> */}
+              <span><img src={chairmanIcon} alt="chairman"  width={'50px'} /> </span>
             </div>
             <div className="leader-info">
               <h3>Chairman</h3>

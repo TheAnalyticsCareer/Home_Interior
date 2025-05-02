@@ -150,6 +150,7 @@ import whatsapp from "./HomeImg/whatsapp.png";
 import instagram from "./HomeImg/insta.png";
 import logo from "./HomeImg/aidf_logo.png";
 
+
 const Footer = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -163,11 +164,11 @@ const Footer = () => {
       transition: { staggerChildren: 0.1, delayChildren: 0.2 }
     }
   };
-
+{/** link to the social platform*/}
   const socialLinks = [
-    { icon: linkedIn, url: "https://www.linkedin.com/company/alu-empire/", alt: "LinkedIn" },
+    { icon: linkedIn, url: "/", alt: "LinkedIn" }, 
     { icon: facebook, url: "/", alt: "Facebook" },
-    { icon: whatsapp, url: "https://wa.me/919002690068", alt: "WhatsApp" },
+    { icon: whatsapp, url: "https://wa.me/918447595048", alt: "WhatsApp" },
     { icon: instagram, url: "https://www.instagram.com/aidfgroup/", alt: "Instagram" }
   ];
 
@@ -176,33 +177,44 @@ const Footer = () => {
       title: "Discover AIDF GROUP",
       links: [
         { text: "Home", url: "/" },
-        { text: "About Us", url: "/about-us/" },
-        { text: "Blog", url: "/blogs/" }
+        { text: "About Us", url: "/about-us" },
+        { text: "Products", url: "/productPage" },
+        { text: "Blog", url: "/blogs" },
+        { text: "Locate Us", url: "/locateUs" },
+     
       ]
     },
     {
-      title: "AIDF GROUP Home Interior",
+      title: "Skirting & Profile",
+      
       links: [
-        { text: "Door & Window", url: "/alu-home-interior/doors-and-window" },
-        { text: "Stair Railing", url: "/alu-home-interior/railingsystem" },
-        { text: "Shower Cubical", url: "/alu-home-interior/shower-cubical" },
-        { text: "Sky Light", url: "/alu-home-interior/sky-light" },
-        { text: "Slim Sliding Door", url: "/alu-home-interior/Slim-Sliding-Doors" }
+        { text: "Screw On Skirting", url: "/skirtingProfile" },
+        { text: "Stick On Toe Skirting", url: "/skirtingProfile" },
+        { text: "Line Skirting", url: "/skirtingProfile" },
+        { text: "Easy Fix PVC Skirting", url: "/skirtingProfile" },
+        { text: "Slim Sliding Door", url: "/skirtingProfile" }
       ]
     },
     {
-      title: "uPVC Window & Door",
+      title: "Carpets" ,
       links: [
-        { text: "Window", url: "/upvc-door-and-window/window" },
-        { text: "Door", url: "/upvc-door-and-window/door" },
-        { text: "Accessories", url: "/accessories/window-door-and-accessories" }
-      ]
+        { text: "Wall to Wall carpet", url: "/carpet" },
+        { text: "Wall To Wall Floor Carpets", url: "/carpet" },
+        { text: "Hotel carpet", url: "/carpet" },
+        { text: "Hand Tuffted Carpet", url: "/carpet" }      ]
     },
     {
-      title: "Commercial Partition System",
+      title: "Flooring",
       links: [
-        { text: "Glass Partition", url: "/commercial-partition-system/glass-partition" },
-        { text: "Profile & Accessories", url: "/accessories/profile-and-accessories" }
+        { text: "Laminate Flooring", url: "/flooring" },
+        { text: "SPC Flooring", url: "/flooring" },
+        { text: "Engineered Flooring", url: "/flooring" },
+        { text: "Hardwood Flooring", url: "/flooring" },
+        { text: "Bamboo Flooring", url: "/flooring" },
+        { text: "Decking Wood", url: "/flooring" },
+        { text: "ThermoPineg", url: "/flooring" }
+
+
       ]
     },
     {
@@ -230,12 +242,16 @@ const Footer = () => {
           <motion.div className="footer-brand" variants={fadeIn}>
             <a href="/" className="footer-logo-link">
               <img src={logo} alt="AIDF Group Logo" className="footer-logo" />
-              <div className="footer-tagline">
-                <p>We Provide Best Quality,</p>
-                <p>Complete Flooring Solutions</p>
-              </div>
+              
             </a>
+            <div className="footer-tagline">
+                <p >We Provide Best Quality,
+                Complete Flooring Solutions</p>
+              </div>
           </motion.div>
+
+
+        
 
           {/* Social Media */}
           <motion.div className="social-media-container" variants={fadeIn}>
@@ -253,11 +269,28 @@ const Footer = () => {
                   <div className="social-icon">
                     <img src={social.icon} alt={social.alt} />
                   </div>
+
+                  
                 </motion.a>
               ))}
             </div>
-          </motion.div>
+            </motion.div>
         </motion.div>
+         
+
+ {/* Call Us Section */}
+<div className="social-media-container">
+  <div className="call-info">
+    <h5 className="social-title">Call Us -</h5> 
+    <a href="tel:+911294064647" className="phone-number">0129-4064647</a>
+  </div>
+</div>
+
+
+          
+      
+
+
 
         {/* Navigation Links */}
         <motion.div 

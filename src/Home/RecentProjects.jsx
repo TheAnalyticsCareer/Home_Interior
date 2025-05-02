@@ -118,11 +118,11 @@ SwiperCore.use([Pagination, Autoplay, Navigation]);
 
 const RecentProjects = () => {
   const projects = [
-    { id: 1, title: "Commercial Partitions Project", image: project_1 },
-    { id: 2, title: "Commercial Partitions Project", image: project_2 },
-    { id: 3, title: "Commercial Partitions Project", image: project_3 },
-    { id: 4, title: "Sector - 8 (Faridabad)", image: project_4 },
-    { id: 5, title: "Sector - 30 Faridabad", image: project_5 }
+    { id: 1, title: "Wood & Composites", image: project_1 },
+    { id: 2, title: "Hospitality & Banquet Carpet", image: project_2 },
+    { id: 3, title: "Wall Covering", image: project_3 },
+    { id: 4, title: "Laminate Wooden Flooring", image: project_4 },
+    { id: 5, title: "Modular Carpet Tiles", image: project_5 }
   ];
 
   const swiperRef = useRef(null);
@@ -226,7 +226,7 @@ const RecentProjects = () => {
           </div>
         </motion.div>
 
-        <motion.div className="view-more-container" variants={itemVariants}>
+        {/* <motion.div className="view-more-container" variants={itemVariants}>
           <a href="/all-recent-project" className="view-more-link">
             <motion.button 
               className="view-more-btn"
@@ -244,7 +244,7 @@ const RecentProjects = () => {
               View All Projects
             </motion.button>
           </a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

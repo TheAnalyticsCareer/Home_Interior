@@ -1,6 +1,6 @@
 /* Main Section Styles */
 .services-section {
-  padding: 80px 0;
+  padding: 50px 0;
   position: relative;
   overflow: hidden;
 }
@@ -47,6 +47,7 @@
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
+  height: 350px;
 }
 
 .service-card:hover {
@@ -115,7 +116,7 @@
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 60px 0;
+    padding: 0px 0;
   }
   
   .services-header {

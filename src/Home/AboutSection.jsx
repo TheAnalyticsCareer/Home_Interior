@@ -216,6 +216,10 @@
 import React from 'react';
 import './AboutSection.css';
 import aboutImage from './HomeImg/about-img.jpg'; 
+import Logo from './HomeImg/companyLogo.jpg'; 
+import icon1 from './HomeImg/premium-icon.png'; 
+import icon2 from './HomeImg/Eco-Friendly.png';
+
 
 const AIDFAboutSection = () => {
   return (
@@ -228,17 +232,22 @@ const AIDFAboutSection = () => {
         <div className="aidf-about-content">
           <div className="aidf-section-title">
             <h2 style={{ color: '#2a2a2a' }}>About AIDF</h2>
-            <div className="aidf-title-decoration" style={{ backgroundColor: '#6B9071' }}></div>
+            <h6 style={{fontSize:'16px'}}>Powered by Advant</h6>
+
+            <img style={{height:'40px'}} src={Logo} alt="About AIDF Group" />
+
+
+
+                  <div className="aidf-title-decoration" style={{ backgroundColor: '#6B9071' }}></div>
           </div>
           <p className="aidf-about-text" style={{ color: '#375534' }}>
-            AIDF is a leading manufacturer of uPVC windows and doors, committed to delivering 
-            high-quality, energy-efficient products that enhance modern living spaces. With 
-            years of industry experience, we combine innovative technology with exceptional 
-            craftsmanship to provide solutions that stand the test of time.
+          Since our inception the aidf brand has made a commendable mark in the industry through its state of the art interior products range. Our products are manufactured using the most advanced machinery and technology to provide great durability and quality by which we aim to reach distinguishing levels of success through our constant dedication and diligence.
           </p>
           <div className="aidf-about-features">
             <div className="aidf-feature">
-              <div className="aidf-feature-icon" style={{ backgroundColor: '#2a2a2a' }}>
+              <div className="aidf-feature-icon" style={{ backgroundColor: '#fff' }}>
+                
+              <img style={{height:'40px'}} src={icon1} alt="Premium Icon" />
                 <i className="fas fa-medal" style={{ color: '#E3EED4' }}></i>
               </div>
               <div className="aidf-feature-content">
@@ -247,7 +256,11 @@ const AIDFAboutSection = () => {
               </div>
             </div>
             <div className="aidf-feature">
-              <div className="aidf-feature-icon"  style={{ backgroundColor: '#2a2a2a' }}>
+              <div className="aidf-feature-icon"  style={{ backgroundColor: '#fff' }}>
+
+
+              <img style={{height:'40px'}} src={icon2} alt="Eco-friendly" />
+
                 <i className="fas fa-leaf" style={{ color: '#E3EED4' }}></i>
               </div>
               <div className="aidf-feature-content">
@@ -256,7 +269,7 @@ const AIDFAboutSection = () => {
               </div>
             </div>
           </div>
-          <a href="/about" className="aidf-about-button" style={{ backgroundColor: 'red', color: 'white' }}>
+          <a href="/about-us" className="aidf-about-button" style={{ backgroundColor: 'red', color: 'white' }}>
             Learn More
             <i className="fas fa-arrow-right"></i>
           </a>

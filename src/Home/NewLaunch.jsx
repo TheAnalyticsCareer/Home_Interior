@@ -146,12 +146,12 @@
 
 
 import { useState, useEffect, useRef } from "react";
-import img1 from "./NewLaunchImg/project-1.jpeg";
-import img2 from "./NewLaunchImg/project-2.jpeg";
-import img3 from "./NewLaunchImg/project-3.jpeg";
+import img1 from "./NewLaunchImg/ultra.jpg";
+import img2 from "./NewLaunchImg/ultra-strong.jpg";
+import img3 from "./NewLaunchImg/ultra-max.jpg";
 import img4 from "./NewLaunchImg/project-4.jpeg";
-import img5 from "./NewLaunchImg/project-5.jpeg";
-import img6 from "./NewLaunchImg/project-6.jpeg";
+import img5 from "./NewLaunchImg/stile-doors.jpg";
+import img6 from "./NewLaunchImg/oak.jpg";
 import "./NewLaunch.css";
 
 const NewLaunch = () => {
@@ -162,12 +162,12 @@ const NewLaunch = () => {
   const timerRef = useRef(null);
 
   const projects = [
-    { id: 1, image: img1, title: "Luxury Heights", location: "Bangalore" },
-    { id: 2, image: img2, title: "Sky Villas", location: "Mumbai" },
-    { id: 3, image: img3, title: "Ocean View", location: "Goa" },
-    { id: 4, image: img4, title: "Green Valley", location: "Pune" },
-    { id: 5, image: img5, title: "Royal Gardens", location: "Delhi" },
-    { id: 6, image: img6, title: "Mountain Retreat", location: "Dehradun" },
+    { id: 1, image: img1, title: "ULTRA- Glass Partition", location: "Bangalore" },
+    { id: 2, image: img2, title: "ULTRA STRONG- Glass Partition", location: "Mumbai" },
+    { id: 3, image: img3, title: "ULTRA MAX- Glass Partition", location: "Goa" },
+    { id: 4, image: img4, title: "Aluminium Glass Partition", location: "Pune" },
+    { id: 5, image: img5, title: "STILE DOORS- Glass Partition", location: "Delhi" },
+    { id: 6, image: img6, title: "Oak Walnut Art Tiles", location: "Dehradun" },
   ];
 
   // Function to go to next slide

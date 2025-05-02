@@ -16,6 +16,8 @@ import Blogs from "./Blog/Blogs";
 import BlogDetail from "./Blog/BlogDetail";
 import ContactFormPopup from "./POPUP/ContactFormPopup";
 import Certificates from "./Certificate/Aidf_certificates";
+import BlogList from "./StaticBLog/BlogList";
+import Detail from "./StaticBLog/Detail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,7 +31,7 @@ root.render(
           <Route path="productPage" element={<UPVCDoorsWindows />} />
           <Route path="skirtingProfile">
             <Route index element={<SkirtingProfile />} />
-            <Route path="skirting" element={<Skirting />} />
+            <Route path="/skirtingProfile/skirting" element={<Skirting />} />
           </Route>
           <Route path="locateUs" element={<LocateUs />} />
           <Route path="dealer" element={<Dealer />} />
@@ -39,6 +41,8 @@ root.render(
           <Route path="blogDetails/:blogId" element={<BlogDetail />} />
           <Route path="contact" element={<ContactFormPopup />} />
           <Route path="certificates" element={<Certificates />} />
+           <Route path="static-blog" element={<BlogList />} />
+        <Route path="/static-blog/:id" element={<Detail />} />
         </Route>
       </Routes>
     </Router>

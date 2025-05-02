@@ -1,6 +1,7 @@
 /* Main Section Styles */
 .aidf-about-section {
-  padding: 80px 0;
+  padding: 74px 0;
+    margin-top: -104px;
 }
 
 .aidf-about-container {
@@ -50,11 +51,11 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 0px;
 }
 
 .aidf-section-title {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .aidf-section-title h2 {

@@ -1,190 +1,3 @@
-// import React from 'react'
-// import heroImg from "./UPVC/img/aluminium-skirting-profile.jpg"
-
-// const SkirtingProfile = () => {
-//   return (
-//     <>
-//       <div>skirting</div>
-//       <div>Profile</div>
-//     </>
-//   )
-// }
-
-// export default SkirtingProfile
-
-
-
-
-
-
-
-// import React from 'react';
-// import { useEffect } from 'react';
-// import "./SkirtingProfile.css"
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-// import heroImg from "./UPVC/img/aluminium-skirting-profile.jpg";
-
-// const SkirtingProfile = () => {
-//   useEffect(() => {
-//     AOS.init({
-//       duration: 800,
-//       easing: 'ease-in-out',
-//       once: true
-//     });
-//   }, []);
-
-//   return (
-//     <div className="skirting-profile-page">
-//       {/* Hero Section */}
-//       <section className="skirting-hero">
-//         <div className="hero-container">
-//           <div className="hero-content" data-aos="fade-up">
-//             <h1>Aluminium Skirting And Profile</h1>
-//             <p>
-//               Floors And Walls Matching up with the ever increasing demands of the customers, 
-//               we are instrumental in offering Aluminium Skirting Profiles. These Aluminium 
-//               Skirting Profiles are extensively used in different residential and commercial buildings.
-//             </p>
-//           </div>
-//           <div className="hero-image" data-aos="fade-left">
-//             <img src={heroImg} alt="Aluminium Skirting Profile" />
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Service Options Section */}
-//       <section className="service-options">
-//         <div className="service-tabs">
-//           <button className="tab-button active">Skirting Solutions</button>
-//           <button className="tab-button">Profile Solutions</button>
-//         </div>
-
-//         {/* Skirting Solutions */}
-//         <div className="service-section" data-aos="fade-up">
-//           <div className="service-content">
-//             <h2>Screw On Skirting</h2>
-//             <div className="service-features">
-//               <h3>ADVANTAGES</h3>
-//               <p>
-//                 Aidf Aluminium screw on skirting, is ideal to cover any type of wall base to protect 
-//                 from foot scratches and also to cover any type of flooring covering thereby providing 
-//                 a neat finish on the joint. It is installed using a screw covered by PVC beading for neat fixing.
-//               </p>
-//               <ul>
-//                 <li>Available in natural silver anodized, stainless steel finish & powder coat finish</li>
-//                 <li>Choice of 5 heights– 50mm, 75mm, 100mm, 125mm,150mm</li>
-//                 <li>Design allows to cover the flooring edges and gives a smooth finish.</li>
-//                 <li>Supplied in 3m lengths (End caps & rubber bidding included. extra end caps available on request)</li>
-//                 <li>Aluminium beading instead of rubber beading is also available.</li>
-//                 <li>Quick and easy mechanical fix</li>
-//               </ul>
-//             </div>
-//           </div>
-//           <div className="service-image" data-aos="fade-left">
-//             <div className="image-placeholder">Screw On Skirting Image</div>
-//           </div>
-//         </div>
-
-//         {/* Stick On Toe Skirting */}
-//         <div className="service-section reverse" data-aos="fade-up">
-//           <div className="service-image" data-aos="fade-right">
-//             <div className="image-placeholder">Stick On Toe Skirting Image</div>
-//           </div>
-//           <div className="service-content">
-//             <h2>Stick On Toe Skirting</h2>
-//             <div className="service-features">
-//               <h3>ADVANTAGES</h3>
-//               <p>
-//                 Aidf Aluminium Toe Skirting provide a modern, streamlined finish for a variety of 
-//                 commercial environments. Using clean, simple lines, the range is ideal for areas 
-//                 where a Hi-Tech appearance is required.
-//               </p>
-//               <ul>
-//                 <li>Available in natural silver anodized, stainless steel finish and powder coat finish</li>
-//                 <li>Choice of 3 heights – 60mm, 80mm, 100mm</li>
-//                 <li>Sit-on profile – designed to be installed on top of floor coverings</li>
-//                 <li>Features a capped toe design to allow wall-to-floor expansion gaps to be hidden when installed with tiled floor coverings</li>
-//                 <li>PVC End cap accessories available for neat finishing on-site</li>
-//                 <li>Quick and easy to fit using appropriate adhesive</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Line Skirting */}
-//         <div className="service-section" data-aos="fade-up">
-//           <div className="service-content">
-//             <h2>Line Skirting</h2>
-//             <div className="service-features">
-//               <h3>ADVANTAGES</h3>
-//               <p>
-//                 Aidf Aluminium Line skirting is designed to meet the requirements of modern commercial 
-//                 environments, providing a Hi-Tech finish for a clean and simple appearance whilst 
-//                 offering a practical and functional solution for concealing low voltage cables.
-//               </p>
-//               <ul>
-//                 <li>Available in natural silver anodized, stainless steel finish and powder coat finsh</li>
-//                 <li>Choice of 2 heights – 75mm, 100mm</li>
-//                 <li>Sit-on profile – designed to be installed on top of floor</li>
-//                 <li>Design allows low voltage (computer & telephone) cables to be hidden behind the skirting profile</li>
-//                 <li>PVC End cap accessories available for neat finishing on-site</li>
-//                 <li>Quick and easy to fit using appropriate adhesive</li>
-//               </ul>
-//             </div>
-//           </div>
-//           <div className="service-image" data-aos="fade-left">
-//             <div className="image-placeholder">Line Skirting Image</div>
-//           </div>
-//         </div>
-
-//         {/* Easy Fix PVC Skirting */}
-//         <div className="service-section reverse" data-aos="fade-up">
-//           <div className="service-image" data-aos="fade-right">
-//             <div className="image-placeholder">Easy Fix PVC Skirting Image</div>
-//           </div>
-//           <div className="service-content">
-//             <h2>Easy Fix PVC Skirting</h2>
-//             <div className="service-features">
-//               <h3>ADVANTAGES</h3>
-//               <p>
-//                 Aidf EASY FIX PVC SKIRTING provides a modern, streamlined finish for a variety of 
-//                 commercial environments. Using clean and simple lines, the range is ideal for areas 
-//                 where a stylish appearance is required.
-//               </p>
-//               <ul>
-//                 <li>Available in natural silver anodized, aluminium finish.</li>
-//                 <li>Sit-on profile – designed to be installed on top of floor coverings</li>
-//                 <li>PVC End cap accessories available for neat finishing on-site</li>
-//                 <li>Design allows low voltage (computer & telephone) cables to be hidden behind the skirting profile.</li>
-//                 <li>Snap Fit design has a removable upper part which allows for painting and wall papering without unscrewing the skirting profile.</li>
-//                 <li>Due to material flexibility this skirting profile adjusts itself to minor irregularities of walls and floors.</li>
-//                 <li>Extremely easy to fix using appropriate screws.</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* CTA Section */}
-//       <section className="skirting-cta" data-aos="fade-up">
-//         <div className="cta-container">
-//           <h2>Ready to Elevate Your Space with Premium Skirting Solutions?</h2>
-//           <p>Contact our experts today for a consultation and quote</p>
-//           <button className="cta-button">Get a Free Quote</button>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default SkirtingProfile;
-
-
-
-
-
-
 
 
 
@@ -194,13 +7,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./SkirtingProfile.css";
 import { Link } from 'react-router-dom';
-import heroImg from "./UPVC/img/aluminium-skirting-profile.jpg";
-import skirtingIcon from "./UPVC/img/aluminium-skirting-profile.jpg"; // Replace with actual image
-import profileIcon from "./UPVC/img/aluminium-skirting-profile.jpg"; // Replace with actual image
-import screwOnImg from "./UPVC/img/aluminium-skirting-profile.jpg";
-import stickOnImg from "./UPVC/img/aluminium-skirting-profile.jpg";
-import lineImg from "./UPVC/img/aluminium-skirting-profile.jpg";
-import easyFixImg from "./UPVC/img/aluminium-skirting-profile.jpg";
+
+import skirtingIcon from ".//UPVC/img/stick-on-skirting.jpg"; // Replace with actual image
+import profileIcon from "./UPVC/img/easy-fix-pvc.jpg"; // Replace with actual image
+import screwOnImg from "./UPVC/img/screw-on-skirting.jpg";
+import stickOnImg from "./UPVC/img/stick-on-skirting.jpg";
+import lineImg from "./UPVC/img/line-skirting.jpg";
+import easyFixImg from "./UPVC/img/easy-fix-pvc.jpg";
 
 const SkirtingProfile = () => {
   useEffect(() => {
@@ -402,3 +215,12 @@ const SkirtingProfile = () => {
 };
 
 export default SkirtingProfile;
+
+
+
+
+
+
+
+
+

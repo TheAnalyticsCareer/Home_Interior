@@ -1,10 +1,12 @@
+
+
 // import React, { useState } from 'react';
-// import "./header.css";
 // import { Dialog, DialogContent, IconButton } from '@mui/material';
 // import CloseIcon from '@mui/icons-material/Close';
-// import brochure from "./img/brochure.pdf"
-// import logo from "./img/companyLogo.jpg"
-// import aidfLogo from "./img/aidf_logo.png"
+// import "./header.css";
+// import brochure from "./img/brochure.pdf";
+
+// import aidfLogo from "./img/aidf_logo.png";
 
 // const Header = () => {
 //   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -26,10 +28,10 @@
 //   };
 
 //   const handleFormChange = (e) => {
-//     const { name, value } = e.target;
+//     const { name, vaidfe } = e.target;
 //     setFormData(prev => ({
 //       ...prev,
-//       [name]: value
+//       [name]: vaidfe
 //     }));
 //   };
 
@@ -39,7 +41,6 @@
 //     setContactFormOpen(false);
 //   };
 
-//   // Function to determine active link
 //   const isActive = (path) => {
 //     return window.location.pathname === path ? 'active' : '';
 //   };
@@ -53,27 +54,18 @@
 //         maxWidth="sm"
 //         fullWidth
 //         className="contact-form-dialog"
-//         BackdropProps={{
-//           style: {
-//             backgroundColor: 'rgba(0, 0, 0, 0.7)',
-//             backdropFilter: 'blur(4px)'
-//           }
-//         }}
 //       >
 //         <DialogContent className="contact-form-content">
 //           <IconButton 
 //             aria-label="close" 
 //             onClick={() => setContactFormOpen(false)}
 //             className="close-button"
-//             style={{ color: '#E90000' }}
 //           >
 //             <CloseIcon />
 //           </IconButton>
-
 //           <div className="contact-form-container">
-//             <h2 className="form-title" style={{ color: '#E90000' }}>Get in Touch</h2>
+//             <h2 className="form-title">Get in Touch</h2>
 //             <p className="form-subtitle">We'll get back to you shortly</p>
-
 //             <form onSubmit={handleFormSubmit} className="contact-form">
 //               <div className="form-group">
 //                 <label htmlFor="name">Name</label>
@@ -82,13 +74,11 @@
 //                   id="name"
 //                   name="name"
 //                   placeholder="Enter your name"
-//                   maxLength="35"
-//                   value={formData.name}
+//                   vaidfe={formData.name}
 //                   onChange={handleFormChange}
 //                   required
 //                 />
 //               </div>
-
 //               <div className="form-group">
 //                 <label htmlFor="phone">Phone Number</label>
 //                 <input
@@ -96,29 +86,26 @@
 //                   id="phone"
 //                   name="phone"
 //                   placeholder="Enter your phone number"
-//                   maxLength="13"
-//                   value={formData.phone}
+//                   vaidfe={formData.phone}
 //                   onChange={handleFormChange}
 //                   required
 //                 />
 //               </div>
-
 //               <div className="form-group">
 //                 <label htmlFor="service">I'm looking for</label>
 //                 <select
 //                   id="service"
 //                   name="service"
-//                   value={formData.service}
+//                   vaidfe={formData.service}
 //                   onChange={handleFormChange}
 //                   required
 //                 >
-//                   <option value="uPVC">uPVC</option>
-//                   <option value="ALU Home Interior">ALU Home Interior</option>
-//                   <option value="Commercial partition system">Commercial partition system</option>
-//                   <option value="other">Other</option>
+//                   <option vaidfe="uPVC">uPVC</option>
+//                   <option vaidfe="aidf Home Interior">aidf Home Interior</option>
+//                   <option vaidfe="Commercial partition system">Commercial partition system</option>
+//                   <option vaidfe="other">Other</option>
 //                 </select>
 //               </div>
-
 //               <div className="form-group">
 //                 <label htmlFor="email">Email ID</label>
 //                 <input
@@ -126,233 +113,113 @@
 //                   id="email"
 //                   name="email"
 //                   placeholder="Enter your email"
-//                   maxLength="70"
-//                   value={formData.email}
+//                   vaidfe={formData.email}
 //                   onChange={handleFormChange}
 //                   required
 //                 />
 //               </div>
-
-//               <button type="submit" className="submit-button" style={{ backgroundColor: '#E90000' }}>
+//               <button type="submit" className="submit-button">
 //                 Submit
-//                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 15 15">
-//                   <path fill="none" stroke="currentColor" d="m13.5 7.5l-4-4m4 4l-4 4m4-4H1"></path>
-//                 </svg>
 //               </button>
 //             </form>
 //           </div>
 //         </DialogContent>
 //       </Dialog>
 
-//       {/* Desktop Header Section */}
+//       {/* Desktop Header */}
 //       <div className="outer_desktop_header">
 //         <div className="inner_desktop_header">
-//           {/* Top Section - Action Buttons */}
-//           <div className="header_top_section" style={{ backgroundColor: '#2A2A2A' }}>
+//           {/* Top Action Bar */}
+//           <div className="header_top_section">
 //             <div className="header_top_container">
 //               <div className="header_button_container">
-//                 {/* <button className="header_button1" onClick={() => window.location.href = '/dealer'}>
-//                   <img
-//                     src="https://www.aluempire.com/assets/images/become-a-dealerIcon.png"
-//                     alt="Dealer program icon"
-//                   />
-//                   <span>Become a Dealer</span>
-//                 </button> */}
-
-//                 <button className="header_button1" onClick={() => window.open(brochure, '_blank')}>
-//                   <img
-//                     src="https://www.aluempire.com/assets/images/Home/icons/brochure_icon.png"
-//                     alt="Download brochure icon"
-//                   />
+//                 <button className="header_button" onClick={() => window.open(brochure, '_blank')}>
+//                   <span className="button-icon">📄</span>
 //                   <span>Brochure</span>
 //                 </button>
-
-//                 <button className="header_button1" onClick={() => setContactFormOpen(true)}>
-//                   <img
-//                     src="https://www.aluempire.com/assets/images/Home/icons/enqury_icon.png"
-//                     alt="Make an enquiry icon"
-//                   />
+//                 <button className="header_button" onClick={() => setContactFormOpen(true)}>
+//                   <span className="button-icon">✉️</span>
 //                   <span>Enquire</span>
 //                 </button>
+//                 <button
+//                         className="header_button phone"
+//                         onClick={() => {
+//                           window.location.href = 'tel:+918744036000';
+//                         }}
+//                       >
+//                         <span className="button-icon">📞</span>
+//                         <span>+91-87440-36000</span>
+//                       </button>
 
-//                 <button className="header_button2" onClick={() => window.location.href = 'tel:9002690068'}>
-//                   <img
-//                     src="https://www.aluempire.com/assets/images/Home/icons/header_phone_icon.png"
-//                     alt="Phone contact icon"
-//                   />
-//                   <span>90026 90068</span>
-//                 </button>
 //               </div>
 //             </div>
 //           </div>
 
-//           {/* Bottom Section - Navigation with Logo and Search */}
-//           <div className="header_bottom_section" style={{ backgroundColor: '#ffffff' }}>
+//           {/* Main Navigation Bar */}
+//           <div className="header_bottom_section">
 //             <div className="header_bottom_container">
-//               {/* Logo Container */}
+//               {/* Logo Section */}
 //               <div className="header_logo_container">
-//                 <button onClick={() => window.location.href = '/'} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-//                   <img src={logo} alt="Advant" className="company_logo" />
-//                 </button>
-//                 <button onClick={() => window.location.href = '/'} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-//                   <img src={aidfLogo} alt="AIDF" className="aidf_logo" />
-//                 </button>
+//                 <a href="/" className="logo-link">
+//                   <img src={aidfLogo} alt="AIDF Logo" className="aidf_logo" />
+//                 </a>
 //               </div>
 
-//               {/* Search Bar - Centered */}
+//               {/* Search Bar */}
 //               <div className="header_search_container">
 //                 <div className="search_bar">
-//                   <input type="text" placeholder="Search..." />
+//                   <input type="text" placeholder="Search products..." />
 //                   <button className="search_button">
-//                     <svg
-//                       xmlns="http://www.w3.org/2000/svg"
-//                       width="1.2rem"
-//                       height="1.2rem"
-//                       viewBox="0 0 15 15"
-//                     >
-//                       <path
-//                         fill="none"
-//                         stroke="#2A2A2A"
-//                         d="m14.5 14.5l-4-4m-4 2a6 6 0 1 1 0-12a6 6 0 0 1 0 12Z"
-//                       ></path>
+//                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+//                       <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0c.41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"/>
 //                     </svg>
 //                   </button>
 //                 </div>
 //               </div>
 
-//               {/* Main Navigation Menu */}
+//               {/* Main Navigation */}
 //               <nav className="main_navigation">
-//                 <ul>
-//                   <li>
-//                     <button 
-//                       className={`nav-button ${isActive('/')}`}
-//                       onClick={() => window.location.href = '/'}
-//                     >
-//                       Home
-//                     </button>
-//                   </li>
-
-//                   <li 
-//                     className="product_menu" 
-//                     onMouseEnter={() => toggleDropdown('about')}
-//                     onMouseLeave={() => toggleDropdown(null)}
-//                   >
-//                     <button 
-//                       className={`nav-button ${isActive('/about-us')}`}
-//                       onClick={() => window.location.href = '/about-us'}
-//                     >
-//                       <div className="menu_item">
-//                         About Us
-//                         <svg
-//                           xmlns="http://www.w3.org/2000/svg"
-//                           width="1em"
-//                           height="1em"
-//                           viewBox="0 0 16 16"
-//                         >
-//                           <path
-//                             fill="#2A2A2A"
-//                             fillRule="nonzero"
-//                             d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
-//                           ></path>
-//                         </svg>
-//                       </div>
-//                     </button>
-//                     <div className={`product_dropdown ${activeDropdown === 'about' ? 'show' : ''}`}>
-//                       <div className="innerproduct_dropdown">
-//                         <ul>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/about-us/#chairman-section'}>
-//                               Chairman's Message
-//                             </button>
-//                           </li>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/about-us/#ourstory'}>
-//                               Our Story
-//                             </button>
-//                           </li>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/about-us/#vision'}>
-//                               Vision & Mission
-//                             </button>
-//                           </li>
-//                         </ul>
-//                       </div>
-//                     </div>
-//                   </li>
-
-//                   <li 
-//                     className="product_menu"
-//                     onMouseEnter={() => toggleDropdown('product')}
-//                     onMouseLeave={() => toggleDropdown(null)}
-//                   >
-//                     <button 
-//                       className={`nav-button ${isActive('/productPage')}`}
-//                       onClick={() => window.location.href = '/productPage'}
-//                     >
-//                       <div className="menu_item">
-//                         Product
-//                         <svg
-//                           xmlns="http://www.w3.org/2000/svg"
-//                           width="1em"
-//                           height="1em"
-//                           viewBox="0 0 16 16"
-//                         >
-//                           <path
-//                             fill="#2A2A2A"
-//                             fillRule="nonzero"
-//                             d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
-//                           ></path>
-//                         </svg>
-//                       </div>
-//                     </button>
-//                     <div className={`product_dropdown ${activeDropdown === 'product' ? 'show' : ''}`}>
-//                       <div className="innerproduct_dropdown">
-//                         <ul>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/skirting'}>
-//                               Skirting & profile
-//                             </button>
-//                           </li>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/carpet'}>
-//                               Carpets
-//                             </button>
-//                           </li>
-//                           <li>
-//                             <button onClick={() => window.location.href = '/flooring'}>
-//                               Flooring
-//                             </button>
-//                           </li>
-//                         </ul>
-//                       </div>
-//                     </div>
-//                   </li>
-
-//                   <li>
-//                     <button 
-//                       className={`nav-button ${isActive('/certificates')}`}
-//                       onClick={() => window.location.href = '/certificates'}
-//                     >
-//                       Certifications
-//                     </button>
+//                 <ul className="nav-list">
+//                   <li className="nav-item">
+//                     <a href="/" className={`nav-link ${isActive('/')}`}>Home</a>
 //                   </li>
                   
-//                   <li>
-//                     <button 
-//                       className={`nav-button ${isActive('/blogs/')}`}
-//                       onClick={() => window.location.href = '/blogs/'}
-//                     >
-//                       Blogs
-//                     </button>
+//                   <li className="nav-item dropdown" 
+//                       onMouseEnter={() => toggleDropdown('about')}
+//                       onMouseLeave={() => toggleDropdown(null)}>
+//                     <a href="/about-us" className={`nav-link ${isActive('/about-us')}`}>
+//                       About Us
+//                       <span className="dropdown-arrow">▼</span>
+//                     </a>
+//                     <div className={`dropdown-menu ${activeDropdown === 'about' ? 'show' : ''}`}>
+//                       <a href="/about-us/#chairman-section">Chairman's Message</a>
+//                       <a href="/about-us/#ourstory">Our Story</a>
+//                       <a href="/about-us/#vision">Vision & Mission</a>
+//                     </div>
 //                   </li>
-
-//                   <li>
-//                     <button 
-//                       className={`nav-button ${isActive('/locateUs')}`}
-//                       onClick={() => window.location.href = '/locateUs'}
-//                     >
-//                       Locate Us
-//                     </button>
+                  
+//                   <li className="nav-item dropdown"
+//                       onMouseEnter={() => toggleDropdown('products')}
+//                       onMouseLeave={() => toggleDropdown(null)}>
+//                     <a href="/productPage" className={`nav-link ${isActive('/productPage')}`}>
+//                       Products
+//                       <span className="dropdown-arrow">▼</span>
+//                     </a>
+//                     <div className={`dropdown-menu ${activeDropdown === 'products' ? 'show' : ''}`}>
+//                       <a href="/skirtingProfile">Skirting & Profile</a>
+//                       <a href="/carpet">Carpets</a>
+//                       <a href="/flooring">Flooring</a>
+//                     </div>
+//                   </li>
+                  
+                 
+                  
+//                   <li className="nav-item">
+//                     <a href="/static-blog" className={`nav-link ${isActive('/static-blog')}`}>Blogs</a>
+//                   </li>
+                  
+//                   <li className="nav-item">
+//                     <a href="/locateUs" className={`nav-link ${isActive('/locateUs')}`}>Locate Us</a>
 //                   </li>
 //                 </ul>
 //               </nav>
@@ -361,200 +228,91 @@
 //         </div>
 //       </div>
 
-//       {/* Mobile Header Section */}
+//       {/* Mobile Header */}
 //       <div className="outer_mobile_header">
 //         <header className="mobile_header">
-//           {/* Mobile Logo */}
-//           <div className="mobile_header_logo_container">
-//             <button onClick={() => window.location.href = '/'} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-//               <img src={logo} alt="Advant" className="mobile_logo" />
-//             </button>
-//           </div>
-
-//           {/* Mobile Menu Icons (Search and Hamburger) */}
-//           <div className="mobile_menu_container">
-//             <div className="mobile_search_container">
-//               <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 width="1.2rem"
-//                 height="1.2rem"
-//                 viewBox="0 0 15 15"
-//               >
-//                 <path
-//                   fill="none"
-//                   stroke="#2A2A2A"
-//                   d="m14.5 14.5l-4-4m-4 2a6 6 0 1 1 0-12a6 6 0 0 1 0 12Z"
-//                 ></path>
-//               </svg>
-//             </div>
+//           <div className="mobile_header_container">
+//             <a href="/" className="mobile_logo_link">
+//               <img src={aidfLogo} alt="Company Logo" className="mobile_logo" />
+//             </a>
             
-//             {/* Hamburger Menu Button */}
-//             <div className="menu_bnt" onClick={toggleMobileMenu}>
-//               <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 width="1.8em"
-//                 height="1.8em"
-//                 viewBox="0 0 24 24"
-//               >
-//                 <path
-//                   fill="#2A2A2A"
-//                   d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
-//                 ></path>
-//               </svg>
+//             <div className="mobile_menu_icons">
+//               <button className="mobile_search_button">
+//                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+//                   <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0c.41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"/>
+//                 </svg>
+//               </button>
+              
+//               <button className="mobile_menu_button" onClick={toggleMobileMenu}>
+//                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+//                   <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+//                 </svg>
+//               </button>
+//             </div>
+//           </div>
+          
+//           {/* Mobile Menu */}
+//           <div className={`mobile_menu ${mobileMenuOpen ? 'open' : ''}`}>
+//             <div className="mobile_menu_content">
+//               <ul className="mobile_nav_list">
+//                 <li className="mobile_nav_item">
+//                   <a href="/" className="mobile_nav_link">Home</a>
+//                 </li>
+                
+//                 <li className="mobile_nav_item">
+//                   <div className="mobile_nav_link" onClick={() => toggleDropdown('mobile-about')}>
+//                     About Us
+//                     <span className={`mobile_dropdown_arrow ${activeDropdown === 'mobile-about' ? 'open' : ''}`}>▼</span>
+//                   </div>
+//                   <div className={`mobile_dropdown_menu ${activeDropdown === 'mobile-about' ? 'open' : ''}`}>
+//                     <a href="/about-us/#chairman-section">Chairman's Message</a>
+//                     <a href="/about-us/#ourstory">Our Story</a>
+//                     <a href="/about-us/#vision">Vision & Mission</a>
+//                   </div>
+//                 </li>
+                
+//                 <li className="mobile_nav_item">
+//                   <div className="mobile_nav_link" onClick={() => toggleDropdown('mobile-products')}>
+//                     Products
+//                     <span className={`mobile_dropdown_arrow ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>▼</span>
+//                   </div>
+//                   <div className={`mobile_dropdown_menu ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>
+//                     <a href="/skirtingProfile">Skirting & Profile</a>
+//                     <a href="/carpet">Carpets</a>
+//                     <a href="/flooring">Flooring</a>
+//                   </div>
+//                 </li>
+                
+//                 <li className="mobile_nav_item">
+//                   <a href="/certificates" className="mobile_nav_link">Certifications</a>
+//                 </li>
+                
+//                 <li className="mobile_nav_item">
+//                   <a href="/blogs" className="mobile_nav_link">Blogs</a>
+//                 </li>
+                
+//                 <li className="mobile_nav_item">
+//                   <a href="/locateUs" className="mobile_nav_link">Locate Us</a>
+//                 </li>
+//               </ul>
+              
+//               <div className="mobile_action_buttons">
+//                 <button className="mobile_action_button" onClick={() => window.open(brochure, '_blank')}>
+//                   <span className="button-icon">📄</span>
+//                   Brochure
+//                 </button>
+//                 <button className="mobile_action_button" onClick={() => setContactFormOpen(true)}>
+//                   <span className="button-icon">✉️</span>
+//                   Enquire
+//                 </button>
+//                 <button className="mobile_action_button phone" onClick={() => window.location.href = 'tel:9002690068'}>
+//                   <span className="button-icon">📞</span>
+//                   Call Us
+//                 </button>
+//               </div>
 //             </div>
 //           </div>
 //         </header>
-        
-//         {/* Mobile Menu Content */}
-//         <div className={`mobile_menu ${mobileMenuOpen ? 'open' : ''}`}>
-//           <div className="mobile_menu_content">
-//             <ul>
-//               <li>
-//                 <button 
-//                   className={`mobile-nav-button ${isActive('/')}`}
-//                   onClick={() => window.location.href = '/'}
-//                 >
-//                   Home
-//                 </button>
-//               </li>
-
-//               <li className="mobile_dropdown">
-//                 <div className="mobile_dropdown_toggle" onClick={() => toggleDropdown('mobile-about')}>
-//                   <span className={isActive('/about-us')}>About Us</span>
-//                   <svg
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     width="1em"
-//                     height="1em"
-//                     viewBox="0 0 16 16"
-//                     className={activeDropdown === 'mobile-about' ? 'rotate' : ''}
-//                   >
-//                     <path
-//                       fill="#2A2A2A"
-//                       fillRule="nonzero"
-//                       d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
-//                     ></path>
-//                   </svg>
-//                 </div>
-//                 <div className={`mobile_submenu ${activeDropdown === 'mobile-about' ? 'open' : ''}`}>
-//                   <ul>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/about-us/#chairman-message'}>
-//                         Chairman's Message
-//                       </button>
-//                     </li>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/about-us/#our-story'}>
-//                         Our Story
-//                       </button>
-//                     </li>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/about-us/#vision-&-mission'}>
-//                         Vision & Mission
-//                       </button>
-//                     </li>
-//                   </ul>
-//                 </div>
-//               </li>
-
-//               <li className="mobile_dropdown">
-//                 <div className="mobile_dropdown_toggle" onClick={() => toggleDropdown('mobile-product')}>
-//                   <span className={isActive('/productPage')}>Product</span>
-//                   <svg
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     width="1em"
-//                     height="1em"
-//                     viewBox="0 0 16 16"
-//                     className={activeDropdown === 'mobile-product' ? 'rotate' : ''}
-//                   >
-//                     <path
-//                       fill="#2A2A2A"
-//                       fillRule="nonzero"
-//                       d="M13.069 5.157L8.384 9.768a.546.546 0 0 1-.768 0L2.93 5.158a.55.55 0 0 0-.771 0a.53.53 0 0 0 0 .759l4.684 4.61a1.65 1.65 0 0 0 2.312 0l4.684-4.61a.53.53 0 0 0 0-.76a.55.55 0 0 0-.771 0"
-//                     ></path>
-//                   </svg>
-//                 </div>
-//                 <div className={`mobile_submenu ${activeDropdown === 'mobile-product' ? 'open' : ''}`}>
-//                   <ul>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/alu-home-interior'}>
-//                         Alu Home Interior
-//                       </button>
-//                     </li>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/upvc-door-and-window'}>
-//                         uPVC Door & Window
-//                       </button>
-//                     </li>
-//                     <li>
-//                       <button onClick={() => window.location.href = '/commercial-partition-system'}>
-//                         Commercial Partition System
-//                       </button>
-//                     </li>
-//                   </ul>
-//                 </div>
-//               </li>
-
-//               <li>
-//                 <button 
-//                   className={`mobile-nav-button ${isActive('/certificates')}`}
-//                   onClick={() => window.location.href = '/certificates'}
-//                 >
-//                   Certifications
-//                 </button>
-//               </li>
-
-//               <li>
-//                 <button 
-//                   className={`mobile-nav-button ${isActive('/blogs/')}`}
-//                   onClick={() => window.location.href = '/blogs/'}
-//                 >
-//                   Blogs
-//                 </button>
-//               </li>
-
-//               <li>
-//                 <button 
-//                   className={`mobile-nav-button ${isActive('/locate-us/')}`}
-//                   onClick={() => window.location.href = '/locate-us/'}
-//                 >
-//                   Locate Us
-//                 </button>
-//               </li>
-//             </ul>
-
-//             {/* Mobile Action Buttons */}
-//             <div className="mobile_menu_buttons">
-//               <button className="header_button1" onClick={() => window.location.href = '/become-a-dealer/'}>
-//                 <img
-//                   src="https://www.aluempire.com/assets/images/become-a-dealerIcon.png"
-//                   alt="Become a dealer icon"
-//                 />
-//                 <span>Become a Dealer</span>
-//               </button>
-//               <button className="header_button1" onClick={() => window.open(brochure, '_blank')}>
-//                 <img
-//                   src="https://www.aluempire.com/assets/images/Home/icons/brochure_icon.png"
-//                   alt="Download brochure icon"
-//                 />
-//                 <span>Brochure</span>
-//               </button>
-//               <button className="header_button1" onClick={() => setContactFormOpen(true)}>
-//                 <img
-//                   src="https://www.aluempire.com/assets/images/Home/icons/enqury_icon.png"
-//                   alt="Make an enquiry icon"
-//                 />
-//                 <span>Enquire</span>
-//               </button>
-//               <button className="header_button2" onClick={() => window.location.href = 'tel:9002690068'}>
-//                 <img
-//                   src="https://www.aluempire.com/assets/images/Home/icons/header_phone_icon.png"
-//                   alt="Phone contact icon"
-//                 />
-//                 <span>90026 90068</span>
-//               </button>
-//             </div>
-//           </div>
-//         </div>
 //       </div>
 //     </>
 //   );
@@ -568,13 +326,34 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState } from 'react';
 import { Dialog, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import "./header.css";
 import brochure from "./img/brochure.pdf";
-import logo from "./img/companyLogo.jpg";
 import aidfLogo from "./img/aidf_logo.png";
+
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -583,8 +362,14 @@ const Header = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    service: 'uPVC',
-    email: ''
+    service: 'skirting&profile',
+    email: '',
+    message: ''
+  });
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    success: false,
+    error: false
   });
 
   const toggleDropdown = (menu) => {
@@ -596,17 +381,39 @@ const Header = () => {
   };
 
   const handleFormChange = (e) => {
-    const { name, value } = e.target;
+    const { name, vaidfe } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: vaidfe
     }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setContactFormOpen(false);
+    setFormStatus({ submitting: true, success: false, error: false });
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      console.log('Form submitted:', formData);
+      setFormStatus({ submitting: false, success: true, error: false });
+      
+      // Reset form after successful submission
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          phone: '',
+          service: 'uPVC',
+          email: '',
+          message: ''
+        });
+        setContactFormOpen(false);
+      }, 2000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      setFormStatus({ submitting: false, success: false, error: true });
+    }
   };
 
   const isActive = (path) => {
@@ -615,84 +422,191 @@ const Header = () => {
 
   return (
     <>
-      {/* Contact Form Popup */}
+      {/* Contact Form Dialog */}
       <Dialog 
         open={contactFormOpen} 
-        onClose={() => setContactFormOpen(false)}
-        maxWidth="sm"
-        fullWidth
-        className="contact-form-dialog"
+        onClose={() => {
+          setContactFormOpen(false);
+          setFormStatus({ submitting: false, success: false, error: false });
+        }}
+        maxWidth="md"
+        className="header-cf-dialog"
+        BackdropProps={{
+          style: {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backdropFilter: 'blur(4px)'
+          }
+        }}
       >
-        <DialogContent className="contact-form-content">
+        <DialogContent className="header-cf-dialog-content">
           <IconButton 
             aria-label="close" 
-            onClick={() => setContactFormOpen(false)}
-            className="close-button"
+            onClick={() => {
+              setContactFormOpen(false);
+              setFormStatus({ submitting: false, success: false, error: false });
+            }}
+            className="header-cf-close-button"
           >
             <CloseIcon />
           </IconButton>
-          <div className="contact-form-container">
-            <h2 className="form-title">Get in Touch</h2>
-            <p className="form-subtitle">We'll get back to you shortly</p>
-            <form onSubmit={handleFormSubmit} className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={handleFormChange}
-                  required
-                />
+
+          <div className="header-cf-form-container">
+            <div className="header-cf-form-header">
+              <h2 className="header-cf-form-title">Get in Touch</h2>
+              <p className="header-cf-form-subtitle">Fill out the form below and our team will contact you shortly</p>
+            </div>
+
+            {formStatus.success ? (
+              <div className="header-cf-success-message">
+                <svg className="header-cf-success-icon" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
+                <h3>Thank You!</h3>
+                <p>Your enquiry has been submitted successfully.</p>
+                <p>We'll get back to you within 24 hours.</p>
               </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                  value={formData.phone}
-                  onChange={handleFormChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="service">I'm looking for</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleFormChange}
-                  required
+            ) : formStatus.error ? (
+              <div className="header-cf-error-message">
+                <svg className="header-cf-error-icon" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                </svg>
+                <h3>Submission Failed</h3>
+                <p>There was an error submitting your form.</p>
+                <button 
+                  className="header-cf-retry-button"
+                  onClick={() => setFormStatus({ submitting: false, success: false, error: false })}
                 >
-                  <option value="uPVC">uPVC</option>
-                  <option value="ALU Home Interior">ALU Home Interior</option>
-                  <option value="Commercial partition system">Commercial partition system</option>
-                  <option value="other">Other</option>
-                </select>
+                  Try Again
+                </button>
               </div>
-              <div className="form-group">
-                <label htmlFor="email">Email ID</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  value={formData.email}
-                  onChange={handleFormChange}
-                  required
-                />
-              </div>
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
+            ) : (
+              <form onSubmit={handleFormSubmit} className="header-cf-contact-form">
+                <div className="header-cf-form-grid">
+                  <div className="header-cf-form-group">
+                    <label htmlFor="header-cf-name" className="header-cf-input-label">Full Name*</label>
+                    <div className="header-cf-input-container">
+                      <input
+                        type="text"
+                        id="header-cf-name"
+                        name="name"
+                        placeholder="John Doe"
+                        vaidfe={formData.name}
+                        onChange={handleFormChange}
+                        required
+                        className="header-cf-input-field"
+                      />
+                      <svg className="header-cf-input-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="header-cf-form-group">
+                    <label htmlFor="header-cf-phone" className="header-cf-input-label">Phone Number*</label>
+                    <div className="header-cf-input-container">
+                      <input
+                        type="tel"
+                        id="header-cf-phone"
+                        name="phone"
+                        placeholder="+91 98765 43210"
+                        vaidfe={formData.phone}
+                        onChange={handleFormChange}
+                        required
+                        className="header-cf-input-field"
+                      />
+                      <svg className="header-cf-input-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="header-cf-form-group">
+                    <label htmlFor="header-cf-email" className="header-cf-input-label">Email Address*</label>
+                    <div className="header-cf-input-container">
+                      <input
+                        type="email"
+                        id="header-cf-email"
+                        name="email"
+                        placeholder="your.email@example.com"
+                        vaidfe={formData.email}
+                        onChange={handleFormChange}
+                        required
+                        className="header-cf-input-field"
+                      />
+                      <svg className="header-cf-input-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="header-cf-form-group">
+                    <label htmlFor="header-cf-service" className="header-cf-input-label">Service Interested In*</label>
+                    <div className="header-cf-input-container">
+                      <select
+                        id="header-cf-service"
+                        name="service"
+                        vaidfe={formData.service}
+                        onChange={handleFormChange}
+                        required
+                        className="header-cf-input-field"
+                      >
+                        <option vaidfe="skirting&profile">Skirting&Profile</option>
+                        <option vaidfe="carpets">Carpets</option>
+                        <option vaidfe="flooring">Flooring</option>
+                        <option vaidfe="other">Other Services</option>
+                      </select>
+                      <svg className="header-cf-input-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,16L6,10H18L12,16Z" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div className="header-cf-form-group header-cf-full-width">
+                    <label htmlFor="header-cf-message" className="header-cf-input-label">Your Message</label>
+                    <div className="header-cf-input-container">
+                      <textarea
+                        id="header-cf-message"
+                        name="message"
+                        placeholder="Tell us about your requirements..."
+                        vaidfe={formData.message}
+                        onChange={handleFormChange}
+                        rows="4"
+                        className="header-cf-textarea-field"
+                      ></textarea>
+                      <svg className="header-cf-textarea-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M18.5,2L19.66,4.65L22.5,5.5L19.66,6.36L18.5,9L17.34,6.36L14.5,5.5L17.34,4.65L18.5,2M10.61,8.93L7.5,7.63L4.39,8.93L5.07,12L4.39,15.07L7.5,16.37L10.61,15.07L9.93,12L10.61,8.93M18.5,15L19.66,17.65L22.5,18.5L19.66,19.36L18.5,22L17.34,19.36L14.5,18.5L17.34,17.65L18.5,15Z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <button 
+                  type="submit" 
+                  className="header-cf-submit-button"
+                  disabled={formStatus.submitting}
+                >
+                  {formStatus.submitting ? (
+                    <>
+                      <svg className="header-cf-spinner" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" strokeWidth="5"></circle>
+                      </svg>
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      Submit Enquiry
+                      <svg className="header-cf-arrow-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                      </svg>
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
           </div>
         </DialogContent>
       </Dialog>
+
 
       {/* Desktop Header */}
       <div className="outer_desktop_header">
@@ -709,10 +623,16 @@ const Header = () => {
                   <span className="button-icon">✉️</span>
                   <span>Enquire</span>
                 </button>
-                <button className="header_button phone" onClick={() => window.location.href = 'tel:9002690068'}>
-                  <span className="button-icon">📞</span>
-                  <span>90026 90068</span>
-                </button>
+                <button
+                        className="header_button phone"
+                        onClick={() => {
+                          window.location.href = 'tel:+918744036000';
+                        }}
+                      >
+                        <span className="button-icon">📞</span>
+                        <span>+91-87440-36000</span>
+                      </button>
+
               </div>
             </div>
           </div>
@@ -723,7 +643,6 @@ const Header = () => {
               {/* Logo Section */}
               <div className="header_logo_container">
                 <a href="/" className="logo-link">
-                  <img src={logo} alt="Company Logo" className="company_logo" />
                   <img src={aidfLogo} alt="AIDF Logo" className="aidf_logo" />
                 </a>
               </div>
@@ -775,12 +694,10 @@ const Header = () => {
                     </div>
                   </li>
                   
-                  <li className="nav-item">
-                    <a href="/certificates" className={`nav-link ${isActive('/certificates')}`}>Certifications</a>
-                  </li>
+                 
                   
                   <li className="nav-item">
-                    <a href="/blogs" className={`nav-link ${isActive('/blogs')}`}>Blogs</a>
+                    <a href="/static-blog" className={`nav-link ${isActive('/static-blog')}`}>Blogs</a>
                   </li>
                   
                   <li className="nav-item">
@@ -798,7 +715,7 @@ const Header = () => {
         <header className="mobile_header">
           <div className="mobile_header_container">
             <a href="/" className="mobile_logo_link">
-              <img src={logo} alt="Company Logo" className="mobile_logo" />
+              <img src={aidfLogo} alt="Company Logo" className="mobile_logo" />
             </a>
             
             <div className="mobile_menu_icons">
@@ -837,7 +754,7 @@ const Header = () => {
                 </li>
                 
                 <li className="mobile_nav_item">
-                  <div href="productPage" className="mobile_nav_link" onClick={() => toggleDropdown('mobile-products')}>
+                  <div className="mobile_nav_link" onClick={() => toggleDropdown('mobile-products')}>
                     Products
                     <span className={`mobile_dropdown_arrow ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>▼</span>
                   </div>

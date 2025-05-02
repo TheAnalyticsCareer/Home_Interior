@@ -22,26 +22,27 @@ SwiperCore.use([Pagination, Autoplay, Navigation]);
 const testimonials = [
   {
     id: 1,
-    name: "Megha",
-    role: "Human Resource Manager",
-    review: "I recently purchased this door & I couldn't be more pleased with my choice! The craftsmanship is solid with construction that feels sturdy & secure.",
-    image: client_2,
-  },
-  {
-    id: 2,
-    name: "Raghav",
-    role: "Doctor",
-    review: "Came with all necessary hardware. I would recommend this door to anyone looking for a reliable & stylish addition to their home!",
+    name: "Aarav Sharma",
+   
+    review: "AIDF GROUP delivers unmatched craftsmanship and quality. Their wooden flooring brought warmth and elegance to my client’s home — highly recommended for anyone serious about aesthetics and durability.",
     image: client_1,
   },
   {
+    id: 2,
+    name: "Pooja Mehta",
+
+    review: "From carpet tiles to vinyl flooring, every product from AIDF speaks volumes about premium construction and thoughtful design. Their team provided excellent support throughout the project lifecycle.",
+    image: client_2,
+  },
+  {
     id: 3,
-    name: "Seema",
-    role: "Desktop Engineer",
-    review: "No creaks or sticking, just seamless experience every time. Installation was straightforward & the door arrived well-packaged.",
+    name: "Karan Verma",
+  
+    review: "I’ve worked with AIDF GROUP for over 3 years. Their consistent quality, timely delivery, and customizable options make them my preferred partner for high-end commercial and residential projects.",
     image: client_3,
   },
 ];
+
 
 const ClientTestimonials = () => {
   return (
