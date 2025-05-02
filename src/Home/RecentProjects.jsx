@@ -226,7 +226,7 @@ const RecentProjects = () => {
           </div>
         </motion.div>
 
-        {/* <motion.div className="view-more-container" variants={itemVariants}>
+        <motion.div className="view-more-container" variants={itemVariants}>
           <a href="/all-recent-project" className="view-more-link">
             <motion.button 
               className="view-more-btn"
@@ -244,7 +244,7 @@ const RecentProjects = () => {
               View All Projects
             </motion.button>
           </a>
-        </motion.div> */}
+        </motion.div>
       </motion.div>
     </section>
   );
