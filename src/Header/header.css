@@ -492,6 +492,7 @@ a {
   visibility: hidden;
   transition: all 0.3s ease;
   padding: 0.5rem 0;
+  text-decoration: none;
 }
 
 .dropdown-menu.show {

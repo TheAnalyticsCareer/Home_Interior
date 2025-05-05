@@ -141,17 +141,13 @@
 
 // export default NewLaunch
 
-
-
-
-
 import { useState, useEffect, useRef } from "react";
-import img1 from "./NewLaunchImg/ultra.jpg";
-import img2 from "./NewLaunchImg/ultra-strong.jpg";
+import img1 from "./NewLaunchImg/ULTRA- Glass Partition.jpg";
+import img2 from "./NewLaunchImg/ULTRA STRONG- Glass Partition.jpg";
 import img3 from "./NewLaunchImg/ultra-max.jpg";
 import img4 from "./NewLaunchImg/project-4.jpeg";
-import img5 from "./NewLaunchImg/stile-doors.jpg";
-import img6 from "./NewLaunchImg/oak.jpg";
+import img5 from "./NewLaunchImg/STILE DOORS- Glass Partition.webp";
+import img6 from "./NewLaunchImg/Oak Walnut Art Tiles.webp";
 import "./NewLaunch.css";
 
 const NewLaunch = () => {
@@ -215,7 +211,7 @@ const NewLaunch = () => {
     <section className="new-launch-section">
       <div className="section-header">
         <h2 className="section-title">Our Newly Launched Projects</h2>
-        <p className="section-subtitle" style={{color:"#61CE70"}}>
+        <p className="section-subtitle" style={{ color: "#61CE70" }}>
           Discover exceptional living spaces crafted with precision and elegance
         </p>
       </div>
@@ -240,8 +236,6 @@ const NewLaunch = () => {
                 <div className="content-wrapper">
                   <span className="project-badge">New Launch</span>
                   <h2>{project.title}</h2>
-                  
-                  
                 </div>
               </div>
             </div>
@@ -253,7 +247,7 @@ const NewLaunch = () => {
           className="carousel-button prev-button"
           onClick={prevSlide}
           aria-label="Previous slide"
-        >
+        > 
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -265,7 +259,8 @@ const NewLaunch = () => {
           >
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
-        </button>
+          
+        </button> 
 
         <button
           className="carousel-button next-button"
@@ -285,17 +280,7 @@ const NewLaunch = () => {
           </svg>
         </button>
 
-        {/* Indicator Dots */}
-        <div className="carousel-indicators">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              className={`indicator-dot ${currentSlide === index ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+       
       </div>
     </section>
   );

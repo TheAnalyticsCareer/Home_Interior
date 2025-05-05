@@ -15,9 +15,10 @@ import Flooring from "./Products/UPVC/Flooring";
 import Blogs from "./Blog/Blogs";
 import BlogDetail from "./Blog/BlogDetail";
 import ContactFormPopup from "./POPUP/ContactFormPopup";
-import Certificates from "./Certificate/Aidf_certificates";
 import BlogList from "./StaticBLog/BlogList";
 import Detail from "./StaticBLog/Detail";
+import Conditions from "./Term&condition/Conditions";
+import Policy from "./Policy/Policy";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -37,10 +38,11 @@ root.render(
           <Route path="dealer" element={<Dealer />} />
           <Route path="carpet" element={<Carpet />} />
           <Route path="flooring" element={<Flooring />} />
+          <Route path="Conditions" element={<Conditions />} />
+          <Route path="Policy" element={<Policy />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogDetails/:blogId" element={<BlogDetail />} />
           <Route path="contact" element={<ContactFormPopup />} />
-          <Route path="certificates" element={<Certificates />} />
            <Route path="static-blog" element={<BlogList />} />
         <Route path="/static-blog/:id" element={<Detail />} />
         </Route>

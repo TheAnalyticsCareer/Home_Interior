@@ -207,12 +207,12 @@ import './UPVCDoorsWindows.css';
 
 // Import images
 import HeroImg from './img/parker-tiles.png';
-import skirtingCard from './img/screw-on-skirting.jpg';
+import skirtingCard from './img/parker-tiles.png';
 import flooringCard from './img/wooden-flooring.jpg';
 import carpetCard from './img/carpet-img.png';
-import skirtingSection from './img/screw-on-skirting.jpg';
-import flooringSection from './img/flooring-sol.jpg';
-import carpetSection from './img/carptet-img2.png';
+import skirtingSection from './img/parker-tiles.png';
+import flooringSection from './img/Daltile-Emerson-Wood.jpg';
+import carpetSection from './img/Luxury Carpet Collections.jpg';
 
 const services = [
   {

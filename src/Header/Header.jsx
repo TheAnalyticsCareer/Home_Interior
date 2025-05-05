@@ -674,9 +674,9 @@ const Header = () => {
                       <span className="dropdown-arrow">▼</span>
                     </a>
                     <div className={`dropdown-menu ${activeDropdown === 'about' ? 'show' : ''}`}>
-                      <a href="/about-us/#chairman-section">Chairman's Message</a>
-                      <a href="/about-us/#ourstory">Our Story</a>
-                      <a href="/about-us/#vision">Vision & Mission</a>
+                      <a  style={{ color: 'black', textDecoration: 'none' }} href="/about-us/#chairman-section">Chairman's Message</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/about-us/#ourstory">Our Story</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/about-us/#vision">Vision & Mission</a>
                     </div>
                   </li>
                   
@@ -688,9 +688,9 @@ const Header = () => {
                       <span className="dropdown-arrow">▼</span>
                     </a>
                     <div className={`dropdown-menu ${activeDropdown === 'products' ? 'show' : ''}`}>
-                      <a href="/skirtingProfile">Skirting & Profile</a>
-                      <a href="/carpet">Carpets</a>
-                      <a href="/flooring">Flooring</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/skirtingProfile">Skirting & Profile</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/carpet">Carpets</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/flooring">Flooring</a>
                     </div>
                   </li>
                   

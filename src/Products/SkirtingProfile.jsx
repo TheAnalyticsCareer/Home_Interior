@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 import "./SkirtingProfile.css";
 import { Link } from 'react-router-dom';
 
-import skirtingIcon from ".//UPVC/img/stick-on-skirting.jpg"; // Replace with actual image
+import skirtingIcon from "./UPVC/img/stick-on-skirting.jpg"; // Replace with actual image
 import profileIcon from "./UPVC/img/easy-fix-pvc.jpg"; // Replace with actual image
 import screwOnImg from "./UPVC/img/screw-on-skirting.jpg";
 import stickOnImg from "./UPVC/img/stick-on-skirting.jpg";

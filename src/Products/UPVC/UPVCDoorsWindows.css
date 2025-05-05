@@ -40,6 +40,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: auto;
+  display: block;
 }
 
 .upvc-hero-overlay {
@@ -174,11 +176,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: auto;
   transition: transform 0.5s ease;
+  display: block;
 }
 
 .upvc-service-card:hover .upvc-card-image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .upvc-card-badge {
@@ -337,6 +341,7 @@
   height: auto;
   display: block;
   transition: transform 0.5s ease;
+  image-rendering: auto;
 }
 
 .upvc-expertise-image:hover img {
@@ -348,7 +353,7 @@
   .upvc-hero-title {
     font-size: 3rem;
   }
-  
+
   .upvc-section-title {
     font-size: 2.2rem;
   }
@@ -359,29 +364,29 @@
     height: auto;
     min-height: 500px;
   }
-  
+
   .upvc-hero-title {
     font-size: 2.5rem;
   }
-  
+
   .upvc-hero-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .upvc-section-title {
     font-size: 2rem;
   }
-  
+
   .upvc-expertise-content {
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .upvc-reverse .upvc-expertise-content {
     flex-direction: column;
   }
-  
-  .upvc-expertise-text, 
+
+  .upvc-expertise-text,
   .upvc-expertise-image {
     min-width: 100%;
   }
@@ -391,15 +396,15 @@
   .upvc-hero-title {
     font-size: 2rem;
   }
-  
+
   .upvc-section-title {
     font-size: 1.8rem;
   }
-  
+
   .upvc-services-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .upvc-card-image-container {
     height: 200px;
   }

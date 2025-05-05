@@ -127,14 +127,14 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import "./SlideShow.css";
-import image1 from "./SlideImg/parker-tiles.png";
-import image2 from "./SlideImg/slide-4.jpg";
-import image3 from "./SlideImg/wall-covering.jpg";
+import image1 from "./SlideImg/parker-tiles.jpg";
+import image2 from "./SlideImg/slide-4.jpeg";
+import image3 from "./SlideImg/wall-covering.jfif";
 import "./HeroSection.css";
 import card1 from "./HomeImg/stick-on-skirting.jpg";
 import card2 from "./HomeImg/carpet.jpg";
 import card3 from "./HomeImg/flooring.jpg";
-import years from "./HomeImg/15+excellence.jpeg";
+import years from "./HomeImg/15+excellence.png";
 
 
 const HeroSection = () => {
@@ -232,7 +232,7 @@ const HeroSection = () => {
           ))}
         </div>
 
-        <img src={years} alt="" />
+  
         
         {/* Navigation Arrows */}
         <button
@@ -244,7 +244,7 @@ const HeroSection = () => {
           }}
         >
           &#10094;
-          <div  style={{marginLeft:'95rem'}}  > <img style={{ marginRight:'30px' ,height:'180px'}}
+          <div  style={{marginLeft:'95rem'}}  > <img style={{ marginRight:'30px', marginBottom:'59px',height:'20rem',width: '20rem'}}
         src={years} alt="" /></div>
         </button>
         

@@ -212,7 +212,7 @@ const Footer = () => {
         { text: "Hardwood Flooring", url: "/flooring" },
         { text: "Bamboo Flooring", url: "/flooring" },
         { text: "Decking Wood", url: "/flooring" },
-        { text: "ThermoPineg", url: "/flooring" }
+        { text: "Thermo Pine", url: "/flooring" }
 
 
       ]
@@ -220,9 +220,9 @@ const Footer = () => {
     {
       title: "Support",
       links: [
-        { text: "Terms & Condition", url: "/terms-&-Condition/" },
-        { text: "Privacy Policy", url: "/privacy-policy/" },
-        { text: "Locate Us", url: "/locate-us/" }
+        { text: "Terms & Condition", url: "/Conditions" },
+        { text: "Privacy Policy", url: "/Policy" },
+        { text: "Locate Us", url: "/locateUs" }
       ]
     }
   ];
@@ -326,7 +326,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
         >
-          <p>© {new Date().getFullYear()} AIDF GROUP | Powered By Sanekt</p>
+          <p>© {new Date().getFullYear()} AIDF GROUP </p>
         </motion.div>
       </div>
     </footer>

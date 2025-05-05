@@ -12,9 +12,9 @@ import 'swiper/css/autoplay';
 
 
 
-import client_1 from "./HomeImg/WhatsApp_Image_1.jpeg";
-import client_2 from "./HomeImg/WhatsApp_Image_2.jpeg";
-import client_3 from "./HomeImg/WhatsApp_Image_3.jpeg";
+import client_1 from "./HomeImg/user.jpg";
+import client_2 from "./HomeImg/user.jpg";
+import client_3 from "./HomeImg/user.jpg";
 
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 

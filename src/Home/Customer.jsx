@@ -114,28 +114,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import customer1 from "./customersImg/Screenshot 2025-04-30 124830.png";
-import customer2 from "./customersImg/Screenshot 2025-04-30 124853.png";
-import customer3 from "./customersImg/Screenshot 2025-04-30 124905.png";
-import customer4 from "./customersImg/Screenshot 2025-04-30 124920.png";
-import customer5 from "./customersImg/Screenshot 2025-04-30 124932.png";
-import customer6 from "./customersImg/Screenshot 2025-04-30 124944.png";
-import customer7 from "./customersImg/Screenshot 2025-04-30 124955.png";
-import customer8 from "./customersImg/Screenshot 2025-04-30 125026.png";
-import customer9 from "./customersImg/Screenshot 2025-04-30 125036.png";
-import customer10 from "./customersImg/Screenshot 2025-04-30 125111.png";
-import customer11 from "./customersImg/Screenshot 2025-04-30 125139.png";
-import customer12 from "./customersImg/Screenshot 2025-04-30 125152.png";
-import customer13 from "./customersImg/Screenshot 2025-04-30 125213.png";
-import customer14 from "./customersImg/Screenshot 2025-04-30 125228.png";
-import customer15 from "./customersImg/Screenshot 2025-04-30 125241.png";
-import customer16 from "./customersImg/Screenshot 2025-04-30 125252.png";
-import customer17 from "./customersImg/Screenshot 2025-04-30 125302.png";
-import customer18 from "./customersImg/Screenshot 2025-04-30 125315.png";
-import customer19 from "./customersImg/Screenshot 2025-04-30 125332.png";
-import customer20 from "./customersImg/Screenshot 2025-04-30 125350.png";
-import customer21 from "./customersImg/Screenshot 2025-04-30 125412.png";
-import customer22 from "./customersImg/Screenshot 2025-04-30 125430.png";
+import customer1 from "./customersImg/BNP-Paribas-Emblem.png";
+import customer2 from "./customersImg/Siemens-Logo.png";
+import customer3 from "./customersImg/bizzhub.jpg";
+import customer4 from "./customersImg/danube.png";
+import customer5 from "./customersImg/kpmg.jfif";
+import customer6 from "./customersImg/ford.png";
+import customer7 from "./customersImg/green park.jpeg";
+import customer8 from "./customersImg/hyatt.png";
+import customer9 from "./customersImg/infosys.jpg";
+import customer10 from "./customersImg/leed.png";
+import customer11 from "./customersImg/lemon tree hotels.png";
+import customer12 from "./customersImg/sebi.png";
+import customer13 from "./customersImg/tata.png";
+import customer14 from "./customersImg/tvs.jpg";
+import customer15 from "./customersImg/welspun.jpg";
+import customer16 from "./customersImg/marriott.jfif";
+import customer17 from "./customersImg/micron.jfif";
+import customer18 from "./customersImg/novotels.jfif";
+import customer19 from "./customersImg/orchid.jfif";
+import customer20 from "./customersImg/the cowrks.jfif";
+import customer21 from "./customersImg/wipro.jfif";
+import customer22 from "./customersImg/wns.jfif";
+
 
 const Customer = () => {
   const settings = {
@@ -179,7 +180,7 @@ const Customer = () => {
     customer19,
     customer20,
     customer21,
-    customer22,
+    customer22
   ];
 
   return (
