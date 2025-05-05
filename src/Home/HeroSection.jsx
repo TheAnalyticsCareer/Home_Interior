@@ -266,7 +266,7 @@ const HeroSection = () => {
       {/* Product Cards - Redesigned */}
       <div className="product-cards-container">
         {/* Card 1 */}
-        <a href="/skirting" className="product-card">
+        <a href="/skirtingProfile" className="product-card">
           <div className="card-image-container">
             <img src={card1} alt="Skirting & Profile" className="card-image" />
             <div className="image-overlay"></div>
