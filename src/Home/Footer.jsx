@@ -1,4 +1,3 @@
-
 // import React from 'react';
 // import './Footer.css';
 // import linkedIn from "./HomeImg/linkedin.png";
@@ -12,10 +11,10 @@
 //     <footer className="footer-container">
 //       {/* Main container for the entire footer */}
 //       <div className="footer-content">
-        
+
 //         {/* Top section of the footer - contains logo and social media links */}
 //         <div className="footer-top">
-          
+
 //           {/* Logo link to homepage */}
 //           <a href="/" className="footer-logo-link">
 //             <div className="footer-logo">
@@ -28,8 +27,6 @@
 //               <span> Complete Flooring Solutions</span>
 //             </div>
 //           </a>
-         
-        
 
 //           {/* Social Media Section */}
 //           <div className="social-media-container">
@@ -68,7 +65,7 @@
 
 //         {/* Footer Navigation Links Section */}
 //         <div className="footer-nav">
-          
+
 //           {/* Column 1 - Links to discover pages */}
 //           <div className="footer-column">
 //             <h6 className="footer-heading">Discover AIDF GROUP</h6>
@@ -133,43 +130,40 @@
 
 // export default Footer;
 
-
-
-
-
-
-
-
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import './Footer.css';
+import React from "react";
+import { motion } from "framer-motion";
+import "./Footer.css";
 import linkedIn from "./HomeImg/linkedin.png";
 import facebook from "./HomeImg/facebook.png";
 import whatsapp from "./HomeImg/whatsapp.png";
 import instagram from "./HomeImg/insta.png";
 import logo from "./HomeImg/aidf_logo.png";
 
-
 const Footer = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
   const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
-    }
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
   };
-{/** link to the social platform*/}
+  {
+    /** link to the social platform*/
+  }
   const socialLinks = [
-    { icon: linkedIn, url: "/", alt: "LinkedIn" }, 
+    { icon: linkedIn, url: "/", alt: "LinkedIn" },
     { icon: facebook, url: "/", alt: "Facebook" },
     { icon: whatsapp, url: "https://wa.me/918447595048", alt: "WhatsApp" },
-    { icon: instagram, url: "https://www.instagram.com/aidfgroup/", alt: "Instagram" }
+    {
+      icon: instagram,
+      url: "https://www.instagram.com/aidfgroup/",
+      alt: "Instagram",
+    },
   ];
 
   const footerColumns = [
@@ -181,27 +175,27 @@ const Footer = () => {
         { text: "Products", url: "/productPage" },
         { text: "Blog", url: "/blogs" },
         { text: "Locate Us", url: "/locateUs" },
-     
-      ]
+      ],
     },
     {
       title: "Skirting & Profile",
-      
+
       links: [
         { text: "Screw On Skirting", url: "/skirtingProfile" },
         { text: "Stick On Toe Skirting", url: "/skirtingProfile" },
         { text: "Line Skirting", url: "/skirtingProfile" },
         { text: "Easy Fix PVC Skirting", url: "/skirtingProfile" },
-        { text: "Slim Sliding Door", url: "/skirtingProfile" }
-      ]
+        { text: "Slim Sliding Door", url: "/skirtingProfile" },
+      ],
     },
     {
-      title: "Carpets" ,
+      title: "Carpets",
       links: [
         { text: "Wall to Wall carpet", url: "/carpet" },
         { text: "Wall To Wall Floor Carpets", url: "/carpet" },
         { text: "Hotel carpet", url: "/carpet" },
-        { text: "Hand Tuffted Carpet", url: "/carpet" }      ]
+        { text: "Hand Tuffted Carpet", url: "/carpet" },
+      ],
     },
     {
       title: "Flooring",
@@ -212,26 +206,24 @@ const Footer = () => {
         { text: "Hardwood Flooring", url: "/flooring" },
         { text: "Bamboo Flooring", url: "/flooring" },
         { text: "Decking Wood", url: "/flooring" },
-        { text: "Thermo Pine", url: "/flooring" }
-
-
-      ]
+        { text: "Thermo Pine", url: "/flooring" },
+      ],
     },
     {
       title: "Support",
       links: [
         { text: "Terms & Condition", url: "/Conditions" },
         { text: "Privacy Policy", url: "/Policy" },
-        { text: "Locate Us", url: "/locateUs" }
-      ]
-    }
+        { text: "Locate Us", url: "/locateUs" },
+      ],
+    },
   ];
 
   return (
     <footer className="footer-container">
       <div className="footer-content">
         {/* Top Section */}
-        <motion.div 
+        <motion.div
           className="footer-top"
           initial="hidden"
           whileInView="visible"
@@ -242,20 +234,23 @@ const Footer = () => {
           <motion.div className="footer-brand" variants={fadeIn}>
             <a href="/" className="footer-logo-link">
               <img src={logo} alt="AIDF Group Logo" className="footer-logo" />
-              
             </a>
             <div className="footer-tagline">
-                <p >We Provide Best Quality,
-                Complete Flooring Solutions</p>
-              </div>
+              <p>We Provide Best Quality, Complete Flooring Solutions</p>
+            </div>
           </motion.div>
-
-
-        
 
           {/* Social Media */}
           <motion.div className="social-media-container" variants={fadeIn}>
-            <h5 className="social-title">Connect With Us</h5>
+            <div className="text-content">
+              <h5 className="social-title">Connect With Us</h5>
+              <div className="call-info">
+                <h5 className="social-title">Call Us -</h5>
+                <div className="tel-no"><a href="tel:+911294064647" className="phone-number">
+                  0129-4064647
+                </a></div>
+              </div>
+            </div>
             <div className="social-icons">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -269,31 +264,14 @@ const Footer = () => {
                   <div className="social-icon">
                     <img src={social.icon} alt={social.alt} />
                   </div>
-
-                  
                 </motion.a>
               ))}
             </div>
-            </motion.div>
+          </motion.div>
         </motion.div>
-         
-
- {/* Call Us Section */}
-<div className="social-media-container">
-  <div className="call-info">
-    <h5 className="social-title">Call Us -</h5> 
-    <a href="tel:+911294064647" className="phone-number">0129-4064647</a>
-  </div>
-</div>
-
-
-          
-      
-
-
 
         {/* Navigation Links */}
-        <motion.div 
+        <motion.div
           className="footer-nav"
           initial="hidden"
           whileInView="visible"
@@ -305,7 +283,7 @@ const Footer = () => {
               <h6 className="footer-heading">{column.title}</h6>
               <ul>
                 {column.links.map((link, linkIndex) => (
-                  <motion.li 
+                  <motion.li
                     key={linkIndex}
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -319,7 +297,7 @@ const Footer = () => {
         </motion.div>
 
         {/* Bottom Section */}
-        <motion.div 
+        <motion.div
           className="footer-bottom"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

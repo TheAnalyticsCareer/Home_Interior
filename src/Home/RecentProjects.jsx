@@ -172,6 +172,9 @@ const RecentProjects = () => {
             modules={[Pagination, Autoplay, Navigation]}
             spaceBetween={30}
             slidesPerView={1}
+            speed={300} // Faster transitions
+            touchRatio={0.7} // More sensitive to touch
+            resistanceRatio={0} // No resistance at edges
             pagination={{ 
               clickable: true,
               el: '.custom-pagination',
@@ -183,7 +186,7 @@ const RecentProjects = () => {
               prevEl: '.swiper-button-prev',
             }}
             autoplay={{ 
-              delay: 5000, 
+              delay: 2000, 
               disableOnInteraction: false 
             }}
             breakpoints={{
