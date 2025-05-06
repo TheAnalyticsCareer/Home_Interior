@@ -9,11 +9,11 @@ import "./SkirtingProfile.css";
 import { Link } from 'react-router-dom';
 
 import skirtingIcon from "./UPVC/img/stick-on-skirting.jpg"; // Replace with actual image
-import profileIcon from "./UPVC/img/easy-fix-pvc.jpg"; // Replace with actual image
-import screwOnImg from "./UPVC/img/screw-on-skirting.jpg";
-import stickOnImg from "./UPVC/img/stick-on-skirting.jpg";
-import lineImg from "./UPVC/img/line-skirting.jpg";
-import easyFixImg from "./UPVC/img/easy-fix-pvc.jpg";
+import profileIcon from "./UPVC/img/easy-fix-pvc.jfif"; // Replace with actual image
+import screwOnImg from "./UPVC/img/screw-on-skirting.webp";
+import stickOnImg from "./UPVC/img/stick-on-toe.jpeg";
+import lineImg from "./UPVC/img/line-skirting.avif";
+import easyFixImg from "./UPVC/img/easy-fix-pvc.jfif";
 
 const SkirtingProfile = () => {
   useEffect(() => {

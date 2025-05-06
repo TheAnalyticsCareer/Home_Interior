@@ -248,7 +248,7 @@ textarea.locate-us__form-input {
 
 /* Get Quote Section */
 .locate-us__quote-section {
-  padding: 4rem 0;
+  padding: 2rem 0;
   background-color: var(--lu-primary);
   color: var(--lu-white);
   text-align: center;

@@ -124,18 +124,16 @@
 // };
 
 // export default HeroSection;
-
 import React, { useState, useEffect, useRef } from "react";
-import "./SlideShow.css";
+import "./SlideShow.css"; // You might not need this if styles are in HeroSection.css
 import image1 from "./SlideImg/parker-tiles.jpg";
-import image2 from "./SlideImg/slide-4.jpeg";
-import image3 from "./SlideImg/wall-covering.jfif";
+import image2 from "./SlideImg/2img.jpg";
+import image3 from "./SlideImg/3img.jpg";
 import "./HeroSection.css";
 import card1 from "./HomeImg/stick-on-skirting.jpg";
 import card2 from "./HomeImg/carpet.jpg";
 import card3 from "./HomeImg/flooring.jpg";
 import years from "./HomeImg/15+excellence.png";
-
 
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -169,20 +167,10 @@ const HeroSection = () => {
     },
   ];
 
-  // Auto-advance slides
-  // useEffect(() => {
-  //     if (!isHovered) {
-  //         timerRef.current = setTimeout(() => {
-  //             goToNext();
-  //         }, interval);
-  //     }
-  //     return () => clearTimeout(timerRef.current);
-  // }, [currentIndex, isHovered, interval]);
-
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext();
-    }, 3000); // Change slide every 3 seconds (adjust for desired speed)
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentIndex, slides.length]);
@@ -201,20 +189,18 @@ const HeroSection = () => {
 
   return (
     <section className="hero-container">
-      {/* Video Background */}
+      {/* Slideshow Container */}
       <div
         className="slideshow-container"
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-     
-    
         {/* Slides */}
         <div
           className="slides-wrapper"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
-            transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)", // Smooth easing function
+            transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
           }}
         >
           {slides.map((slide, index) => (
@@ -225,43 +211,29 @@ const HeroSection = () => {
                 backgroundImage: `url(${slide.src})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
-                transition: "opacity 0.3s ease", // For crossfade effect
+                transition: "opacity 0.3s ease",
               }}
               aria-hidden={index !== currentIndex}
             />
           ))}
         </div>
 
-  
-        
         {/* Navigation Arrows */}
         <button
           className="nav-arrow prev-arrow"
           onClick={goToPrev}
           aria-label="Previous slide"
-          style={{
-            transition: "opacity 0.2s ease", // Smooth arrow appearance
-          }}
         >
           &#10094;
-          <div  style={{marginLeft:'95rem'}}  > <img style={{ marginRight:'30px', marginBottom:'59px',height:'20rem',width: '20rem'}}
-        src={years} alt="" /></div>
         </button>
-        
         <button
           className="nav-arrow next-arrow"
           onClick={goToNext}
           aria-label="Next slide"
-          style={{
-            transition: "opacity 0.2s ease", // Smooth arrow appearance
-          }}
-          
         >
-       
           &#10095;
         </button>
       </div>
-      
 
       {/* Product Cards - Redesigned */}
       <div className="product-cards-container">
@@ -345,6 +317,12 @@ const HeroSection = () => {
           </div>
         </a>
       </div>
+      {/* 15+ Years Image - Moved outside the next arrow */}
+      <div className="years-image-wrapper">
+  <img src={years} alt="15+ Years Excellence" className="years-image" />
+</div>
+
+
     </section>
   );
 };

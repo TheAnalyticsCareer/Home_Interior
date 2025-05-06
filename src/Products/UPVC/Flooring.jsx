@@ -230,26 +230,26 @@ import 'aos/dist/aos.css';
 
 // Import images for hero, categories, products, and view-all card
 import heroImage from "./img/skirting/heroImg2.jpg";
-import Category1 from "./img/flooring/african-mahogany-engineered-wood-flooring-500x500.webp";
-import Category2 from "./img/flooring/aluminium-acoustic-slim-glass-partition-for-office-500x500.webp";
-import Category3 from "./img/flooring/aluminum-slim-glass-partition-500x500.webp";
-import Category4 from "./img/flooring/nordic-oak-wood-500x500.webp";
-import Category5 from "./img/flooring/oak-wood-flooring-500x500.webp";
-import Category6 from "./img/flooring/plain-wooden-flooring-500x500.webp";
-import Category7 from "./img/flooring/slimline-glass-partition-500x500.webp";
+import Category1 from "./img/flooring/Red-laminate-floor-color-example-apr19.jpg";
+import Category2 from "./img/flooring/Remarkable-Features-of-SPC-Flooring.webp";
+import Category3 from "./img/flooring/Best-Engineered-Hardwood-Flooring-Brand-Reviews-Comparison-UK.jpg";
+import Category4 from "./img/flooring/hardwood-coswick-herringbone-collection-1.webp";
+import Category5 from "./img/flooring/bamboo -flooring.jpg";
+import Category6 from "./img/flooring/decking-wood.jpg";
+import Category7 from "./img/flooring/thermopine.jpg";
 
-import product1 from "./img/flooring/american-red-oak-flooring-1000x1000.webp";
-import product2 from "./img/flooring/american-walnut-engineered-flooring-500x500.webp";
-import product3 from "./img/flooring/bamboo-hardwood-flooring-1000x1000.webp";
-import product4 from "./img/flooring/canadian-maple-engineered-flooring-500x500.webp";
-import product5 from "./img/flooring/flooring card.webp";
-import product6 from "./img/flooring/jason-hafso-YypTXBPF5S4-unsplash.jpg";
-import product7 from "./img/flooring/jatoba-engineered-wood-laminate-flooring-500x500.webp";
-import product8 from "./img/flooring/mahagony-engineered-wood-flooring-500x500.webp";
-import product9 from "./img/flooring/mahagony-engineered-wood-flooring-500x500.webp";
-import product10 from "./img/flooring/mahagony-engineered-wood-flooring-500x500.webp";
+import product1 from "./img/flooring/oak-silver-pearl-wooden-flooring-500x500.webp";
+import product2 from "./img/flooring/american-red-oak-flooring-500x500.webp";
+import product3 from "./img/flooring/oak-wood-flooring-500x500.webp";
+import product4 from "./img/flooring/Arch2O-7-best-flooring-types-for-an-impressive-interior-3-700x525.jpg";
+import product5 from "./img/flooring/Linoleum Flooring.jpg";
+import product6 from "./img/flooring/cumaru-500x500.webp";
+import product7 from "./img/flooring/canadian-maple-engineered-flooring-500x500.webp";
+import product8 from "./img/flooring/rich-wood-collection-250x250.webp";
+import product9 from "./img/flooring/weathered-oak-wooden-flooring-250x250.webp";
+import product10 from "./img/flooring/american-walnut-wooden-flooring-250x250.webp";
 
-import viewAllImage from "./img/flooring/mahagony-solid-hardwood-flooring-500x500.webp"; // Thumbnail for "View All" card
+import viewAllImage from "./img/flooring/plain-wooden-flooring-500x500.webp"; // Thumbnail for "View All" card
 
 // Category data array for mapping category cards
 const categories = [
@@ -259,21 +259,21 @@ const categories = [
   { link: "/hotel-carpet", image: Category4, title: "Hardwood Flooring" },
   { link: "/hotel-carpet", image: Category5, title: "Bamboo Flooring" },
   { link: "/hotel-carpet", image: Category6, title: "Decking Wood" },
-  { link: "/hotel-carpet", image: Category7, title: "ThermoPineg" },
+  { link: "/hotel-carpet", image: Category7, title: "Thermo Pine" },
 ];
 
 // Product data array for mapping product showcase cards
 const products = [
-  { id: 'p1', link: "/classic-white-skirting", image: product1, title: "Carpets For Media Room", price: "₹120", height: "50mm", material: "MDF", finish: "Glossy" },
-  { id: 'p2', link: "/wooden-oak-skirting", image: product2, title: "Wall To Wall Floor Carpets", price: "₹150", height: "75mm", material: "Solid Oak", finish: "Matte" },
-  { id: 'p3', link: "/modern-grey-skirting", image: product3, title: "Cut Pile Carpet", price: "₹110", height: "50mm", material: "PVC", finish: "Matte" },
-  { id: 'p4', link: "/aluminum-skirting", image: product4, title: "Stone Nylon Matte Carpet Tiles", price: "₹180", height: "100mm", material: "Aluminum", finish: "Brushed" },
-  { id: 'p5', link: "/flexible-pvc-skirting", image: product5, title: "Raven Matte Nylon Carpet Tiles", price: "₹95", height: "50mm", material: "PVC", finish: "Glossy" },
-  { id: 'p6', link: "/heritage-skirting", image: product6, title: "Exotic Wood Flooring", price: "₹200", height: "100mm", material: "Hardwood", finish: "Polished" },
-  { id: 'p7', link: "/minimalist-skirting", image: product7, title: "Polished Nylon Carpet Tiles", price: "₹85", height: "40mm", material: "MDF", finish: "Matte" },
-  { id: 'p8', link: "/contemporary-skirting", image: product8, title: "Floor Profiles", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
-  { id: 'p9', link: "/contemporary-skirting", image: product9, title: "Floor Profiles", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
-  { id: 'p10', link: "/contemporary-skirting", image: product10, title: "Floor Profiles", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
+  { id: 'p1', link: "/classic-white-skirting", image: product1, title: "Oak Silver Pearl Wooden Flooring", price: "₹120", height: "50mm", material: "MDF", finish: "Glossy" },
+  { id: 'p2', link: "/wooden-oak-skirting", image: product2, title: "American Red Oak Flooring", price: "₹150", height: "75mm", material: "Solid Oak", finish: "Matte" },
+  { id: 'p3', link: "/modern-grey-skirting", image: product3, title: "Oak Wood Flooring", price: "₹110", height: "50mm", material: "PVC", finish: "Matte" },
+  { id: 'p4', link: "/aluminum-skirting", image: product4, title: "Hardwood Flooring", price: "₹180", height: "100mm", material: "Aluminum", finish: "Brushed" },
+  { id: 'p5', link: "/flexible-pvc-skirting", image: product5, title: "Linoleum Flooring", price: "₹95", height: "50mm", material: "PVC", finish: "Glossy" },
+  { id: 'p6', link: "/heritage-skirting", image: product6, title: "Cumaru Glossy Engineered Flooring", price: "₹200", height: "100mm", material: "Hardwood", finish: "Polished" },
+  { id: 'p7', link: "/minimalist-skirting", image: product7, title: "Canadian Maple Glossy Engineered Flooring", price: "₹85", height: "40mm", material: "MDF", finish: "Matte" },
+  { id: 'p8', link: "/contemporary-skirting", image: product8, title: "Rich Oak Wooden Flooring", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
+  { id: 'p9', link: "/contemporary-skirting", image: product9, title: "Weathered Oak Wooden Flooring", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
+  { id: 'p10', link: "/contemporary-skirting", image: product10, title: "American Oak Wooden Flooring", price: "₹160", height: "75mm", material: "Wood Composite", finish: "Satin" },
 ];
 
 // Flooring component: displays hero, categories, and product showcase with animations
@@ -397,7 +397,7 @@ const Flooring = () => {
               {/* Right: view all products card (span 3/12) */}
               <div className="col-md-3">
                 <div className="jk-banner-right">
-                  <a href="/all-products" className="view-all-link">
+                  <a href="/productPage" className="view-all-link">
                     {/* Thumbnail image */}
                     <div className="tp_bnr_vm_img">
                       <img src={viewAllImage} alt="View All Products" />

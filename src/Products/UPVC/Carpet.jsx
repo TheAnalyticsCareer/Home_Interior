@@ -275,32 +275,35 @@ import 'aos/dist/aos.css';
 
 // ====== Import images ======
 import heroImage from "./img/skirting/heroImg2.jpg";
-import Carpet50mm from "./img/carpet/app1-500x500.webp";
-import Carpet75mm from "./img/carpet/luxury-carpets-500x500.webp";
-import Carpet100mm from "./img/carpet/trump-carpet-500x500.webp";
-import product1 from "./img/carpet/carpets-for-media-room-500x500.webp";
-import product2 from "./img/carpet/carpet-rolls-foam-for-theater-auditorium-500x500.webp";
+import Carpet1 from "./img/carpet/wall-to-wall-gold-patterned-carpet-blue-wall.jpg";
+import Carpet2 from "./img/carpet/Wall-to-Wall-Carpets-9-1024x1024.jpg";
+import Carpet3 from "./img/carpet/hotel carpet.jpg";
+import Carpet4 from "./img/carpet/hand-tuffed.jpg";
+import product1 from "./img/carpet/pewter.webp";
+import product2 from "./img/carpet/loop-pile-carpet-500x500.webp";
 import product3 from "./img/carpet/cut-pile-carpet-500x500.webp";
-import product4 from "./img/carpet/welspun-carpet-tiles-500x500.webp";
-import product5 from "./img/carpet/welspun-carpet-tiles-1000x1000.webp";
-import product6 from "./img/carpet/cumaru-solid-exotic-wood-flooring-250x250.webp";
-import product7 from "./img/carpet/herinbong-laminate-flooring-250x250.webp";
-import product8 from "./img/carpet/tigerwood-engineered-flooring-250x250.webp";
+import product4 from "./img/carpet/auditorium-carpet-500x500.webp";
+import product5 from "./img/carpet/harmony-carpet-500x500.webp";
+import product6 from "./img/carpet/banquet-carpets-500x500.webp";
+import product7 from "./img/carpet/wall-covering-500x500.webp";
+import product8 from "./img/carpet/welspun-carpet-tiles-500x500.webp";
+import product9 from "./img/carpet/mediaroom -carpet.jpg";
+import product10 from "./img/carpet/carpetforhall.jpg";
 import viewAllImage from "./img/carpet/plain-nylon-carpet-250x250.webp";
 
 // ====== Constants for Category List ======
 const categories = [
-  { title: "Wall to Wall carpet", img: Carpet50mm, link: "/skirting-50mm" },
-  { title: "Wall To Wall Floor Carpets", img: Carpet75mm, link: "/skirting-75mm" },
-  { title: "Hotel carpet", img: product3, link: "/hotel-carpet" },
-  { title: "Hand Tuffted Carpet", img: Carpet100mm, link: "/hand-tuffted-carpet" },
+  { title: "Wall to Wall carpet", img: Carpet1, link: "/skirting-50mm" },
+  { title: "Wall To Wall Floor Carpets", img: Carpet2, link: "/skirting-75mm" },
+  { title: "Hotel carpet", img: Carpet3, link: "/hotel-carpet" },
+  { title: "Hand Tuffted Carpet", img: Carpet4, link: "/hand-tuffted-carpet" },
 ];
 
 // ====== Constants for Main Products ======
 const mainProducts = [
   {
     id: 'mp1',
-    img: product1,
+    img: product9,
     title: "Carpets For Media Room",
     link: "/classic-white-skirting",
     price: "₹120",
@@ -310,8 +313,8 @@ const mainProducts = [
   },
   {
     id: 'mp2',
-    img: product2,
-    title: "Wall To Wall Floor Carpets",
+    img: product10,
+    title: "Modern design banquet hall carpet",
     link: "/wooden-oak-skirting",
     price: "₹150",
     height: "75mm",
@@ -325,7 +328,7 @@ const otherProducts = [
   {
     id: 'op1',
     img: product3,
-    title: "Cut Pile Carpet",
+    title: "Red Cut Pile ",
     link: "/modern-grey-skirting",
     price: "₹110",
     height: "50mm",
@@ -335,7 +338,7 @@ const otherProducts = [
   {
     id: 'op2',
     img: product4,
-    title: "Stone Nylon Matte Carpet Tiles",
+    title: " Polyester Multicolor Auditorium Carpet Flooring",
     link: "/aluminum-skirting",
     price: "₹180",
     height: "100mm",
@@ -345,7 +348,7 @@ const otherProducts = [
   {
     id: 'op3',
     img: product5,
-    title: "Raven Matte Nylon Carpet Tiles",
+    title: "Polyester Harmony Carpet",
     link: "/flexible-pvc-skirting",
     price: "₹95",
     height: "50mm",
@@ -355,7 +358,7 @@ const otherProducts = [
   {
     id: 'op4',
     img: product6,
-    title: "Exotic Wood Flooring",
+    title: "Banquet Carpets",
     link: "/heritage-skirting",
     price: "₹200",
     height: "100mm",
@@ -365,7 +368,7 @@ const otherProducts = [
   {
     id: 'op5',
     img: product7,
-    title: "Polished Nylon Carpet Tiles",
+    title: "Wall To Wall Carpets",
     link: "/minimalist-skirting",
     price: "₹85",
     height: "40mm",
@@ -375,7 +378,7 @@ const otherProducts = [
   {
     id: 'op6',
     img: product8,
-    title: "Floor Profiles",
+    title: "Arabica Matte Nylon Carpet Tiles",
     link: "/contemporary-skirting",
     price: "₹160",
     height: "75mm",
@@ -385,7 +388,7 @@ const otherProducts = [
   {
     id: 'op7',
     img: product1,
-    title: "Polished Engineered Flooring",
+    title: "Pewter Matte Nylon Carpet Tiles",
     link: "/classic-white-skirting",
     price: "₹120",
     height: "50mm",
@@ -395,7 +398,7 @@ const otherProducts = [
   {
     id: 'op8',
     img: product2,
-    title: "Carpet Roll Foam",
+    title: "Loop Pile Carpet",
     link: "/wooden-oak-skirting",
     price: "₹150",
     height: "75mm",
@@ -518,7 +521,7 @@ const Carpet = () => {
               {/* ====== View All Button Section ====== */}
               <div className="col-md-3">
                 <div className="jk-banner-right">
-                  <a href="/all-products" className="view-all-link">
+                  <a href="/productPage" className="view-all-link">
                     <div className="tp_bnr_vm_img">
                       <img src={viewAllImage} alt="View All Products" />
                     </div>

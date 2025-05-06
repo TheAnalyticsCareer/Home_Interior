@@ -83,7 +83,7 @@
 
 .about-hero-image img {
   width: 100%;
-  height: auto;
+  height: 40rem;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -94,7 +94,7 @@
 
 /* Leadership Section */
 .leadership-section {
-  padding: 5rem 0;
+  padding: 0rem 0;
   background: #FFFFFF;
 }
 
@@ -149,7 +149,7 @@
 
 /* Our Story Section */
 .our-story-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   background: #F1F1F1;
 }
 
@@ -210,7 +210,7 @@
 
 /* Vision Section */
 .vision-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background: #FFFFFF;
 }
 
@@ -232,7 +232,7 @@
 
 .vision-image img {
   width: 100%;
-  height: auto;
+  height: 25rem;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -280,7 +280,7 @@
 
 /* Mission Section */
 .mission-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background: #FAFAFA;
 }
 
@@ -302,7 +302,7 @@
 
 .mission-image img {
   width: 100%;
-  height: auto;
+  height: 25rem;
   display: block;
   transition: transform 0.5s ease;
 }
