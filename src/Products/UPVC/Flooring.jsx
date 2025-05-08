@@ -223,6 +223,10 @@
 
 
 
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import './Flooring.css';
 import AOS from 'aos';

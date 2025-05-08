@@ -60,7 +60,7 @@
 
 
 .testimonial-swiper {
-  padding: 0px 0 40px;
+ 
   overflow: hidden;
 }
 
@@ -208,9 +208,7 @@
 }
 
 @media (max-width: 992px) {
-  .testimonial-section {
-    padding: 60px 0;
-  }
+  
   
   .testimonial-header h2 {
     font-size: 2rem;
@@ -250,9 +248,7 @@
 }
 
 @media (max-width: 576px) {
-  .testimonial-section {
-    padding: 50px 0;
-  }
+  
   
   .testimonial-container {
     padding: 0 20px;
@@ -274,3 +270,4 @@
     font-size: 0.9rem;
   }
 }
+

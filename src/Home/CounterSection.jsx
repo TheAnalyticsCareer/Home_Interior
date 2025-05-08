@@ -254,7 +254,7 @@ const CounterSection = () => {
       >
         <div className="counter-content">
           <motion.div className="section-header" variants={itemVariants}>
-            <h4 className="section-subtitle" style={{ color: 'red' }}>OUR MILESTONES</h4>
+            <h4 className="section-subtitle" style={{ color: 'red', fontSize:'30px',marginBottom:'1px'  }}>OUR MILESTONES</h4>
             <h3 className="section-title" style={{ color: '#E3EED4' }}>Experience
             The magic of AIDF</h3>
             <p style={{color:'white', fontSize:'16px'}}>Our products are manufactured using the most advanced machinery and technology to provide great durability and quality.</p>

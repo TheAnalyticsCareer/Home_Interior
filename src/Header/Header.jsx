@@ -353,19 +353,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import "./header.css";
 import brochure from "./img/brochure.pdf";
 import aidfLogo from "./img/aidf_logo.png";
+import axios from 'axios';
+import { useFormik } from 'formik';
 
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactFormOpen, setContactFormOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    service: 'skirting&profile',
-    email: '',
-    message: ''
-  });
+ 
   const [formStatus, setFormStatus] = useState({
     submitting: false,
     success: false,
@@ -380,41 +376,42 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleFormChange = (e) => {
-    const { name, vaidfe } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: vaidfe
-    }));
-  };
+ 
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    setFormStatus({ submitting: true, success: false, error: false });
+ 
     
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      console.log('Form submitted:', formData);
-      setFormStatus({ submitting: false, success: true, error: false });
-      
-      // Reset form after successful submission
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          phone: '',
-          service: 'uPVC',
-          email: '',
-          message: ''
+
+  // -------------------------------------------------------------------------------------------------
+
+  const myFormik=useFormik({
+    initialValues:{
+      name:"",
+      phone:"",
+      email:"",
+      service:"Skirting & Profile",
+      message:""
+    },
+
+    onSubmit: async (values) => {
+      try {
+        setFormStatus({ submitting: true, success: false, error: false });
+        await axios.post(`http://localhost:5588/submit-enquiry`, values);
+        setFormStatus({ submitting: false, success: true, error: false });
+        myFormik.resetForm();
+      } catch (err) {
+        console.error('Submission error:', err);
+        setFormStatus({ 
+          submitting: false, 
+          success: false, 
+          error: true,
+          errorMessage: err.response?.data || err.message 
         });
-        setContactFormOpen(false);
-      }, 2000);
-    } catch (error) {
-      console.error('Submission error:', error);
-      setFormStatus({ submitting: false, success: false, error: true });
+      }
     }
-  };
+  })
+  
+
+
 
   const isActive = (path) => {
     return window.location.pathname === path ? 'active' : '';
@@ -480,7 +477,7 @@ const Header = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleFormSubmit} className="header-cf-contact-form">
+              <form onSubmit={myFormik.handleSubmit} className="header-cf-contact-form">
                 <div className="header-cf-form-grid">
                   <div className="header-cf-form-group">
                     <label htmlFor="header-cf-name" className="header-cf-input-label">Full Name*</label>
@@ -490,8 +487,8 @@ const Header = () => {
                         id="header-cf-name"
                         name="name"
                         placeholder="John Doe"
-                        vaidfe={formData.name}
-                        onChange={handleFormChange}
+                       value={myFormik.values.name}
+                        onChange={myFormik.handleChange}
                         required
                         className="header-cf-input-field"
                       />
@@ -508,9 +505,9 @@ const Header = () => {
                         type="tel"
                         id="header-cf-phone"
                         name="phone"
-                        placeholder="+91 98765 43210"
-                        vaidfe={formData.phone}
-                        onChange={handleFormChange}
+                        placeholder="Your Phone No."
+                        value={myFormik.values.phone}
+                        onChange={myFormik.handleChange}
                         required
                         className="header-cf-input-field"
                       />
@@ -528,8 +525,8 @@ const Header = () => {
                         id="header-cf-email"
                         name="email"
                         placeholder="your.email@example.com"
-                        vaidfe={formData.email}
-                        onChange={handleFormChange}
+                        value={myFormik.values.email}
+                        onChange={myFormik.handleChange}
                         required
                         className="header-cf-input-field"
                       />
@@ -545,15 +542,15 @@ const Header = () => {
                       <select
                         id="header-cf-service"
                         name="service"
-                        vaidfe={formData.service}
-                        onChange={handleFormChange}
+                        value={myFormik.values.service}
+                        onChange={myFormik.handleChange}
                         required
                         className="header-cf-input-field"
                       >
-                        <option vaidfe="skirting&profile">Skirting&Profile</option>
-                        <option vaidfe="carpets">Carpets</option>
-                        <option vaidfe="flooring">Flooring</option>
-                        <option vaidfe="other">Other Services</option>
+                        <option value="skirting&profile">Skirting&Profile</option>
+                        <option value="carpets">Carpets</option>
+                        <option value="flooring">Flooring</option>
+                        <option value="other">Other Services</option>
                       </select>
                       <svg className="header-cf-input-icon" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12,16L6,10H18L12,16Z" />
@@ -568,8 +565,8 @@ const Header = () => {
                         id="header-cf-message"
                         name="message"
                         placeholder="Tell us about your requirements..."
-                        vaidfe={formData.message}
-                        onChange={handleFormChange}
+                        value={myFormik.values.message}
+                        onChange={myFormik.handleChange}
                         rows="4"
                         className="header-cf-textarea-field"
                       ></textarea>
@@ -691,6 +688,7 @@ const Header = () => {
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/skirtingProfile">Skirting & Profile</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/carpet">Carpets</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/flooring">Flooring</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/Aluminium_glass">Aluminium Modular Glass Partition</a>
                     </div>
                   </li>
                   

@@ -206,7 +206,7 @@ const SkirtingProfile = () => {
           <p>Our experts are ready to help you choose the perfect solution for your project</p>
           <div className="cta-buttons">
             <button className="cta-button">Get a Free Quote</button>
-            <button className="secondary-button">View Product Catalog</button>
+          
           </div>
         </div>
       </section>

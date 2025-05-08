@@ -216,7 +216,7 @@ const NewLaunch = () => {
   return (
     <section className="new-launch-section">
       <div className="section-header">
-        <h2 className="section-title">Our Newly Launched Projects</h2>
+        <h2 className="section-title"> OUR NEWLY LAUNCHED PROJECTS </h2>
         <p className="section-subtitle" style={{ color: "#61CE70" }}>
           Discover exceptional living spaces crafted with precision and elegance
         </p>

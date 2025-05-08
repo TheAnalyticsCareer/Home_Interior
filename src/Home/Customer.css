@@ -1,4 +1,5 @@
 /* In styles.css or global.css */
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

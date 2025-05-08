@@ -140,7 +140,7 @@ import customer22 from "./customersImg/wns.jfif";
 
 const Customer = () => {
   const settings = {
-    dots: true,
+    dots: false, // changed from true to false
     infinite: true,
     speed: 800,
     slidesToShow: 6,
@@ -157,6 +157,7 @@ const Customer = () => {
       { breakpoint: 640, settings: { slidesToShow: 2, slidesToScroll: 1 } },
     ],
   };
+  
 
   const customers = [
     customer1,

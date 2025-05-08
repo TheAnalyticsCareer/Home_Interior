@@ -1,6 +1,6 @@
 /* Main Section Styles */
 .projects-section {
-  padding: 40px 0;
+  padding: 0px 0;
   position: relative;
   overflow: hidden;
 }
@@ -35,7 +35,7 @@
 /* Swiper Container */
 .swiper-container {
   position: relative;
-  padding: 0 40px;
+  padding: 5px 40px;
   margin-bottom: 15px;
 }
 
@@ -183,7 +183,8 @@
 
 @media (max-width: 768px) {
   .projects-container {
-    padding: 0 20px;
+    padding: 35px 20px;
+    margin-bottom: -75px;
   }
 
   .section-subtitle {

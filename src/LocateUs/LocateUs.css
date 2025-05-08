@@ -295,10 +295,64 @@ textarea.locate-us__form-input {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
+
+
+
+/* Loading Spinner Styles */
+.locate-us__submit-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.locate-us__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: locate-us-spin 1s ease-in-out infinite;
+}
+
+@keyframes locate-us-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled state for button */
+.locate-us__submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #1a365d;
+}
+
+/* Form input loading state */
+.locate-us__form-input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .locate-us__submit-btn {
+    padding: 12px 20px;
+  }
+  
+  .locate-us__spinner {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+
 /* Map Section */
 .locate-us__map-section {
   padding: 4rem 0;
-  background: var(--lu-white);
+  background: var(--lu-lighter);
 }
 
 .locate-us__section-header {

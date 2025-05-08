@@ -7,7 +7,7 @@ import NewLaunch from './NewLaunch';
 import RecentProjects from './RecentProjects';
 import CounterSection from './CounterSection';
 // import TrustSection from './TrustSection';
-// import BlogSlider from './BlogSlider';
+ import BlogSlider from './BlogSlider';
 import ClientTestimonials from './ClientTestimonials';
 import Customer from './Customer';
 import Whatsapp from './Whatsapp';
@@ -24,7 +24,7 @@ function Home() {
       <NewLaunch />
       <RecentProjects />
       {/* <TrustSection /> */}
-      {/* <BlogSlider /> */}
+      { <BlogSlider /> }
       <ClientTestimonials />
       <Customer/>
     </>

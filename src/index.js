@@ -11,9 +11,12 @@ import SkirtingProfile from "./Products/SkirtingProfile";
 import LocateUs from "./LocateUs/LocateUs";
 import Dealer from "./Dealer/Dealer";
 import Carpet from "./Products/UPVC/Carpet";
+import Aluminium_glass from "./Products/UPVC/Aluminium_glass";
 import Flooring from "./Products/UPVC/Flooring";
 import Blogs from "./Blog/Blogs";
 import BlogDetail from "./Blog/BlogDetail";
+import BlogSlider from "./Home/BlogSlider";
+import BlogDetails from "./Home/BlogDetails";
 import ContactFormPopup from "./POPUP/ContactFormPopup";
 import BlogList from "./StaticBLog/BlogList";
 import Detail from "./StaticBLog/Detail";
@@ -38,13 +41,18 @@ root.render(
           <Route path="dealer" element={<Dealer />} />
           <Route path="carpet" element={<Carpet />} />
           <Route path="flooring" element={<Flooring />} />
+          <Route path="Aluminium_glass" element={<Aluminium_glass />} />
           <Route path="Conditions" element={<Conditions />} />
           <Route path="Policy" element={<Policy />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogDetails/:blogId" element={<BlogDetail />} />
+
+          <Route path="blogSlider" element={<BlogSlider />} />
+          <Route path="/static-blog/:id" element={<BlogDetails />} />
+
           <Route path="contact" element={<ContactFormPopup />} />
-           <Route path="static-blog" element={<BlogList />} />
-        <Route path="/static-blog/:id" element={<Detail />} />
+          <Route path="static-blog" element={<BlogList />} />
+          <Route path="/static-blog/:id" element={<Detail />} />
         </Route>
       </Routes>
     </Router>
