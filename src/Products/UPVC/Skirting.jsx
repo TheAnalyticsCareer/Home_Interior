@@ -748,26 +748,23 @@ const Skirting = () => {
 
 
    // ------------------------------------------------------------------------
-
    const myFormik = useFormik({
     initialValues: {
-      name:"",
+      name: "",
       phone: "",
       email: "",
-      price:"",
-      height:"",
-      material:"",
-      finish:""
-     
+      price: "",
+      height: "",
+      material: "",
+      finish: "",
     },
 
     onSubmit: async (values) => {
       setIsSubmitting(true);
       try {
         await axios.post(`http://localhost:5588/submit-quote`, values);
-        toast.success("Request Submit Successfully");
+        toast.success("Request Submitted Successfully");
         closeModal();
-
       } catch (err) {
         toast.error("Error While Submitting Request");
         console.error("Submission error:", err);
@@ -779,17 +776,20 @@ const Skirting = () => {
 
   // ---------------------------------------------------------------------
 
-  useEffect(()=>{
-    isModalOpen?console.log("currentProduct ---",currentProduct):console.log("no modal ")
+  useEffect(() => {
+    if (isModalOpen && currentProduct) {
+      myFormik.setFieldValue("name", currentProduct.name);
+      myFormik.setFieldValue("price", currentProduct.price);
 
-    myFormik.setFieldValue("name",currentProduct.name);
-    myFormik.setFieldValue("price",currentProduct.price);
-    myFormik.setFieldValue("height",currentProduct.height);
-    myFormik.setFieldValue("material",currentProduct.material);
-    myFormik.setFieldValue("finsish",currentProduct.finish);
+      const heightDetail = currentProduct.details.find(d => d.label === "Height");
+      const materialDetail = currentProduct.details.find(d => d.label === "Material");
+      const finishDetail = currentProduct.details.find(d => d.label === "Finish");
 
-    
-  },[ isModalOpen])
+      myFormik.setFieldValue("height", heightDetail ? heightDetail.value : "");
+      myFormik.setFieldValue("material", materialDetail ? materialDetail.value : "");
+      myFormik.setFieldValue("finish", finishDetail ? finishDetail.value : "");
+    }
+  }, [isModalOpen, currentProduct]);
 
 
 
@@ -1115,20 +1115,12 @@ const Skirting = () => {
             <button className="close-modal" onClick={closeModal}>
               <span className="material-symbols-outlined">close</span>
             </button>
-
             <div className="modal-content">
               <div className="product-info">
-                <img
-                  src={currentProduct.image}
-                  alt={currentProduct.name}
-                  className="modal-product-image"
-                />
+                <img src={currentProduct.image} alt={currentProduct.name} className="modal-product-image" />
                 <div className="product-details">
                   <h3>{currentProduct.name}</h3>
-                  <div className="modal-price">
-                    {currentProduct.price}
-                    <span>/sq ft</span>
-                  </div>
+                  <div className="modal-price">{currentProduct.price}<span>/sq ft</span></div>
                   <ul className="modal-specs">
                     {currentProduct.details.map((detail, index) => (
                       <li key={index}>
@@ -1138,21 +1130,19 @@ const Skirting = () => {
                   </ul>
                 </div>
               </div>
-
               <div className="contact-form">
-                <p className="contact-message">
-                  We'll contact you shortly with the quote details
-                </p>
+                <p className="contact-message">We'll contact you shortly with the quote details</p>
                 <form onSubmit={myFormik.handleSubmit}>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       value={myFormik.values.phone}
                       onChange={myFormik.handleChange}
-                      placeholder="Enter your phone number"
                       required
+                      placeholder="Phone no."
                       className="form-input"
                     />
                   </div>
@@ -1161,15 +1151,16 @@ const Skirting = () => {
                     <input
                       type="email"
                       id="user-email"
+                      name="email"
                       value={myFormik.values.email}
                       onChange={myFormik.handleChange}
-                      placeholder="example@gmail.com"
                       required
+                      placeholder="example@gmail.com"
                       className="form-input"
                     />
                   </div>
-                  <button type="submit" className="submit-btn">
-                    Submit Request
+                  <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                    {isSubmitting ? "Submitting..." : "Submit Request"}
                   </button>
                 </form>
               </div>
@@ -1177,7 +1168,7 @@ const Skirting = () => {
           </div>
         </div>
       )}
-       <ToastContainer position="top-center" autoClose={3000} />
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 };
