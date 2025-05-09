@@ -50,11 +50,11 @@
 //   };
 
 //   return (
-//     <div className="about-us-page">
+//     <div className="aboutPage-us-page">
 //       {/* ========== Top Hero Section ========== */}
-//       <section className="about-hero-section">
-//         <div className="about-hero-container">
-//           <div className="about-hero-content">
+//       <section className="aboutPage-hero-section">
+//         <div className="aboutPage-hero-container">
+//           <div className="aboutPage-hero-content">
 //             <h1>
 //               <span className="highlight">PARAMOUNT WHOLESALER, EXPORTER & PROVIDER</span>
 //             </h1>
@@ -65,7 +65,7 @@
 //               and wooden products.
 //             </p>
 //           </div>
-//           <div className="about-hero-image">
+//           <div className="aboutPage-hero-image">
 //             <img src={heroImg} alt="AIDF GROUP Products" />
 //           </div>
 //         </div>
@@ -363,18 +363,18 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="about-us-page">
+    <div className="aboutPage-us-page">
       {/* ========== Top Hero Section ========== */}
       <motion.section 
-        className="about-hero-section"
+        className="aboutPage-hero-section"
         ref={heroRef}
         initial="hidden"
         animate={heroControls}
         variants={fadeIn}
       >
-        <div className="about-hero-container">
+        <div className="aboutPage-hero-container">
           <motion.div 
-            className="about-hero-content"
+            className="aboutPage-hero-content"
             variants={leftToRight}
           >
             <motion.h1 variants={staggerItem}>
@@ -388,7 +388,7 @@ const AboutUs = () => {
             </motion.p>
           </motion.div>
           <motion.div 
-            className="about-hero-image"
+            className="aboutPage-hero-image"
             variants={rightToLeft}
           >
             <motion.img 
@@ -420,8 +420,8 @@ const AboutUs = () => {
         >
           <motion.div 
             className="leader-card"
-            variants={staggerItem}
-            whileHover={{ y: -5 }}
+           
+          
           >
             <div className="leader-icon">
               {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -443,9 +443,7 @@ const AboutUs = () => {
 
           <motion.div 
             className="leader-card"
-            variants={staggerItem}
-            whileHover={{ y: -5 }}
-            transition={{ delay: 0.2 }}
+           
           >
             <div className="leader-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

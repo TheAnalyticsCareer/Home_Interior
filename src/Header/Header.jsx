@@ -388,7 +388,7 @@ const Header = () => {
       name:"",
       phone:"",
       email:"",
-      service:"Skirting & Profile",
+      service:"Skirting and Profile",
       message:""
     },
 

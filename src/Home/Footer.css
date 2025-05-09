@@ -2,14 +2,14 @@
 .footer-container {
   background: #2a2a2a;
   color: #ffffff;
-  padding: 1rem 0 0;
+  padding: 2rem 0 0;
   font-family: 'Inter', sans-serif;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /* Top Section */
@@ -17,52 +17,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 2rem;
 }
 
 .footer-brand {
   text-align: center;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-logo {
   height: 70px;
-  margin-bottom: 0rem;
+  width: auto;
+  margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
 
 .footer-logo-link:hover .footer-logo {
   transform: scale(1.05);
-  color: white;
-  text-decoration: none;
 }
 
 .footer-tagline p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
+  margin: 0;
+  font-size: 0.95rem;
   color: #f1f1f1;
-  line-height: 1.4;
-  text-decoration: none;
-  
-
+  line-height: 1.5;
+  max-width: 300px;
 }
 
 /* Social Media */
-
-
-
 .social-media-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  justify-content: flex-end;
+
+  width: 100%;
 }
 
 .text-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .social-title {
@@ -70,35 +69,37 @@
   margin-bottom: 0.5rem;
   color: #f1f1f1;
   font-weight: 500;
-  text-align: right;
 }
-
 
 .call-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
 }
-
 
 .phone-number {
   color: #f1f1f1;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-
+.phone-number:hover {
+  color: #61CE70;
+}
 
 .social-icons {
   display: flex;
-  gap: 1.5rem;
-  position: relative;
-  top: -24px;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -111,6 +112,7 @@
   width: 20px;
   height: 20px;
   filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
 }
 
 .social-icon:hover {
@@ -118,36 +120,25 @@
   transform: translateY(-3px);
 }
 
-.contact-container{
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.social-icon:hover img {
+  filter: brightness(0) invert(1);
 }
-
-
-.tel-no{
-  position: relative;
-  top: -4px;
-}
-
-
 
 /* Navigation Links */
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  padding: 0.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .footer-column {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .footer-heading {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
   color: #ffffff;
   font-weight: 600;
   position: relative;
@@ -171,7 +162,7 @@
 }
 
 .footer-column li {
-  margin-bottom: 0rem;
+  margin-bottom: 0.3rem;
 }
 
 .footer-column a {
@@ -180,6 +171,7 @@
   font-size: 0.9rem;
   transition: all 0.3s ease;
   display: inline-block;
+  line-height: 1.4;
 }
 
 .footer-column a:hover {
@@ -190,7 +182,7 @@
 /* Bottom Section */
 .footer-bottom {
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -201,113 +193,107 @@
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    text-align: left;
+    align-items: flex-start;
   }
 
   .footer-brand {
+    align-items: flex-start;
     text-align: left;
-    margin-bottom: 0;
-    flex: 1;
+    max-width: 300px;
   }
 
   .social-media-container {
-    text-align: right;
-    flex: 1;
+    align-items: flex-end;
+  }
+
+  .text-content {
+    align-items: flex-end;
+  }
+
+  .call-info {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    padding: 0 2rem;
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
   }
 
   .social-icons {
-    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-nav {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer-top {
+    padding-bottom: 0rem;
   }
 }
 
 @media (max-width: 480px) {
   .footer-nav {
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
-  
-  .footer-content {
-    padding: 0 1.5rem;
-  }
-}
-social-media-container img{
-  height: 10px;
-}
-
-.call-info {
-  display: flex;
-  align-items: left;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-  justify-content: right;
-}
-
-.phone-icon-wrapper {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.phone-icon {
-  width: 16px;
-  height: 16px;
-  align-items: right;
-}
-.phone-number {
-  color: white;
-  text-decoration: none;
-}
-
-
-
-
-
-
-
-
-@media (max-width: 480px) {
-
-
-  
 
   .footer-brand {
-    margin-bottom: 1.5rem;
-  }
-
-  .social-media-container {
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-  }
-
-  .text-content {
     align-items: center;
+    text-align: center;
   }
 
-  /* 3. Enlarge social icons */
+  .footer-logo {
+    height: 60px;
+  }
+
   .social-icon {
-    margin-top: 20px;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
   }
 
   .social-icon img {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
-  /* Enlarge phone link */
   .phone-number {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-nav {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-column a:hover {
+    transform: none;
+  }
+
+  .social-icons {
+    gap: 0.8rem;
+  }
 }

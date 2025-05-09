@@ -797,7 +797,7 @@ const Skirting = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: "ease-in-out",
+      easing: "ease-in",
       once: true,
     });
   }, []);

@@ -116,8 +116,8 @@
   }
   
   .blog-content p {
-    margin-bottom: 1.8rem;
-  }
+    margin-bottom: 1.8rem;    text-align: justify;
+   }
   
   .blog-content h2 {
     color: var(--text-color);

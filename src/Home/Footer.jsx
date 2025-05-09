@@ -245,9 +245,9 @@ const Footer = () => {
             <div className="text-content">
               <h5 className="social-title">Connect With Us</h5>
               <div className="call-info">
-                <h5 className="social-title">Call Us -</h5>
+                <h5 className="social-title">Call Us - 0129-4064647</h5>
                 <div className="tel-no"><a href="tel:+911294064647" className="phone-number">
-                  0129-4064647
+                  
                 </a></div>
               </div>
             </div>

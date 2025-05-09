@@ -65,12 +65,12 @@ const HeroSection = () => {
   return (
     <section className="hero-container">
       <div
-        className="slideshow-container"
+        className="hs-slideshow-container"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <div
-          className="slides-wrapper"
+          className="hs-slides-wrapper"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
             transition: "transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)",
@@ -79,7 +79,7 @@ const HeroSection = () => {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="slide"
+              className="hs-slide"
               style={{
                 backgroundImage: `url(${slide.src})`,
                 backgroundPosition: "center",
@@ -107,13 +107,13 @@ const HeroSection = () => {
         </button>
       </div>
 
-      <div className="product-cards-container">
-        <a href="/skirtingProfile" className="product-card">
-          <div className="card-image-container">
-            <img src={card1} alt="Skirting & Profile" className="card-image" />
-            <div className="image-overlay"></div>
+      <div className="hs-product-cards-container">
+        <a href="/skirtingProfile" className="hs-product-card">
+          <div className="hs-card-image-container">
+            <img src={card1} alt="Skirting & Profile" className="hs-card-image" />
+            <div className="hs-image-overlay"></div>
           </div>
-          <div className="card-content">
+          <div className="hs-card-content">
             <h3 style={{ color: "black" }} className="card-title">
               Skirting & Profile
             </h3>
@@ -130,13 +130,13 @@ const HeroSection = () => {
           </div>
         </a>
 
-        <a href="/carpet" className="product-card">
-          <div className="card-image-container">
-            <img src={card2} alt="Carpets" className="card-image" />
-            <div className="image-overlay"></div>
+        <a href="/carpet" className="hs-product-card">
+          <div className="hs-card-image-container">
+            <img src={card2} alt="Carpets" className="hs-card-image" />
+            <div className="hs-image-overlay"></div>
           </div>
-          <div className="card-content">
-            <h3 className="card-title">Carpets</h3>
+          <div className="hs-card-content">
+            <h3 className="hs-card-title">Carpets</h3>
             <div className="card-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 24 24">
                 <path
@@ -150,13 +150,13 @@ const HeroSection = () => {
           </div>
         </a>
 
-        <a href="/flooring" className="product-card">
-          <div className="card-image-container">
-            <img src={card3} alt="Flooring" className="card-image" />
-            <div className="image-overlay"></div>
+        <a href="/flooring" className="hs-product-card">
+          <div className="hs-card-image-container">
+            <img src={card3} alt="Flooring" className="hs-card-image" />
+            <div className="hs-image-overlay"></div>
           </div>
-          <div className="card-content">
-            <h3 className="card-title">Flooring</h3>
+          <div className="hs-card-content">
+            <h3 className="hs-card-title">Flooring</h3>
             <div className="card-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 24 24">
                 <path
@@ -170,13 +170,13 @@ const HeroSection = () => {
           </div>
         </a>
 
-        <a href="/Aluminium_glass" className="product-card">
-          <div className="card-image-container">
-            <img src={card4} alt="Aluminium Modular Glass Partition" className="card-image" />
-            <div className="image-overlay"></div>
+        <a href="/Aluminium_glass" className="hs-product-card">
+          <div className="hs-card-image-container">
+            <img src={card4} alt="Aluminium Modular Glass Partition" className="hs-card-image" />
+            <div className="hs-image-overlay"></div>
           </div>
-          <div className="card-content">
-            <h3 className="card-title">Aluminium Modular Glass Partition</h3>
+          <div className="hs-card-content">
+            <h3 className="hs-card-title">Aluminium Modular Glass Partition</h3>
             <div className="card-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 24 24">
                 <path

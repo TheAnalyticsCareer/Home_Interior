@@ -1,23 +1,24 @@
 /* Main Section Styles */
-.projects-section {
-  padding: 0px 0;
+.recent-projects-section {
+  padding: 30px 0;
+  padding-bottom: 0.5rem;
   position: relative;
   overflow: hidden;
 }
 
-.projects-container {
+.recent-projects-container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
 /* Header Styles */
-.section-header {
+.recent-section-header {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.section-subtitle {
+.recent-section-subtitle {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -25,7 +26,7 @@
   margin-bottom: 15px;
 }
 
-.section-title {
+.recent-section-title {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
@@ -33,31 +34,31 @@
 }
 
 /* Swiper Container */
-.swiper-container {
+.recent-swiper-container {
   position: relative;
   padding: 5px 40px;
   margin-bottom: 15px;
 }
 
-.project-swiper {
+.recent-project-swiper {
   overflow: visible;
 }
 
 /* Project Card Styles */
-.project-card {
+.recent-project-card {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(15, 42, 29, 0.1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.project-image-container {
+.recent-project-image-container {
   position: relative;
   height: 300px;
   overflow: hidden;
 }
 
-.project-image {
+.recent-project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -65,29 +66,29 @@
 }
 
 /* Reduced hover scale for better quality */
-.project-card:hover .project-image {
+.recent-project-card:hover .recent-project-image {
   transform: scale(1.02);
 }
 
 /* Removed blur/overlay */
-.image-overlay {
+.recent-image-overlay {
   display: none;
 }
 
-.project-title {
+.recent-project-title {
   padding: 20px;
   text-align: center;
 }
 
-.project-title h4 {
+.recent-project-title h4 {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 
 /* Swiper Controls */
-.swiper-controls {
+.recent-swiper-controls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +96,7 @@
   margin-top: 30px;
 }
 
-.custom-pagination {
+.recent-custom-pagination {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -111,7 +112,7 @@
 }
 
 .custom-bullet-active {
-  background-color: #0F2A1D;
+  background-color: #0f2a1d;
   transform: scale(1.2);
 }
 
@@ -138,7 +139,7 @@
 }
 
 /* View More Button */
-.view-more-container {
+.recent-view-more-container {
   text-align: center;
 }
 
@@ -154,48 +155,54 @@
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .projects-container {
+  .recent-projects-container {
     padding: 0 30px;
+    margin-top: 2rem;
   }
 
-  .project-image-container {
+  .recent-project-image-container {
     height: 250px;
+  }
+
+  .recent-projects-section{
+    padding-top: 0px;
+    margin-bottom: -20px;
   }
 }
 
 @media (max-width: 992px) {
-  .projects-section {
-    padding: 60px 0;
+  .recent-projects-section {
+    padding-bottom: 100px;
   }
 
-  .section-header {
+  .recent-section-header {
     margin-bottom: 40px;
   }
 
-  .section-title {
+  .recent-section-title {
     font-size: 2rem;
   }
 
-  .swiper-container {
+  .recent-swiper-container {
     padding: 0 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .projects-container {
-    padding: 35px 20px;
+  .recent-projects-container {
+    padding: 0px 20px;
     margin-bottom: -75px;
   }
 
-  .section-subtitle {
+  .recent-section-subtitle {
     font-size: 0.9rem;
   }
 
-  .section-title {
+  .recent-section-title {
     font-size: 1.8rem;
   }
 
-  .project-title h4 {
+  .recent-project-title h4 {
     font-size: 1rem;
   }
 
@@ -205,19 +212,19 @@
 }
 
 @media (max-width: 576px) {
-  .projects-section {
-    padding: 40px 0;
+  .recent-projects-section {
+    padding: 1px 0;
   }
 
-  .section-title {
+  .recent-section-title {
     font-size: 1.5rem;
   }
 
-  .swiper-container {
+  .recent-swiper-container {
     padding: 0 10px;
   }
 
-  .swiper-controls {
+  .recent-swiper-controls {
     gap: 20px;
   }
 
