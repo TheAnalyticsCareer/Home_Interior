@@ -114,7 +114,7 @@ const HeroSection = () => {
             <div className="hs-image-overlay"></div>
           </div>
           <div className="hs-card-content">
-            <h3 style={{ color: "black" }} className="card-title">
+            <h3 style={{ color: "black" }} className="hs-card-title">
               Skirting & Profile
             </h3>
             <div className="card-arrow">
