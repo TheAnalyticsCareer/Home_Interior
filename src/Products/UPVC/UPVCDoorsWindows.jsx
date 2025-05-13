@@ -452,7 +452,7 @@ const services = [
     description: "Premium skirting profiles for perfect finishing",
     badge: "New",
     image: skirtingCard,
-    link: "/skirtingProfile",
+    link: "/skirting",
   },
   {
     id: 2,

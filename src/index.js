@@ -32,27 +32,27 @@ root.render(
           <Route index element={<Home />} />
           {/* <Route path='home-interior' element={<HomeInterior />} /> */}
           <Route path="about-us" element={<AboutUs />} />
-          <Route path="productPage" element={<UPVCDoorsWindows />} />
-          
-          
-            <Route path="/skirting" element={<Skirting />} />
-     
+
           <Route path="locateUs" element={<LocateUs />} />
-          <Route path="dealer" element={<Dealer />} />
-          <Route path="carpet" element={<Carpet />} />
-          <Route path="flooring" element={<Flooring />} />
-          <Route path="Aluminium_glass" element={<Aluminium_glass />} />
+          {/* <Route path="dealer" element={<Dealer />} /> */}
           <Route path="Conditions" element={<Conditions />} />
           <Route path="Policy" element={<Policy />} />
+
+          <Route path="productPage" element={<UPVCDoorsWindows />} />
+          <Route path="/skirting" element={<Skirting />} />
+          <Route path="carpet" element={<Carpet />} />
+          <Route path="Aluminium_glass" element={<Aluminium_glass />} />
+          <Route path="flooring" element={<Flooring />} />
+          <Route path="static-blog" element={<BlogList />} />
+          
+
           <Route path="blogs" element={<Blogs />} />
           <Route path="blogDetails/:blogId" element={<BlogDetail />} />
-
           <Route path="blogSlider" element={<BlogSlider />} />
           <Route path="/static-blog/:id" element={<BlogDetails />} />
+          <Route path="/static-blog/:id" element={<Detail />} />
 
           <Route path="contact" element={<ContactFormPopup />} />
-          <Route path="static-blog" element={<BlogList />} />
-          <Route path="/static-blog/:id" element={<Detail />} />
         </Route>
       </Routes>
     </Router>
