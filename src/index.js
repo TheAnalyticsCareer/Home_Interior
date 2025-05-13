@@ -7,7 +7,7 @@ import Home from "./Home/Home";
 import AboutUs from "./About/AboutUs";
 import UPVCDoorsWindows from "./Products/UPVC/UPVCDoorsWindows";
 import Skirting from "./Products/UPVC/Skirting";
-import SkirtingProfile from "./Products/SkirtingProfile";
+// import SkirtingProfile from "./Products/SkirtingProfile";
 import LocateUs from "./LocateUs/LocateUs";
 import Dealer from "./Dealer/Dealer";
 import Carpet from "./Products/UPVC/Carpet";
@@ -33,10 +33,10 @@ root.render(
           {/* <Route path='home-interior' element={<HomeInterior />} /> */}
           <Route path="about-us" element={<AboutUs />} />
           <Route path="productPage" element={<UPVCDoorsWindows />} />
-          <Route path="skirtingProfile">
-            <Route index element={<SkirtingProfile />} />
-            <Route path="/skirtingProfile/skirting" element={<Skirting />} />
-          </Route>
+          
+          
+            <Route path="/skirting" element={<Skirting />} />
+     
           <Route path="locateUs" element={<LocateUs />} />
           <Route path="dealer" element={<Dealer />} />
           <Route path="carpet" element={<Carpet />} />

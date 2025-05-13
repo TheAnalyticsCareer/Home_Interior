@@ -685,7 +685,7 @@ const Header = () => {
                       <span className="dropdown-arrow">▼</span>
                     </a>
                     <div className={`dropdown-menu ${activeDropdown === 'products' ? 'show' : ''}`}>
-                      <a style={{ color: 'black', textDecoration: 'none' }} href="/skirtingProfile">Skirting & Profile</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/skirting">Skirting & Profile</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/carpet">Carpets</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/flooring">Flooring</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/Aluminium_glass">Aluminium Modular Glass Partition</a>
@@ -757,7 +757,7 @@ const Header = () => {
                     <span className={`mobile_dropdown_arrow ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>▼</span>
                   </div>
                   <div className={`mobile_dropdown_menu ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>
-                    <a href="/skirtingProfile">Skirting & Profile</a>
+                    <a href="/skirting">Skirting & Profile</a>
                     <a href="/carpet">Carpets</a>
                     <a href="/flooring">Flooring</a>
                   </div>
@@ -768,7 +768,7 @@ const Header = () => {
                 </li>
                 
                 <li className="mobile_nav_item">
-                  <a href="/blogs" className="mobile_nav_link">Blogs</a>
+                  <a href="/static-blog" className="mobile_nav_link">Blogs</a>
                 </li>
                 
                 <li className="mobile_nav_item">

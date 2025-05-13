@@ -9,6 +9,7 @@
 /* Color Variables */
 .skirting-component {
   --primary: #6EC1E4;
+  --primary-dark: #4da8cc;
   --secondary: #54595F;
   --text: #7A7A7A;
   --accent: #61CE70;
@@ -89,9 +90,9 @@
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 40%;
+  left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 80px;
   height: 4px;
   background: var(--primary);
   border-radius: 2px;
@@ -100,7 +101,7 @@
 /* Category Grid */
 .skirting-category-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
 }
@@ -109,14 +110,20 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .skirting-category-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skirting-category-item.active {
+  box-shadow: 0 0 0 3px var(--primary);
 }
 
 .skirting-category-image-wrapper {
@@ -138,6 +145,7 @@
 .skirting-category-content {
   padding: 1.5rem;
   background: white;
+  text-align: center;
 }
 
 .skirting-category-content h3 {
@@ -146,12 +154,18 @@
   color: var(--dark-gray);
 }
 
-/* Product Showcase */
-.skirting-product-showcase {
+/* Product Sections */
+.skirting-product-section {
   padding: 4rem 0;
   background: var(--off-white);
+  scroll-margin-top: 100px;
 }
 
+.skirting-product-section:nth-child(even) {
+  background: white;
+}
+
+/* Product Grid */
 .skirting-product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -166,6 +180,8 @@
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .skirting-product-card:hover {
@@ -181,12 +197,22 @@
 
 .skirting-product-content {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .skirting-product-content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   color: var(--dark-gray);
+}
+
+.skirting-product-description {
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  flex: 1;
 }
 
 .skirting-product-price {
@@ -220,8 +246,14 @@
   display: inline-block;
 }
 
+.skirting-product-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
 .skirting-quote-button {
-  width: 100%;
+  flex: 1;
   padding: 0.75rem;
   background: var(--primary);
   color: white;
@@ -230,45 +262,34 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skirting-quote-button:hover {
   background: var(--dark-gray);
 }
 
-/* View All Link */
-.skirting-view-all-container {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-.skirting-view-all-link {
-  display: inline-flex;
+.skirting-brochure-button {
+  flex: 1;
+  padding: 0.75rem;
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  gap: 0.5rem;
+}
+
+.skirting-brochure-button:hover {
   background: var(--primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(110, 193, 228, 0.3);
-}
-
-.skirting-view-all-link:hover {
-  background: var(--dark-gray);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(110, 193, 228, 0.4);
-}
-
-.skirting-view-all-link svg {
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.skirting-view-all-link:hover svg {
-  transform: translateX(4px);
+  color: var(--white);
 }
 
 /* Modal */
@@ -331,6 +352,12 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--dark-gray);
+}
+
+.skirting-modal-description {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .skirting-modal-price {
@@ -447,5 +474,9 @@
   .skirting-product-info,
   .skirting-contact-form {
     padding: 1.5rem;
+  }
+
+  .skirting-product-actions {
+    flex-direction: column;
   }
 }

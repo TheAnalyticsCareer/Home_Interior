@@ -16,10 +16,10 @@ const CounterSection = () => {
 
   const controls = useAnimation();
   const [counters, setCounters] = useState([
-    { id: 1, value: 0, target: 1500, suffix: '+', label: 'Happy Clients' },
+    { id: 1, value: 0, target: 2540, suffix: '+', label: 'Happy Clients' },
     { id: 2, value: 0, target: 25, suffix: '+', label: 'Years Experience' },
-    { id: 3, value: 0, target: 386, suffix: '+', label: 'Projects Completed' },
-    { id: 4, value: 0, target: 99, suffix: '%', label: 'Client Satisfaction' }
+    { id: 3, value: 0, target: 268, suffix: '+', label: 'Projects Completed' },
+    { id: 4, value: 0, target: 98, suffix: '%', label: 'Client Satisfaction' }
   ]);
 
   useEffect(() => {

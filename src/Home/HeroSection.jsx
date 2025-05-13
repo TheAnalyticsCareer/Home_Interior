@@ -108,14 +108,14 @@ const HeroSection = () => {
       </div>
 
       <div className="hs-product-cards-container">
-        <a href="/skirtingProfile" className="hs-product-card">
+        <a href="/skirting" className="hs-product-card">
           <div className="hs-card-image-container">
             <img src={card1} alt="Skirting & Profile" className="hs-card-image" />
             <div className="hs-image-overlay"></div>
           </div>
           <div className="hs-card-content">
             <h3 style={{ color: "black" }} className="hs-card-title">
-              Skirting & Profile
+              Aluminium Skirting & Profile
             </h3>
             <div className="card-arrow">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.3rem" height="1.3rem" viewBox="0 0 24 24">
