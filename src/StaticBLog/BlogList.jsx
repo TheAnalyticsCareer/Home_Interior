@@ -81,7 +81,7 @@ const BlogList = () => {
                 </div>
                 <h2 className="blog-card-title">{blog.title}</h2>
                 <p className="blog-card-excerpt">{blog.excerpt}</p>
-                <div onClick={()=>navigate(`/static-blog/${blog.id}`)} className="blog-card-readmore">Read Article →</div>
+                <div onClick={()=>navigate(`/blogs/${blog.id}`)} className="blog-card-readmore">Read Article →</div>
               </div>
             </div>
           </div>

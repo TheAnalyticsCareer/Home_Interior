@@ -172,29 +172,33 @@ const Footer = () => {
       links: [
         { text: "Home", url: "/" },
         { text: "About Us", url: "/about-us" },
-        { text: "Products", url: "/productPage" },
+        { text: "Products", url: "/products" },
         { text: "Blog", url: "/blogs" },
-        { text: "Locate Us", url: "/locateUs" },
+        { text: "Locate Us", url: "/locate-us" },
       ],
     },
+
+
     {
       title: "Skirting & Profile",
 
       links: [
-        { text: "Screw On Skirting", url: "/skirtingProfile" },
-        { text: "Stick On Toe Skirting", url: "/skirtingProfile" },
-        { text: "Line Skirting", url: "/skirtingProfile" },
-        { text: "Easy Fix PVC Skirting", url: "/skirtingProfile" },
-        { text: "Slim Sliding Door", url: "/skirtingProfile" },
+        { text: "50MM Skirting", url: "/skirting&profile" },
+        { text: "75MM Skirting", url: "/skirting&profile" },
+        { text: "100MM Skirting", url: "/skirting&profile" },
+        
+               
       ],
     },
+
+
     {
       title: "Carpets",
       links: [
-        { text: "Wall to Wall carpet", url: "/carpet" },
-        { text: "Wall To Wall Floor Carpets", url: "/carpet" },
-        { text: "Hotel carpet", url: "/carpet" },
-        { text: "Hand Tuffted Carpet", url: "/carpet" },
+        { text: "Wall to Wall Carpet", url: "/carpets" },
+        { text: "Carpet Tile", url: "/carpets" },
+       
+      
       ],
     },
     {
@@ -210,11 +214,31 @@ const Footer = () => {
       ],
     },
     {
+      title: "Aluminium Glass Partition",
+      links: [
+        { text: "Curved Glass Partition", url: "/Aluminium_Glass_Partitions" },
+        { text: "Aluminum Slim Glass Partition", url: "/Aluminium_Glass_Partitions" },
+        { text: "Aluminium Acoustic Slim Glass Partition, For Office,", url: "/Aluminium_Glass_Partitions" },
+        { text: "Aluminium Grid Partition", url: "/Aluminium_Glass_Partitions" },
+        { text: "Slimline Glass Partition", url: "/Aluminium_Glass_Partitions" },
+       { text: "Transparent Laminated Glass Partition, For Office", url: "/Aluminium_Glass_Partitions" },
+
+      ],
+    },
+
+    {
+      title: "More...",
+      links: [
+        { text: "More... ", url: "/Moreproducts" },
+       
+      ],
+    },
+    {
       title: "Support",
       links: [
-        { text: "Terms & Condition", url: "/Conditions" },
-        { text: "Privacy Policy", url: "/Policy" },
-        { text: "Locate Us", url: "/locateUs" },
+        { text: "Terms & Condition", url: "/terms&conditions" },
+        { text: "Privacy Policy", url: "/privacy&policy" },
+        { text: "Locate Us", url: "/locate-us" },
       ],
     },
   ];

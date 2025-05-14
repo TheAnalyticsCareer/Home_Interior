@@ -1,14 +1,12 @@
-/* HeroSection.css */
-
 /* Hero Section Container */
-.hero-container {
+.hs-container {
   position: relative;
   width: 100%;
-  height: auto;
   min-height: 100vh;
   overflow: hidden;
   background-color: #fafafa;
   margin-top: 10px;
+  padding-bottom: 2rem;
 }
 
 /* Slideshow Container */
@@ -19,9 +17,7 @@
   min-height: 400px;
   max-height: 800px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0 auto;
 }
 
 /* Slides Wrapper */
@@ -29,6 +25,7 @@
   display: flex;
   width: 100%;
   height: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* Individual Slide */
@@ -39,7 +36,7 @@
   background-position: center;
   background-size: cover;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease;
 }
 
 .hs-slide[aria-hidden="true"] {
@@ -48,7 +45,7 @@
 }
 
 /* Navigation Arrows */
-.nav-arrow {
+.hs-nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -68,16 +65,16 @@
   font-size: 1.2rem;
 }
 
-.nav-arrow:hover {
+.hs-nav-arrow:hover {
   background: rgba(14, 14, 14, 0.9);
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev-arrow {
+.hs-prev-arrow {
   left: 20px;
 }
 
-.next-arrow {
+.hs-next-arrow {
   right: 20px;
 }
 
@@ -88,11 +85,9 @@
   gap: 20px;
   padding: 0 20px;
   position: relative;
-  margin-top: -100px;
+  margin: -100px auto 0;
   z-index: 2;
   max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Individual Product Card */
@@ -170,35 +165,35 @@
 }
 
 .hs-product-card:hover .hs-card-title {
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .hs-product-card:hover .hs-card-content {
   background-color: #e90000;
 }
 
-.card-arrow {
+.hs-card-arrow {
   transition: transform 0.3s ease;
 }
 
-.card-arrow svg {
+.hs-card-arrow svg {
   width: 1.3rem;
   height: 1.3rem;
 }
 
-.hs-product-card:hover .card-arrow {
+.hs-product-card:hover .hs-card-arrow {
   transform: translateX(5px);
 }
 
 /* Years Image */
-.years-image-wrapper {
+.hs-years-image-wrapper {
   position: absolute;
   top: 10%;
   right: 20px;
   z-index: 11;
 }
 
-.years-image {
+.hs-years-image {
   height: 8rem;
   width: auto;
 }
@@ -212,10 +207,8 @@
   .hs-product-cards-container {
     margin-top: -80px;
     margin-bottom: 2rem;
-
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    max-width: 900px; /* Slightly wider container */
-    gap: 20px; /* Maintain spacing */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
   }
 }
 
@@ -226,20 +219,20 @@
   }
 
   .hs-product-cards-container {
-    grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
   }
 
-  .years-image-wrapper {
+  .hs-years-image-wrapper {
     top: 2%;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-container {
+  .hs-container {
     margin-top: 0;
     margin-bottom: 4rem;
   }
+  
   .hs-slideshow-container {
     height: 50vh;
   }
@@ -262,19 +255,20 @@
     font-size: 1rem;
   }
 
-  .years-image-wrapper {
+  .hs-years-image-wrapper {
     top: 1rem;
     right: 10px;
   }
 
-  .years-image {
+  .hs-years-image {
     height: 6rem;
   }
 }
 
 @media (max-width: 576px) {
-  .hero-container {
-    height: 1160px;
+  .hs-container {
+    min-height: auto;
+    padding-bottom: 1rem;
   }
 
   .hs-slideshow-container {
@@ -289,7 +283,7 @@
     gap: 15px;
   }
 
-  .nav-arrow {
+  .hs-nav-arrow {
     width: 35px;
     height: 35px;
     font-size: 1rem;
@@ -299,17 +293,12 @@
     height: 140px;
   }
 
-  .years-image {
+  .hs-years-image {
     height: 5rem;
   }
 }
 
 @media (max-width: 400px) {
-
-  .hero-container {
-    height: 1115px;
-  }
-
   .hs-slideshow-container {
     height: 40vh;
   }
@@ -327,22 +316,21 @@
     font-size: 0.95rem;
   }
 
-  .card-arrow svg {
+  .hs-card-arrow svg {
     width: 1.1rem;
     height: 1.1rem;
   }
 
-  .years-image-wrapper {
-    position: relative;
-    top: -87rem;
-    right: -146px;
-
+  .hs-years-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
     text-align: center;
     margin: 20px 0;
   }
 
-  .years-image {
-    height: 4rem;
+  .hs-years-image {
+    height: 5rem;
     margin: 0 auto;
   }
 }

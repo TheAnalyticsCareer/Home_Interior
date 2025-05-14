@@ -154,7 +154,7 @@ const BlogSlider = () => {
                 <h2 className="blogSLider-card-title">{blog.title}</h2>
                 <p className="blogSLider-card-excerpt">{blog.excerpt}</p>
                 <div 
-                  onClick={() => navigate(`/static-blog/${blog.id}`)} 
+                  onClick={() => navigate(`/blogs/${blog.id}`)} 
                   className="blog-card-readmore"
                 >
                   Read Article →
@@ -167,7 +167,7 @@ const BlogSlider = () => {
       <div className="view-all-container">
         <button 
           className="view-all-button" 
-          onClick={() => navigate('/static-blog')}
+          onClick={() => navigate('/blogs')}
         >
           View All Blogs
         </button>

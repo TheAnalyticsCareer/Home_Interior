@@ -421,14 +421,29 @@ import heroImage from "./img/skirting/heroImg2.jpg";
 import skirting50mm from "./img/skirting/skirtingIcon-1.jpg";
 import skirting75mm from "./img/skirting/skirtingIcon-2.jpg";
 import skirting100mm from "./img/skirting/skirtingIcon-3.webp";
-import product1 from "./img/skirting/product1.webp";
-import product2 from "./img/skirting/product2.webp";
-import product3 from "./img/skirting/product3.webp";
-import product4 from "./img/skirting/product4.webp";
-import product5 from "./img/skirting/product5.webp";
-import product6 from "./img/skirting/prodcut6.webp";
-import product7 from "./img/skirting/product7.webp";
-import product8 from "./img/skirting/product8.webp";
+import product1 from "./img/skirting/aluminum-screw-on-skirting-1000x1000.webp";
+import product2 from "./img/skirting/easy-fix-modular-skirting-500x500.webp";
+import product3 from "./img/skirting/aluminium door.webp";
+import product4 from "./img/skirting/aluminum-stuck-on-skirting-500x500.webp";
+import product5 from "./img/skirting/profiles-for-floor-pvc-edge-profile-1000x1000.webp";
+import product6 from "./img/skirting/aluminum-stair-edging-500x500.webp";
+import product7 from "./img/skirting/anodized-aluminum-profile-500x500.webp";
+import product8 from "./img/skirting/modular-aluminium-skirting-500x500.webp";
+import product9 from "./img/skirting/glossy modular.webp";
+import product10 from "./img/skirting/aluminum-t-profile-with-fixing-base-profile-bp-23-500x500.webp";
+
+
+//pdf broshure
+
+import p9  from "./img/skirting/modular-skirting-illusion-recessed.pdf"
+import p10  from "./img/skirting/modular-skirting-illusion-recessed.pdf"
+
+
+
+
+
+
+
 
 const Skirting = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -477,9 +492,18 @@ const Skirting = () => {
   };
 
   const downloadBrochure = (productName) => {
-    // In a real app, this would download the actual brochure PDF
-    console.log(`Downloading brochure for ${productName}`);
-    toast.info(`Brochure download started for ${productName}`);
+    // Find the product by name
+    const productKey = Object.keys(products).find(
+      key => products[key].name === productName
+    );
+    
+    if (productKey && products[productKey].brochure) {
+      // Open the PDF in a new tab
+      window.open(products[productKey].brochure, '_blank');
+    } else {
+      // Fallback if no PDF is found
+      toast.error("Brochure not available for this product");
+    }
   };
 
   useEffect(() => {
@@ -513,108 +537,189 @@ const Skirting = () => {
   ];
 
   const products = {
-    product1: {
+       product1: {
       id: 1,
-      name: "Classic White Skirting",
-      price: "₹120",
-      image: product1,
-      category: "50",
-      description: "Premium white skirting with glossy finish, perfect for modern interiors.",
+      name: "Aluminum Screw On Skirting",
+      price: "₹120 / sq ft",
+      image: product1, // Make sure 'product2' is imported or defined as the image path
+      category: "50", // You can adjust this based on your actual category IDs
+      description: "Flat-shaped aluminum skirting with anodised finish, ideal for interior construction use.",
       details: [
-        { label: "Height", value: "50mm" },
-        { label: "Material", value: "MDF" },
-        { label: "Finish", value: "Glossy" },
+        { label: "Shape", value: "Flat" },
+        { label: "Dimensions", value: "50mm, 75mm & 100mm" },
+        { label: "Usage/Application", value: "Construction" },
+        { label: "Material", value: "Aluminum" },
+        { label: "Finish", value: "Anodised" },
+        { label: "Anodised", value: "Yes" },
+        { label: "Position", value: "Interior" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Weight", value: "900 Gram" },
+        { label: "Minimum Order Quantity", value: "20 sq ft" },
       ],
     },
     product2: {
       id: 2,
-      name: "Wooden Oak Skirting",
-      price: "₹150",
-      image: product2,
-      category: "75",
-      description: "Authentic oak wood skirting with natural matte finish.",
+      name: "Easy Fix Modular Skirting",
+      price: "₹1200 / Piece",
+      image: product2, // Make sure to define or import this image
+        brochure: p9,
+      category: "50",
+      description: "Designed to be installed on wall, gypsum and plywood partitions and on top of all kinds of flooring..",
       details: [
-        { label: "Height", value: "75mm" },
-        { label: "Material", value: "Solid Oak" },
-        { label: "Finish", value: "Matte" },
+        { label: "Thickness", value: "12 mm" },
+        { label: "Surface Finish", value: "Polish" },
+        { label: "Finish", value: "Glossy" },
+        { label: "Height", value: "50–150 mm" },
+        { label: "Material", value: "PVC" },
+        { label: "Length", value: "3048 mm" },
+        { label: "Country of Origin", value: "Made in India" },
       ],
     },
     product3: {
       id: 3,
-      name: "Modern Grey Skirting",
-      price: "₹110",
-      image: product3,
-      category: "50",
-      description: "Contemporary grey PVC skirting with durable matte texture.",
+      name: "Aluminium Door Profiles",
+      price: "₹200 / sq ft",
+      image: product3, // Replace or import the actual image reference
+      category: "50", // You may use a separate category ID for door profiles
+      description: "Durable aluminium door profiles with smooth surface treatment, suitable for both interior and exterior industrial applications.",
       details: [
-        { label: "Height", value: "50mm" },
-        { label: "Material", value: "PVC" },
-        { label: "Finish", value: "Matte" },
+        { label: "Usage/Application", value: "Industrial" },
+        { label: "Shape", value: "Angle" },
+        { label: "Position", value: "Interior, Exterior" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Color", value: "Multi Color" },
+        { label: "Surface Treatment", value: "Smooth" },
       ],
     },
     product4: {
       id: 4,
-      name: "Aluminum Skirting",
-      price: "₹180",
-      image: product4,
-      category: "100",
-      description: "Sleek aluminum skirting with brushed metal finish.",
+      name: "Aluminum Stuck On Skirting",
+      price: "₹350 / Piece",
+      image: product4, // Replace with the actual image import or path
+      category: "80",
+      description: "AIDF Matt Silver Finish 80 mm Aluminum Skirting SK-80 is ideal to cover any types of wall base to protect from foot scratches and is also designed with a sit on toe to conceal any gaps between the joint of a wall and any type of floor covering thereby providing a neat finish on the joint. It is installed using a special adhesive for permanent and neat fixing.",
       details: [
-        { label: "Height", value: "100mm" },
+        { label: "Shape", value: "T Slot Profile" },
+        { label: "Usage/Application", value: "Industrial" },
         { label: "Material", value: "Aluminum" },
-        { label: "Finish", value: "Brushed" },
+        { label: "Finish", value: "Matt Silver Finish" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Color", value: "Silver" },
+        { label: "Length", value: "80 mm" },
+        { label: "Application", value: "Furniture, Windows & Doors, Decorations" },
       ],
     },
     product5: {
       id: 5,
-      name: "Flexible PVC Skirting",
-      price: "₹95",
-      image: product5,
-      category: "50",
-      description: "Flexible PVC skirting ideal for curved walls and corners.",
+      name: "Profiles For Floor PVC Edge Profile",
+      price: "₹150 / Kg",
+      image: product5, // Replace with actual image import or path
+      category: "50", // You can update this based on your category system
+      description: "PVC Edge Profile to be used with floorings up to 5mm thick.",
       details: [
-        { label: "Height", value: "50mm" },
+        { label: "Design", value: "Customized" },
         { label: "Material", value: "PVC" },
-        { label: "Finish", value: "Glossy" },
+        { label: "Usage/Application", value: "Home, Office" },
+        { label: "Thickness", value: "10 mm" },
+        { label: "Length", value: "2800 mm" },
+        { label: "Usage", value: "Household, Commercial" },
       ],
     },
     product6: {
       id: 6,
-      name: "Heritage Skirting",
-      price: "₹200",
-      image: product6,
-      category: "100",
-      description: "Traditional hardwood skirting with polished finish.",
+      name: "Aluminum Stair Nose",
+      price: "₹120 / Piece",
+      image: product6, // Replace with the actual image import or path
+      category: "100", // Update based on your category system
+      description: "Annapurna Interiors Decorators & Furnitures are most trustworthy and renowned Importer, Trader and Supplier of Wooden Flooring, Laminated Flooring, Vinyl Flooring, Carpet Tiles, Window Blinds, Aluminum Profiles, Engineered Wood, Wooden Flooring Pieces, Machine Tufted Carpets, Brazilian Flooring,Cinema Hall Carpet,Auditorium Carpet,Banquate Carpet etc.",
       details: [
-        { label: "Height", value: "100mm" },
-        { label: "Material", value: "Hardwood" },
-        { label: "Finish", value: "Polished" },
+        { label: "Brand", value: "Annupurana" },
+        { label: "Length", value: "2.44-3.0 m" },
+        { label: "Material", value: "Aluminum" },
+        { label: "Color", value: "Silver" },
+        { label: "Finish", value: "Mill Finish Mat Silver" },
+        { label: "Tensile Strength", value: "160 MPa" },
       ],
     },
     product7: {
       id: 7,
-      name: "Minimalist Skirting",
-      price: "₹85",
-      image: product7,
-      category: "50",
-      description: "Ultra-thin minimalist skirting for modern aesthetics.",
+      name: "Anodized Aluminum Profile",
+      price: "₹170 / Kg",
+       brochure: p10,
+      image: product7, // Replace with the actual image import or path
+      category: "50", // Update based on your category system
+      description: "This one-piece carpet profile is to make a smooth and safe transition between carpet and different types of hard floorings. The design of the profile secures and conceals the flooring thus providing a smooth finish and also protecting the edge of the floorings. The carpet is fitted into the profile and then the top is flattened to provide a secure fit. These trims are commonly used at door interfaces to provide a smooth and safe transition.",
       details: [
-        { label: "Height", value: "40mm" },
-        { label: "Material", value: "MDF" },
-        { label: "Finish", value: "Matte" },
+        { label: "Usage/Application", value: "Interiors" },
+        { label: "Shape", value: "Flat" },
+        { label: "Dimensions", value: "28mm" },
+        { label: "Width", value: "28mm" },
+        { label: "Surface Finishing", value: "Plain" },
+        { label: "Position", value: "Interior" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Brand", value: "AIDF" },
+        { label: "Material", value: "Aluminum" },
+        { label: "Is It Anodised", value: "Anodised" },
+        { label: "Minimum Order Quantity", value: "50 Kg" },
       ],
     },
     product8: {
       id: 8,
-      name: "Contemporary Skirting",
-      price: "₹160",
-      image: product8,
-      category: "75",
-      description: "Modern wood composite skirting with satin finish.",
+      name: "Modular Aluminium Skirting",
+      price: "₹350 / Piece",
+      image: product8, // Replace with the actual image import or path
+      category: "100", // Update based on your category system
+      description: "llusion fineline along with illusion recessed is an ideal combination of skirting for offices where dry wall partitions are created along the periphery on civil walls..",
       details: [
-        { label: "Height", value: "75mm" },
-        { label: "Material", value: "Wood Composite" },
-        { label: "Finish", value: "Satin" },
+        { label: "Shape", value: "T Slot Profile" },
+        { label: "Usage/Application", value: "Industrial" },
+        { label: "Color", value: "Green, Black" },
+        { label: "Wear Resistance", value: "Yes" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Finish", value: "Satin Matte" },
+        { label: "Length", value: "3048 mm" },
+        { label: "Height", value: "40–60 mm" },
+        { label: "Country of Origin", value: "Made in India" },
+      ],
+    },
+    product9: {
+      id: 9,
+      name: "Glossy Modular Skirting Profile",
+      price: "₹350 / Piece",
+      brochure: p9,
+      image: product9, // Replace with the actual image import or path
+      category: "75", // Update based on your category system
+      description: "Gypsum although a idea| material for drywall partition is susceptible to water, illusion recessed is an ideal skirting for areas where wet mopping is done on regular basis.",
+      details: [
+        { label: "Shape", value: "T Profile" },
+        { label: "Wood Flooring Type", value: "Oak Flooring" },
+        { label: "Wear Resistance", value: "Yes" },
+        { label: "Material", value: "PVC" },
+        { label: "Thickness", value: "10–12 mm" },
+        { label: "Length", value: "4 Feet" },
+        { label: "Finishing", value: "Glossy" },
+      ],
+    },
+    product10: {
+      id: 10,
+      name: "Interior Aluminium Profiles",
+      price: "₹220 / Kg",
+       brochure: p10,
+      image: product10, // Replace with the actual image import or path
+      category: "100", // Update based on your category system
+      description: "This two-piece carpet profile forms a C shape with adjustable height which can be used to form a neat edge at the junction of the floor and wall. This profile can also be used on carpet skirting’s as capping to grip the carpet skirting and also giving a neat edge finish to the carpet skirting. The fixing base profile is screwed to the ground or the wall and the carpet edge covers the screwed part of fixing base profile. Further the L profile is plugged in the fixing base profile which covers the edges of the Scarpet while also securing and concealing the uneven edges or junctions thus providing a neat finish.",
+      details: [
+        { label: "Usage/Application", value: "Interior" },
+        { label: "Dimension", value: "AIDF-16BP-23" },
+        { label: "Height", value: "3048mm" },
+        { label: "Alloy", value: "Is Alloy" },
+        { label: "Finishing", value: "Silver/Matt" },
+        { label: "Color", value: "Silver/Matt" },
+        { label: "Temper", value: "18" },
+        { label: "Features", value: "Protect for Edge Area Carpet, Vinyl & Laminate Flooring" },
+        { label: "Brand", value: "AIDF" },
+        { label: "Is It Anodised", value: "Anodised" },
+        { label: "Minimum Order Quantity", value: "20 Kg" },
       ],
     },
   };

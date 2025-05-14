@@ -305,6 +305,8 @@ import product3 from "./img/aluminium_glass/aluminium-acoustic-slim-glass-partit
 import product4 from "./img/aluminium_glass/transparent-laminated-glass-partition-for-office-1000x1000.webp";
 import product5 from "./img/aluminium_glass/slim-line.webp";
 import product6 from "./img/aluminium_glass/aluminium-grid-partition-500x500.webp";
+import product7 from "./img/aluminium_glass/transparent-laminated-glass-partition-for-office-500x500.webp";
+
 
 const Aluminium_glass = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -364,75 +366,149 @@ const Aluminium_glass = () => {
     product1: {
       id: 'p1',
       name: "Curved Glass Partition",
-      price: "₹1200",
-      image: product1,
-      description: "Elegant curved glass partitions for modern office spaces.",
+      price: "₹1000 / Square feet",
+      image: product1, // Ensure image is defined
+      description: <ul>
+     <li> Unique durable design where profiles click into each other.</li>
+     <li>StepUp is made from inserting textile in to aluminium retainer.</li>  
+     <li>Installed on the  oor with ramps on all four sides.</li>
+     <li>Unlike conventional "use and throw" matting, only inserts need to be changed after its useful life making the system cheaper than the conventional matting.</li>
+     <li>Available in multiple ofl feet in length and width up to maximum of 10 feet on each side.</li>
+      </ul> ,
+      category: "office-partitions", // or "home-interiors"
       details: [
-        { label: "Thickness", value: "10mm" },
-        { label: "Material", value: "Tempered Glass" },
-        { label: "Finish", value: "Clear" }
-      ]
+        { label: "Material", value: "Glass" },
+        { label: "Usage/Application", value: "Home" },
+        { label: "Surface Treatment", value: "PE Coated" },
+        { label: "Color", value: "Transparent" },
+        { label: "Pattern", value: "Plain" },
+        { label: "Country of Origin", value: "Made in India" },
+        { label: "Minimum Order Quantity", value: "50 Square feet" }
+      ],
     },
     product2: {
-      id: 'p2',
-      name: "Aluminum Slim Glass Partition",
-      price: "₹1500",
-      image: product2,
-      description: "Sleek aluminum framed glass partitions with minimal design.",
-      details: [
-        { label: "Thickness", value: "8mm" },
-        { label: "Material", value: "Aluminum + Glass" },
-        { label: "Finish", value: "Brushed" }
-      ]
+       id: 'p2',
+  name: "Aluminum Slim Glass Partition",
+  price: "₹315 / Square feet",
+  image: product2, // Ensure this image is imported and available
+  description: <ul>
+    <li>Unique durable design where pro les click into each other.</li>
+    <li>StepUp is made from inserting textile in to aluminium retainer.</li>
+    <li>Installed on the  oor with ramps on all four sides.</li>
+    <li>Unlike conventional "use and throw" matting, only inserts need to be changed after its useful life making the system cheaper than the conventional matting.</li>
+    <li>Available in multiple ofl feet in length and width up to maximum of 10 feet on each side.</li>
+  </ul> ,
+  category: "office-partitions", // or "home-interiors"
+  details: [
+    { label: "Material", value: "Aluminium Acoustic" },
+    { label: "Usage/Application", value: "All" },
+    { label: "Thickness", value: "3mm" },
+    { label: "Insulation", value: "Thermal" },
+    { label: "Surface Treatment", value: "PVDF Coated" },
+    { label: "Open Style", value: "All" },
+    { label: "Color", value: "Multicolor" },
+    { label: "Country of Origin", value: "Made in India" },
+    { label: "Minimum Order Quantity", value: "50 Square feet" }
+  ]
     },
     product3: {
       id: 'p3',
-      name: "Acoustic Slim Glass Partition",
-      price: "₹1800",
-      image: product3,
-      description: "Soundproof glass partitions for office privacy.",
-      details: [
-        { label: "Thickness", value: "12mm" },
-        { label: "Material", value: "Laminated Glass" },
-        { label: "Finish", value: "Frosted" }
-      ]
-    },
-    product4: {
-      id: 'p4',
-      name: "Transparent Laminated Glass Partition",
-      price: "₹1600",
-      image: product4,
-      description: "Safety glass partitions with clear visibility.",
-      details: [
-        { label: "Thickness", value: "12mm" },
-        { label: "Material", value: "Laminated Glass" },
-        { label: "Finish", value: "Clear" }
-      ]
-    },
-    product5: {
-      id: 'p5',
-      name: "Slimline Glass Partition",
-      price: "₹1400",
-      image: product5,
-      description: "Ultra-slim glass partitions for contemporary spaces.",
+      name: "Aluminium Acoustic Slim Glass Partition",
+      price: "₹395 / Square feet",
+      image: product3, // Ensure this image is imported and available
+      description: <ul> <li>Established in the year 1995 at Delhi, we, Annapurna Interiors Decorators & Furnitures are leading and paramount Wholesaler, Service provider, Exporter and Importer of Wooden Flooring, Laminate Flooring, Vinyl Flooring, Carpet Tiles, Aluminum Profiles, Engineered Wood, Wooden Flooring Pieces, Machine Tufted Carpets, Brazilian Flooring etc.</li> </ul> ,
       details: [
         { label: "Thickness", value: "6mm" },
-        { label: "Material", value: "Tempered Glass" },
-        { label: "Finish", value: "Clear" }
+        { label: "Usage/Application	", value: "Office" },
+        { label: "Color", value: "Transparent" },
+        { label: "Pattern	", value: "Rectangular" },
+        { label: "Country of Origin", value: "Made in India" },
+      ]
+    },
+
+
+
+    product4: {
+      id: 'p4',
+      name: "Transparent Laminated Glass Partition, For Office",
+      price: "₹350 / Square feet",
+      image: product4, // Ensure this image is imported and available
+      description: <ul> <li>Established in the year 1995 at Delhi, we, Annapurna Interiors Decorators & Furnitures are leading and paramount Wholesaler, Service provider, Exporter and Importer of Wooden Flooring, Laminate Flooring, Vinyl Flooring, Carpet Tiles, Aluminum Profiles, Engineered Wood, Wooden Flooring Pieces, Machine Tufted Carpets, Brazilian Flooring etc.</li> </ul> ,
+      details: [
+        { label: "Thickness", value: "6mm" },
+        { label: "Usage/Application	", value: "Office" },
+        { label: "Color", value: "Transparent" },
+        { label: "Pattern	", value: "Plain" },
+        { label: "Shape	", value: "Rectangular" },
+        { label: "Country of Origin", value: "Made in India" },
+      ]
+    },
+
+    
+    product5: {
+      id: 'p5',
+      name: "Aluminium Grid Partition",
+      price: "₹310 / Square feet",
+      image: product6, // Ensure this image is imported and available
+      description:
+          <ul>
+            <li>Unique durable design where pro les click into each other.</li>
+            <li>StepUp is made from inserting textile in to aluminium retainer.</li>
+            <li>Installed on the  oor with ramps on all four sides.</li>
+            <li>Unlike conventional "use and throw" matting, only inserts need to be changed after its useful life making the system cheaper than the conventional matting.</li>
+            <li>Available in multiple ofl feet in length and width up to maximum of 10 feet on each side.</li>
+          </ul>
+      ,
+      details: [
+        { label: "Thickness", value: "2mm" },
+        { label: "Usage/Application	", value: "All" },
+        { label: "Material", value: "Aluminium Acoustic" },
+        { label: "Insulation	", value: "Acoustic" },
+        { label: "Surface Treatment		", value: "PE Coated" },
+        { label: "Open Style		", value: "Hinged" },
+        { label: "Country of Origin", value: "Made in India" },
       ]
     },
     product6: {
       id: 'p6',
-      name: "Aluminium Grid Partition",
-      price: "₹1700",
-      image: product6,
-      description: "Decorative grid patterned glass partitions.",
+      name: "Slimline Glass Partition",
+      price: "₹320 / Square feet",
+      image: product5, // Ensure this image is imported and available
+      description:
+          <ul>
+            <li>Unique durable design where pro les click into each other.</li>
+            <li>StepUp is made from inserting textile in to aluminium retainer.</li>
+            <li>Installed on the  oor with ramps on all four sides.</li>
+            <li>Unlike conventional "use and throw" matting, only inserts need to be changed after its useful life making the system cheaper than the conventional matting.</li>
+            <li>Available in multiple ofl feet in length and width up to maximum of 10 feet on each side.</li>
+          </ul>
+      ,
       details: [
-        { label: "Thickness", value: "10mm" },
-        { label: "Material", value: "Glass + Aluminum Grid" },
-        { label: "Finish", value: "Black Frame" }
+        { label: "Usage/Application	", value: "Commercial" },
+        { label: "Material", value: "Glass" },
+        { label: "Insulation	", value: "Acoustic" },
+        { label: "Open Style		", value: "Hinged" },
+        { label: "Color		", value: "Multicolor" },
+        { label: "Country of Origin", value: "Made in India" },
       ]
-    }
+    },
+    product7: {
+      id: 7,
+      name: "Transparent Laminated Glass Partition",
+      price: "₹350 / sq ft",
+      image: product7, // Replace with the actual image import or path
+      category: "130", // Update based on your category system
+      description: "Established in the year 1995 at Delhi, we, Annapurna Interiors Decorators & Furnitures are leading and paramount Wholesaler, Service provider, Exporter and Importer of Wooden Flooring, Laminate Flooring, Vinyl Flooring, Carpet Tiles, Aluminum Profiles, Engineered Wood, Wooden Flooring Pieces, Machine Tufted Carpets, Brazilian Flooring etc.",
+      details: [
+        { label: "Pattern", value: "Plain" },
+        { label: "Shape", value: "Rectangular" },
+        { label: "Country of Origin", value: "Made in India" },
+        { label: "Thickness", value: "6 mm" },
+        { label: "Usage/Application", value: "Office" },
+        { label: "Color", value: "Transparent" },
+      ],
+    },
+   
   };
 
   const openModal = (productKey) => {

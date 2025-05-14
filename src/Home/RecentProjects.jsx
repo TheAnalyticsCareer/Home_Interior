@@ -134,7 +134,7 @@ const RecentProjects = () => {
         </motion.div>
 
         <motion.div className="recent-view-more-container" variants={itemVariants}>
-          <a href="/productPage" className="recent-view-more-link">
+          <a href="/products" className="recent-view-more-link">
             <motion.button 
               className="view-more-btn"
               style={{ 

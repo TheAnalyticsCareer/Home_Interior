@@ -111,7 +111,7 @@
 
 /* Product Sections */
 .aluminium-product-section {
-  padding: 4rem 0;
+  padding: 1rem 0;
   background: var(--off-white);
 }
 
@@ -163,7 +163,7 @@
 }
 
 .aluminium-product-description {
-  color: var(--text);
+  color: #736b6b;
   font-size: 0.9rem;
   margin-bottom: 1rem;
   flex: 1;
