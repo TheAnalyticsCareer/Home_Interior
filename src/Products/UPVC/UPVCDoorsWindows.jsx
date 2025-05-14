@@ -452,7 +452,7 @@ const services = [
     description: "Premium skirting profiles for perfect finishing",
     badge: "New",
     image: skirtingCard,
-    link: "/skirting",
+    link: "/skirting&profile",
   },
   {
     id: 2,
@@ -468,7 +468,7 @@ const services = [
     description: "Luxurious carpets for ultimate comfort",
     badge: "Eco-Friendly",
     image: carpetCard,
-    link: "/carpet",
+    link: "/carpets",
   },
   {
     id: 4,
@@ -476,7 +476,7 @@ const services = [
     description: "Elegant glass partitions for modern spaces",
     badge: "Modern",
     image: Aluminium_glass,
-    link: "/Aluminium_glass",
+    link: "/Aluminium_Glass_Partitions",
   },
 ]
 
