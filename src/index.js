@@ -104,7 +104,7 @@ root.render(
             <Route path="terms&conditions" element={<Conditions />} />
             <Route path="privacy&policy" element={<Policy />} />
             <Route path="products" element={<UPVCDoorsWindows />} />
-            <Route path="/skirting&profile" element={<Skirting />} />
+            <Route path="/aluminum-profile-skirtings" element={<Skirting />} />
             <Route path="/carpets" element={<Carpet />} />
             <Route path="/Aluminium_Glass_Partitions" element={<Aluminium_glass />} />
             <Route path="Moreproducts" element={<Moreproducts/>}/>

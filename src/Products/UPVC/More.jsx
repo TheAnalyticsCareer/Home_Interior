@@ -248,7 +248,7 @@ const More = () => {
           <h3 className="more-product-title">{product.name}</h3>
           <div className="more-product-description">{product.description}</div>
           <div className="more-product-price">
-            {product.price}<span>/sq ft</span>
+            {product.price}
           </div>
           <ul className="more-product-details">
             {product.details.map((detail, index) => (
@@ -321,7 +321,7 @@ const More = () => {
               <h3 className="more-modal-product-title">{currentProduct.name}</h3>
               <div className="more-modal-product-description">{currentProduct.description}</div>
               <div className="more-modal-product-price">
-                {currentProduct.price}<span>/sq ft</span>
+                {currentProduct.price}
               </div>
               <ul className="more-modal-product-specs">
                 {currentProduct.details.map((detail, index) => (

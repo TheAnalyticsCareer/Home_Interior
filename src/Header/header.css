@@ -739,6 +739,7 @@ a {
   font-weight: 500;
   font-size: 1rem;
   padding: 0.5rem 0;
+  text-decoration: none;
 }
 
 .mobile_dropdown_arrow {
@@ -791,6 +792,7 @@ a {
   color: white;
   font-weight: 500;
   font-size: 0.9rem;
+  border: 2px solid #ffffff;
 }
 
 .mobile_action_button.phone {

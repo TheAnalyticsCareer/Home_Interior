@@ -448,11 +448,11 @@ import carpetSection from "./img/carpet_pro.jpg"
 const services = [
   {
     id: 1,
-    title: "Skirting & Profile",
+    title: "Aluminum Profile and Skirtings",
     description: "Premium skirting profiles for perfect finishing",
     badge: "New",
     image: skirtingCard,
-    link: "/skirting&profile",
+    link: "/aluminum-profile-skirtings",
   },
   {
     id: 2,

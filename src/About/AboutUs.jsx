@@ -236,7 +236,7 @@
 
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation, stagger } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import './AboutUs.css'; 
 import heroImg from "./img/heroImg.png";
 import visionImg from "./img/vision.jpg";

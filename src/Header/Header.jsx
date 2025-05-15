@@ -469,7 +469,7 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Dialog, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import "./header.css";
@@ -717,7 +717,7 @@ const Header = () => {
                         required
                         className="header-cf-input-field"
                       >
-                        <option value="skirting&profile">Skirting&Profile</option>
+                        <option value="skirting&profile">Aluminum Profile and Skirtings</option>
                         <option value="carpets">Carpets</option>
                         <option value="flooring">Flooring</option>
                         <option value="other">Other Services</option>
@@ -875,7 +875,7 @@ const Header = () => {
                       <span className="dropdown-arrow">▼</span>
                     </a>
                     <div className={`dropdown-menu ${activeDropdown === 'products' ? 'show' : ''}`}>
-                      <a style={{ color: 'black', textDecoration: 'none' }} href="/skirting&profile">Skirting & Profile</a>
+                      <a style={{ color: 'black', textDecoration: 'none' }} href="/aluminum-profile-skirtings">Aluminum Profile and Skirtings</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/carpets">Carpets</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/flooring">Flooring</a>
                       <a style={{ color: 'black', textDecoration: 'none' }} href="/Aluminium_Glass_Partitions">Aluminium  Glass Partition</a>
@@ -949,7 +949,7 @@ const Header = () => {
                     <span className={`mobile_dropdown_arrow ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>▼</span>
                   </div>
                   <div className={`mobile_dropdown_menu ${activeDropdown === 'mobile-products' ? 'open' : ''}`}>
-                    <a href="/skirting&profile">Skirting & Profile</a>
+                    <a href="/aluminum-profile-skirtings">Aluminum Profile and Skirtings</a>
                     <a href="/carpets">Carpets</a>
                     <a href="/flooring">Flooring</a>
                       <a href="/Aluminium_Glass_Partitions">Aluminium Glass Partition</a>
