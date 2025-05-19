@@ -24,18 +24,10 @@
 // import product9 from "./img/skirting/glossy modular.webp";
 // import product10 from "./img/skirting/aluminum-t-profile-with-fixing-base-profile-bp-23-500x500.webp";
 
-
 // //pdf broshure
 
 // import p9  from "./img/skirting/modular-skirting-illusion-recessed.pdf"
 // import p10  from "./img/skirting/modular-skirting-illusion-recessed.pdf"
-
-
-
-
-
-
-
 
 // const Skirting = () => {
 //   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -88,7 +80,7 @@
 //     const productKey = Object.keys(products).find(
 //       key => products[key].name === productName
 //     );
-    
+
 //     if (productKey && products[productKey].brochure) {
 //       // Open the PDF in a new tab
 //       window.open(products[productKey].brochure, '_blank');
@@ -368,8 +360,8 @@
 //     );
 //   };
 
-//   const filteredProducts = activeCategory === "all" 
-//     ? Object.keys(products) 
+//   const filteredProducts = activeCategory === "all"
+//     ? Object.keys(products)
 //     : Object.keys(products).filter(key => products[key].category === activeCategory);
 
 //   return (
@@ -393,7 +385,7 @@
 //         <h2 className="skirting-section-title" data-aos="fade-up">
 //           Explore Our Aluminium Skirting Range
 //         </h2>
-        
+
 //       </div>
 
 //       {/* All Products Section */}
@@ -410,9 +402,9 @@
 
 //       {/* Category Sections */}
 //       {categories.slice(1).map(category => (
-//         <section 
-//           key={category.id} 
-//           className="skirting-product-section" 
+//         <section
+//           key={category.id}
+//           className="skirting-product-section"
 //           ref={categoryRefs[category.id]}
 //         >
 //           <div className="skirting-container">
@@ -511,18 +503,6 @@
 
 // export default Skirting;
 
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -562,15 +542,48 @@ const Skirting = () => {
       material: "",
       finish: "",
     },
+    // onSubmit: async (values) => {
+    //   setIsSubmitting(true);
+    //   try {
+    //     await axios.post(`https://aidf-backend-vite.onrender.com/submit-quote`, values);
+    //     myFormik.resetForm();
+    //     toast.success("Request Submitted Successfully");
+    //     closeModal();
+    //   } catch (err) {
+    //     toast.error("Error While Submitting Request");
+    //     console.error("Submission error:", err);
+    //   } finally {
+    //     setIsSubmitting(false);
+    //   }
+    // },
+
     onSubmit: async (values) => {
       setIsSubmitting(true);
       try {
-        await axios.post(`https://aidf-backend-vite.onrender.com/submit-quote`, values);
-        myFormik.resetForm();
-        toast.success("Request Submitted Successfully");
-        closeModal();
+        const response = await axios.post(
+          "https://aidf-backend-vite.onrender.com/submit-quote",
+          values,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
+
+        if (response.data.success) {
+          myFormik.resetForm();
+          toast.success("Request Submitted Successfully");
+          closeModal();
+        } else {
+          toast.error(response.data.message || "Submission failed");
+        }
       } catch (err) {
-        toast.error("Error While Submitting Request");
+        let errorMessage = "Error While Submitting Request";
+        if (err.response) {
+          errorMessage = err.response.data.message || errorMessage;
+        }
+        toast.error(errorMessage);
         console.error("Submission error:", err);
       } finally {
         setIsSubmitting(false);
@@ -582,7 +595,7 @@ const Skirting = () => {
     const productKey = Object.keys(products).find(
       (key) => products[key].name === productName
     );
-    
+
     if (productKey && products[productKey].brochure) {
       window.open(products[productKey].brochure, "_blank");
     } else {
@@ -628,7 +641,7 @@ const Skirting = () => {
       name: "Aluminum Screw On Skirting",
       price: "₹120 / sq ft",
       image: product1,
-            brochure: p9,
+      brochure: p9,
 
       description:
         "Flat-shaped aluminum skirting with anodised finish, ideal for interior construction use.",
@@ -668,7 +681,7 @@ const Skirting = () => {
       name: "Aluminium Door Profiles",
       price: "₹200 / sq ft",
       image: product3,
-          brochure: p10,
+      brochure: p10,
       description:
         "Durable aluminium door profiles with smooth surface treatment, suitable for both interior and exterior industrial applications.",
       details: [
@@ -695,7 +708,10 @@ const Skirting = () => {
         { label: "Alloy", value: "Is Alloy" },
         { label: "Color", value: "Silver" },
         { label: "Length", value: "80 mm" },
-        { label: "Application", value: "Furniture, Windows & Doors, Decorations" },
+        {
+          label: "Application",
+          value: "Furniture, Windows & Doors, Decorations",
+        },
       ],
     },
     product5: {
@@ -703,7 +719,8 @@ const Skirting = () => {
       name: "Profiles For Floor PVC Edge Profile",
       price: "₹150 / Kg",
       image: product5,
-      description: "PVC Edge Profile to be used with floorings up to 5mm thick.",
+      description:
+        "PVC Edge Profile to be used with floorings up to 5mm thick.",
       details: [
         { label: "Design", value: "Customized" },
         { label: "Material", value: "PVC" },
@@ -751,7 +768,6 @@ const Skirting = () => {
         { label: "Minimum Order Quantity", value: "50 Kg" },
       ],
     },
-    
   };
 
   const openModal = (productKey) => {
@@ -778,11 +794,11 @@ const Skirting = () => {
           <h3>{product.name}</h3>
           <p className="skirting-product-description">{product.description}</p>
           <div className="skirting-product-price">{product.price}</div>
-           <ul className="skirting-product-details">
+          <ul className="skirting-product-details">
             {product.details.map((detail, index) => (
-             <li key={index}>
+              <li key={index}>
                 <span>{detail.label}:</span> {detail.value}
-             </li>
+              </li>
             ))}
           </ul>
           <div className="skirting-product-actions">
@@ -810,17 +826,6 @@ const Skirting = () => {
     <div className="skirting-component">
       {/* Hero Banner Section */}
 
-
-
-
-
-
-
-
-
-
-
-      
       <section className="skirting-hero-section">
         <img
           src={heroImage}
@@ -835,17 +840,6 @@ const Skirting = () => {
             </p>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-        
       </section>
 
       {/* Products Section */}
@@ -854,7 +848,11 @@ const Skirting = () => {
           <h2 className="skirting-section-title" data-aos="fade-up">
             Our Skirting Products
           </h2>
-          <p className="skirting-section-subtitle" data-aos="fade-up" data-aos-delay="100">
+          <p
+            className="skirting-section-subtitle"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             High-quality aluminum profiles for various applications
           </p>
           <div className="skirting-product-grid">
