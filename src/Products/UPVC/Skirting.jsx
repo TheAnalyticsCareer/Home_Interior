@@ -545,7 +545,7 @@ const Skirting = () => {
     // onSubmit: async (values) => {
     //   setIsSubmitting(true);
     //   try {
-    //     await axios.post(`https://aidf-backend-vite.onrender.com/submit-quote`, values);
+    //     await axios.post(`https://aidf-backend-vite.onrender.com`, values);
     //     myFormik.resetForm();
     //     toast.success("Request Submitted Successfully");
     //     closeModal();
@@ -561,7 +561,7 @@ const Skirting = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post(
-          "https://aidf-backend-vite.onrender.com/submit-quote",
+          "https://aidf-backend-vite.onrender.com",
           values,
           {
             headers: {
